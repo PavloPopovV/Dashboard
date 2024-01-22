@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <section class="sidebar">
+    <img class="sidebar__logo" src="images/Logo.png" alt="logo">
+    <div class="sidebar__navigation">
+        <div class="sidebar__options">
+            <div class="sidebar__search-box search-box">
+                <input class="sidebar__search search" type="text" placeholder="Поиск"></input>
+            </div>
+            <nav class="sidebar__menu">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="index.html" class="sidebar__btn sidebar__btn--main sidebar-active">Главная</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="flights.html" class="sidebar__btn sidebar__btn--flights">Рейсы</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="" class="sidebar__btn sidebar__btn--passengers">Пассажиры</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="" class="sidebar__btn sidebar__btn--planes">Самолеты</a>
+                    </li>
+                    <li class="sidebar__item"> 
+                        <a href="" class="sidebar__btn sidebar__btn--notifications">Уведомления</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar__location">
+            <div class="sidebar__location-item">
+                <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
+                <button type="button" class="sidebar__country">Узбекистан</button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar__account">
+        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="">
+        <div class="sidebar__account-info">
+            <span class="sidebar__account-name">Kianna Press</span>
+            <span class="sidebar__account-position">Сержант</span>
+        </div>
+    </div>
+</section>
+
+    <main class="main">
+
+        <section class="flights">
+    <div class="container">
+        <h1 class=" flights__title">Рейсы</h1>
+        <div class="flights__text">
+            <p>Информация о запланированых рейсах</p>
+        </div>
+        <div class="flights-filters">
+            <div class="flights-filters__left">
+                <div class="flights-filters__search search-box">
+                    <input class="search" type="text" name="search" placeholder="Поиск">
+                </div>
+                <div class="flights-filters__box date-wrapper">
+                    <div class="flights-filters__date date-box">
+                        <button class="date-btn" type="button">01 ноября 2020</button>
+
+                        <div class="flights-filters__datepicker datepicker">
+                            <div class="datepicker__header">
+                                <button class="datepicker__arrows datepicker__arrows--left" type="button"></button>
+
+                                <div class="datepicker__center">
+                                    <span class="datepicker__month">Ноября</span>
+                                    <span class="datepicker__year">2022</span>
+                                </div>
+
+                                <button class="datepicker__arrows datepicker__arrows--right" type="button"></button>
+                            </div>
+                            <ul class="datepicker-list datepicker-list--days">
+                                <li class="datepicker-list__item">
+                                    <span>Mo</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Tu</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>We</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Th</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Fr</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Sa</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Su</span>
+                                </li>
+                            </ul>
+                            <ul class="datepicker-list datepicker-list--numbers">
+                                <li class="datepicker-list__item"><span>30</span></li>
+                                <li class="datepicker-list__item"><span>31</span></li>
+                                <li class="datepicker-list__item"><span>1</span></li>
+                                <li class="datepicker-list__item"><span>2</span></li>
+                                <li class="datepicker-list__item"><span>3</span></li>
+                                <li class="datepicker-list__item"><span>4</span></li>
+                                <li class="datepicker-list__item"><span>5</span></li>
+                                <li class="datepicker-list__item"><span>6</span></li>
+                                <li class="datepicker-list__item"><span>7</span></li>
+                                <li class="datepicker-list__item"><span>8</span></li>
+                                <li class="datepicker-list__item"><span>9</span></li>
+                                <li class="datepicker-list__item"><span>10</span></li>
+                                <li class="datepicker-list__item"><span>11</span></li>
+                                <li class="datepicker-list__item"><span>12</span></li>
+                                <li class="datepicker-list__item"><span>13</span></li>
+                                <li class="datepicker-list__item"><span>14</span></li>
+                                <li class="datepicker-list__item"><span>15</span></li>
+                                <li class="datepicker-list__item"><span>16</span></li>
+                                <li class="datepicker-list__item"><span>17</span></li>
+                                <li class="datepicker-list__item"><span>18</span></li>
+                                <li class="datepicker-list__item"><span>19</span></li>
+                                <li class="datepicker-list__item"><span>20</span></li>
+                                <li class="datepicker-list__item"><span>21</span></li>
+                                <li class="datepicker-list__item today"><span>22</span></li>
+                                <li class="datepicker-list__item active"><span>23</span></li>
+                                <li class="datepicker-list__item"><span>24</span></li>
+                                <li class="datepicker-list__item"><span>25</span></li>
+                                <li class="datepicker-list__item"><span>26</span></li>
+                                <li class="datepicker-list__item"><span>27</span></li>
+                                <li class="datepicker-list__item"><span>28</span></li>
+                                <li class="datepicker-list__item"><span>29</span></li>
+                                <li class="datepicker-list__item"><span>30</span></li>
+                                <li class="datepicker-list__item"><span>31</span></li>
+                                <li class="datepicker-list__item"><span>1</span></li>
+                                <li class="datepicker-list__item"><span>2</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flights-filters__date date-box">
+                        <button class="date-btn" type="button">07 января 2021</button>
+
+                        <div class="flights-filters__datepicker datepicker">
+                            <div class="datepicker__header">
+                                <button class="datepicker__arrows datepicker__arrows--left" type="button"></button>
+
+                                <div class="datepicker__center">
+                                    <span class="datepicker__month">Ноября</span>
+                                    <span class="datepicker__year">2022</span>
+                                </div>
+
+                                <button class="datepicker__arrows datepicker__arrows--right" type="button"></button>
+                            </div>
+                            <ul class="datepicker-list datepicker-list--days">
+                                <li class="datepicker-list__item">
+                                    <span>Mo</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Tu</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>We</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Th</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Fr</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Sa</span>
+                                </li>
+                                <li class="datepicker-list__item">
+                                    <span>Su</span>
+                                </li>
+                            </ul>
+                            <ul class="datepicker-list datepicker-list--numbers">
+                                <li class="datepicker-list__item"><span>30</span></li>
+                                <li class="datepicker-list__item"><span>31</span></li>
+                                <li class="datepicker-list__item"><span>1</span></li>
+                                <li class="datepicker-list__item"><span>2</span></li>
+                                <li class="datepicker-list__item"><span>3</span></li>
+                                <li class="datepicker-list__item"><span>4</span></li>
+                                <li class="datepicker-list__item"><span>5</span></li>
+                                <li class="datepicker-list__item"><span>6</span></li>
+                                <li class="datepicker-list__item"><span>7</span></li>
+                                <li class="datepicker-list__item"><span>8</span></li>
+                                <li class="datepicker-list__item"><span>9</span></li>
+                                <li class="datepicker-list__item"><span>10</span></li>
+                                <li class="datepicker-list__item"><span>11</span></li>
+                                <li class="datepicker-list__item"><span>12</span></li>
+                                <li class="datepicker-list__item"><span>13</span></li>
+                                <li class="datepicker-list__item"><span>14</span></li>
+                                <li class="datepicker-list__item"><span>15</span></li>
+                                <li class="datepicker-list__item"><span>16</span></li>
+                                <li class="datepicker-list__item"><span>17</span></li>
+                                <li class="datepicker-list__item"><span>18</span></li>
+                                <li class="datepicker-list__item"><span>19</span></li>
+                                <li class="datepicker-list__item"><span>20</span></li>
+                                <li class="datepicker-list__item"><span>21</span></li>
+                                <li class="datepicker-list__item today"><span>22</span></li>
+                                <li class="datepicker-list__item active"><span>23</span></li>
+                                <li class="datepicker-list__item"><span>24</span></li>
+                                <li class="datepicker-list__item"><span>25</span></li>
+                                <li class="datepicker-list__item"><span>26</span></li>
+                                <li class="datepicker-list__item"><span>27</span></li>
+                                <li class="datepicker-list__item"><span>28</span></li>
+                                <li class="datepicker-list__item"><span>29</span></li>
+                                <li class="datepicker-list__item"><span>30</span></li>
+                                <li class="datepicker-list__item"><span>31</span></li>
+                                <li class="datepicker-list__item"><span>1</span></li>
+                                <li class="datepicker-list__item"><span>2</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flight-filter__right filter-selector-box">
+                <button class="flight-filter__alphabet filter-selector active" type="button">По алфавиту</button>
+                <button class="flight-filter__date filter-selector" type="button">По дате</button>
+                <button class="flight-filter__descending filter-selector" type="button">По убыванию</button>
+            </div>
+        </div>
+
+        <table class="flights-table table" width="100%">
+            <thead>
+                <tr class="flights-table__row table__row">
+                    <th>ID рейса</th>
+                    <th>Маршрут</th>
+                    <th>Дата вылета</th>
+                    <th>Аэропорт вылета</th>
+                    <th>Аэропорт прибытия</th>
+                    <th>Самолет</th>
+                    <th>Статус</th>
+                    <th>Кол-во пассажиров</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+
+                <tr>
+                    <td class="table__id"><span>5152</span></td>
+                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
+                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
+                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
+                    <td class="table__type"><span>Завершен</span></td>
+                    <td class="table__number"><span>95</span></td>
+                    <td><button class="table__details">Детали</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <div class="flights-pagination pagination">
+            <button class="pagination__left"></button>
+            <ul class="pagination__list">
+                <li class="pagination__item">
+                    <button class="pagination__btn" type="button">1</button>
+                </li>
+                <li class="pagination__item">
+                    <button class="pagination__btn active" type="button">2</button>
+                </li>
+                <li class="pagination__item">
+                    <button class="pagination__btn" type="button">3</button>
+                </li>
+                <li class="pagination__item">
+                    <button class="pagination__btn" type="button">4</button>
+                </li>
+                <li class="pagination__item">
+                    <button class="pagination__btn" type="button">10</button>
+                </li>
+                <li class="pagination__item">
+                    <button class="pagination__btn pagination__btn--dots" type="button">...</button>
+                </li>
+                <li class="pagination__item">
+                    <button class="pagination__btn" type="button">40</button>
+                </li>
+            </ul>
+            <button class="pagination__right"></button>
+        </div>
+
+
+    </div>
+</section>
+
+    </main>
+</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/main.min.js"></script>
+
+
+
+    </body>
+
+</html>
