@@ -7,36 +7,22 @@
         <div class="flights-filters">
             <div class="flights-filters__left">
                 <div class="flights-filters__search search-box">
-                    <input class="left-search search" type="text" name="search" placeholder="Поиск">
+                    <input class="search" type="text" name="search" placeholder="Поиск">
                 </div>
-                <div class="flights-filters__date">
-                    <div class="date-picker">
-                        <div class="selected-date"></div>
-
-                        <div class="dates">
-                            <div class="month">
-                                <div class="arrows prev-mth">&lt;</div>
-                                <div class="mth"></div>
-                                <div class="arrows next-mth">&gt;</div>
-                            </div>
-
-                            <div class="days"></div>
-                        </div>
+                <div class="flights-filters__box date-wrapper">
+                    <div class="flights-filters__date date-box">
+                        <button class="date" type="button">01 ноября 2020</button>
                     </div>
-                    <input type="date">
+                    <div class="flights-filters__date date-box">
+                        <button class="date" type="button">07 января 2021</button>
+                    </div>
                 </div>
             </div>
 
             <div class="flight-filter__right">
-                <select name="flight-filter__alphabet" id="">
-                    <option value="По алфавиту">По алфавиту</option>
-                </select>
-                <select name="flight-filter__alphabet" id="">
-                    <option value="По алфавиту">По дате</option>
-                </select>
-                <select name="flight-filter__alphabet" id="">
-                    <option value="По алфавиту">По убыванию</option>
-                </select>
+                <button class="flight-filter__alphabet flight-filter-selector active" type="button">По алфавиту</button>
+                <button class="flight-filter__date flight-filter-selector" type="button">По дате</button>
+                <button class="flight-filter__tomin flight-filter-selector" type="button">По убыванию</button>
             </div>
         </div>
     </div>
