@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -40,7 +42,7 @@
         <div class="sidebar__location">
             <div class="sidebar__location-item">
                 <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
-                <span class="sidebar__country">Узбекистан</span>
+                <button type="button" class="sidebar__country">Узбекистан</button>
             </div>
         </div>
     </div>
@@ -54,11 +56,172 @@
 </section>
 
 <main class="main">
+    <section class="statistics">
+  <div class="statistics__top">
+    <h2 class="statistics__title title">Статистика</h2>
+    <a class="statistics__day" href="#">Today</a>
+  </div>
+  <ul class="statistics__box">
+    <li class="statistics__item">
+      <span class="statistics__text">Количество обработанных рейсов</span>
+      <div class="statistics__numbers">
+        <span class="statistics__odometer odometer" id="odometer-one">0</span>
+        <span class="statistics__percentage statistics__percentage--success"
+          >+11.02%</span
+        >
+      </div>
+    </li>
+    <li class="statistics__item">
+      <span class="statistics__text">Количество обработанных рейсов</span>
+      <div class="statistics__numbers">
+        <span class="statistics__odometer odometer" id="odometer-two">0</span>
+        <span class="statistics__percentage statistics__percentage--lose"
+          >-11.02%</span
+        >
+      </div>
+    </li>
+    <li class="statistics__item">
+      <span class="statistics__text">Количество обработанных рейсов</span>
+      <div class="statistics__numbers">
+        <span class="statistics__odometer odometer" id="odometer-three">0</span>
+        <span class="statistics__percentage statistics__percentage--success"
+          >+11.02%</span
+        >
+      </div>
+    </li>
+    <li class="statistics__item">
+      <span class="statistics__text">Количество обработанных рейсов</span>
+      <div class="statistics__numbers">
+        <span class="statistics__odometer odometer" id="odometer-four">0</span>
+        <span class="statistics__percentage statistics__percentage--success"
+          >+11.02%</span
+        >
+      </div>
+    </li>
+  </ul>
+</section>
 
+    <section class="flight">
+  <h2 class="flight__main-title title">Информация о рейсах</h2>
+  <div class="flight__box">
+    <div class="flight__img">
+      <img src="images/main-page__map.png" alt="map" />
+    </div>
+    <div class="flight__info">
+      <a href="" class="flight__title">Рейс <span>752GS - 09</span></a>
+      <ul class="flight__list flight-info__list">
+        <li class="flight__item flight-info__item">
+          <span class="flight__route flight-info__route">Маршрут</span>
+          <span class="flight__location flight-info__location">Lviv - Budapest</span>
+        </li>
+        <li class="flight__item flight-info__item">
+          <span class="flight__route flight-info__route">Статус</span>
+          <span class="flight__location flight-info__location">Ожидает вылет</span>
+        </li>
+        <li class="flight__item flight-info__item flight-info__item--loc">
+          <span class="flight__route flight-info__route">Текущее местоположение</span>
+          <span class="flight__location flight-info__location">Украина, Lviv Airport</span>
+        </li>
+      </ul>
+      <p class="flight__suspicions-title">Подозрения</p>
+      <div class="flight__suspicions">
+        <div class="flight__suspicions-user">
+          <img src="images/suspicions-user.png" alt="suspicions-user" />
+          <span class="flight__suspicions-name"
+            >Васильев Максим Олександрович</span
+          >
+        </div>
+        <a class="flight__suspicions-details" href="">Детали</a>
+      </div>
+      <p class="flight__suspicions-desrciption">
+        Регулярный контакт с известными фигурами наркоторговли, согласно данным
+        из базы Интерпола.
+      </p>
+    </div>
+  </div>
+</section>
 
+    <section class="suspicion">
+    <div class="suspicion__top">
+    <h2 class="suspicion__title title">Подозрения</h2>
+    <div class="suspicion__pagination">
+      <button type="button"
+        class="suspicion__btn suspicion__btn--prev"
+      ></button>
+      <div class="suspicion__count-wrapper">
+        <span class="suspicion__count suspicion__count--prev">1</span>
+        /
+        <span class="suspicion__count suspicion__count--next">62</span>
+      </div>
+      <button
+        type="button"
+        class="suspicion__btn suspicion__btn--next"
+      ></button>
+    </div>
+  </div>
+  <div class="suspicion__box">
+    <div class="suspicion__card">
+      <div class="suspicion__notice">
+        <img
+          class="suspicion__photo"
+          src="images/suspicions-photo.png"
+          alt=""
+        />
+        <div class="suspicion__warnning">
+          <span class="suspicion__warnning-text">
+            INTERPOL
+            <span> 1 RED NOTICE </span>
+          </span>
+      </div>
+    </div>
+      <div class="suspicion__data">
+        <div class="suspicion__name-details">
+          <span class="suspicion__name"
+            >Васильев Максим Олександрович</span
+          >
+          <a href="" class="suspicion__details">Детали</a>
+        </div>
+
+        <p class="suspicion__text">
+          Предыдущие подозрения в наркотрафике с 2019 года, но официальных
+          обвинений не было предъявлено.
+        </p>
+        <div class="suspicion__buttons">
+          <a href="" class="suspicion__processing suspicion__processing--proc">В обработку</a>
+          <a href="" class="suspicion__processing suspicion__processing--remove"
+            >Снять все подозрения</a>
+        </div>
+      </div>
+    </div>
+    <div class="suspicion__flight">
+        <a href="" class="suspicion__flight-name">
+            Рейс <span>752GS - 09</span>
+        </a>
+      <ul class="suspicion__flight-list flight-info__list">
+        <li class="suspicion__flight-item flight-info__item">
+          <span class="suspicion__flight-route flight-info__route">Маршрут</span>
+          <span class="suspicion__flight-location flight-info__location">Lviv - Budapest</span>
+        </li>
+        <li class="suspicion__flight-item flight-info__item">
+          <span class="suspicion__flight-route flight-info__route">Статус</span>
+          <span class="suspicion__flight-location flight-info__location">Ожидает вылет</span>
+        </li>
+        <li class="suspicion__flight-item flight-info__item flight-info__item--loc">
+          <span class="suspicion__flight-route flight-info__route">Текущее местоположение</span>
+          <span class="suspicion__flight-location flight-info__location">Украина, Lviv Airport</span>
+        </li>
+        <li class="suspicion__flight-item flight-info__item">
+          <span class="suspicion__flight-route flight-info__route">Место в самолете</span>
+          <span class="suspicion__flight-location flight-info__location">Б - 43</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 </main>
 
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="js/main.min.js"></script>
 
 

@@ -100,9 +100,10 @@
     &__country{
         position: relative;
         width: 100%;
-        display: inline-block;
+        text-align-last: left;
         font-weight: 600;
         color: #172B4D;
+        z-index: 10;
     }
 
     &__account{
@@ -114,7 +115,7 @@
             position: absolute;
             width: 24px;
             height: 24px;
-            top: 20px;
+            top: 26px;
             right: 8px;
             background-image: url('../images/sprite.svg#sidebar-searchCountry-icon');
             background-repeat: no-repeat;

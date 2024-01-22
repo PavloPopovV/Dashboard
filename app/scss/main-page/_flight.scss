@@ -1,0 +1,95 @@
+.flight {
+    margin-bottom: 32px;
+
+    &__main-title{
+        margin-bottom: 24px;
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img {
+        width: 458px;
+        height: 351px;
+        margin-right: 24px;
+
+        img {
+            
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        background-color: #fff;
+        border: 1px solid var(--Border-Light, #E7E8E9);
+        padding: 21px 35px 18px;
+    }
+
+    &__title {
+        display: block;
+        color: #172B4D;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: -0.336px;
+        margin-bottom: 18px;
+
+        span {
+            color: #2563EB;
+        }
+    }
+
+    &__suspicions-title {
+        color: #172B4D;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: -0.336px;
+        margin: 26px 0 20px;
+    }
+
+    &__suspicions {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    &__suspicions-user {
+        display: flex;
+        align-items: center;
+
+        img {
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+            margin-right: 8px;
+        }
+    }
+
+    &__suspicions-name {
+        position: relative;
+        color: #172B4D;
+        font-weight: 500;
+        line-height: 162.5%;
+        letter-spacing: -0.176px;
+    }
+
+    &__suspicions-details {
+        padding: 6px;
+        border-radius: 6px;
+        background-color: rgba(35, 55, 55, 0.05);
+        color: #2C2E30;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 92.308%;
+        letter-spacing: -0.04px;
+    }
+
+    &__suspicions-desrciption {
+        color: #A0A3A6;
+    }
+}
