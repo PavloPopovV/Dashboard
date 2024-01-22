@@ -14,9 +14,10 @@ html {
     letter-spacing: -0.128px;
 }
 
-.search-box{
+.search-box {
     position: relative;
-    &::after{
+
+    &::after {
         content: '';
         position: absolute;
         width: 20px;
@@ -28,25 +29,36 @@ html {
         background-size: cover;
         background-position: center;
     }
-}   
+}
 
-.search{
+.search {
     width: 100%;
     height: 40px;
     background-color: #fff;
     padding: 9px 0 9px 44px;
+    border: 1px solid #fff;
 
-    &::placeholder{
+    &::placeholder {
         font-size: 14px;
+    }
+
+    &:hover::placeholder {
+        transition: border .3s linear;
+        color: #172B4D
     }
 }
 
-.sidebar-active{
+.sidebar-active {
     background-color: #E6E9EF;
     color: #2563EB;
     border-radius: 4px;
 
-    &::after{
+    &::after {
         filter: invert(32%) sepia(98%) saturate(4220%) hue-rotate(217deg) brightness(98%) contrast(87%);
     }
+}
+
+.search-active {
+    transition: border .3s ease-in-out;
+    border: 1px solid #2563EB;
 }
