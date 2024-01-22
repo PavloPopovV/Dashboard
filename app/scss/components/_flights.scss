@@ -1,0 +1,30 @@
+.flights {
+    width: 100%;
+
+    .container {
+        padding: 48px 40px 24px;
+    }
+
+    &__title {
+        color: #172B4D;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        /* 133.333% */
+        letter-spacing: -0.464px;
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        margin-bottom: 23px;
+        p {
+            color: var(--Text-Secondary, #A0A3A6);
+            font-size: 14px;
+            font-weight: 450;
+            line-height: 22px;
+            letter-spacing: -0.128px;
+        }
+    }
+
+    
+}
