@@ -12,6 +12,38 @@ html {
     display: flex;
     justify-content: space-between;
     letter-spacing: -0.128px;
-    
 }
 
+.search-box{
+    position: relative;
+    margin-bottom: 16px;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        left: 14px;
+        background-image: url('../images/sprite.svg#sidebar-search-icon');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}   
+
+.search{
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    padding: 9px 0 9px 44px;
+
+    &::placeholder{
+        font-size: 14px;
+    }
+}
+
+.sidebar-active{
+    background-color: #E6E9EF;
+    color: #2563EB;
+    border-radius: 4px;
+}

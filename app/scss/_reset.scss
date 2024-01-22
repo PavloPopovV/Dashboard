@@ -54,7 +54,28 @@ input,
 button,
 textarea,
 select {
+    cursor: pointer;
     outline: transparent;
     font: inherit;
     border: inset;
+    background-color: transparent;
+    border: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+
+button:focus,
+button:active,
+button[type=submit]:active,
+button[type=submit]:focus,
+a:active,
+a:focus,
+input:active,
+input:focus,
+label:focus,
+label:active {
+    outline: transparent;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
 }
