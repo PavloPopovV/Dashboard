@@ -4,11 +4,27 @@
         <div class="flights__text">
             <p>Информация о запланированых рейсах</p>
         </div>
-        <div class="flights-fliters">
-            <div class="flights-filter__left">
-                <input class="search" type="text" name="search">
-                <input type="text">
-                <input type="text">
+        <div class="flights-filters">
+            <div class="flights-filters__left">
+                <div class="flights-filters__search search-box">
+                    <input class="left-search search" type="text" name="search" placeholder="Поиск">
+                </div>
+                <div class="flights-filters__date">
+                    <div class="date-picker">
+                        <div class="selected-date"></div>
+
+                        <div class="dates">
+                            <div class="month">
+                                <div class="arrows prev-mth">&lt;</div>
+                                <div class="mth"></div>
+                                <div class="arrows next-mth">&gt;</div>
+                            </div>
+
+                            <div class="days"></div>
+                        </div>
+                    </div>
+                    <input type="date">
+                </div>
             </div>
 
             <div class="flight-filter__right">

@@ -1,12 +1,13 @@
 @include('components/_head.html')
 
-@include('components/_sidebar.html')
+<div class="wrapper">
+    @include('components/_sidebar.html')
 
-<main class="main">
+    <main class="main">
 
-    @include('flights/_flights.html')
+        @include('flights/_flights.html')
 
-</main>
-
+    </main>
+</div>
 
 @include('components/_footer_scripts.html')

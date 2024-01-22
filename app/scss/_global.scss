@@ -9,14 +9,20 @@ html {
     font-style: normal;
     height: 100vh;
     width: 100%;
-    display: flex;  
+    display: flex;
     letter-spacing: -0.128px;
 }
 
-.search-box{
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 316px 1fr;
+}
+
+.search-box {
     position: relative;
-    margin-bottom: 16px;
-    &::after{
+
+    &::after {
         content: '';
         position: absolute;
         width: 20px;
@@ -28,20 +34,22 @@ html {
         background-size: cover;
         background-position: center;
     }
-}   
+}
 
-.search{
+.search {
     width: 100%;
     height: 40px;
     background-color: #fff;
-    padding: 9px 0 9px 44px;
+    padding: 9px 12px 9px 44px;
+    border: 1px solid #E7E8E9;
+    box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 
-    &::placeholder{
+    &::placeholder {
         font-size: 14px;
     }
 }
 
-.sidebar-active{
+.sidebar-active {
     background-color: #E6E9EF;
     color: #2563EB;
     border-radius: 4px;
