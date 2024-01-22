@@ -16,7 +16,6 @@ html {
 
 .search-box{
     position: relative;
-    margin-bottom: 16px;
     &::after{
         content: '';
         position: absolute;
@@ -46,4 +45,8 @@ html {
     background-color: #E6E9EF;
     color: #2563EB;
     border-radius: 4px;
+
+    &::after{
+        filter: invert(32%) sepia(98%) saturate(4220%) hue-rotate(217deg) brightness(98%) contrast(87%);
+    }
 }
