@@ -1,3 +1,6 @@
+const datepickerPopup = document.querySelectorAll(".datepicker");
+const datepickerBtn = document.querySelectorAll(".date-btn");
+
 function setValueOnOdometer() {
   let oneValue = 7265;
   let twoValue = 3671;
@@ -9,23 +12,15 @@ function setValueOnOdometer() {
   document.getElementById("odometer-four").innerHTML = fourValue;
 }
 
-function clickHandler(e) {
-  const target = e.target;
-  const datepickerPopup = document.querySelectorAll(".datepicker");
-  const datepickerBtn = document.querySelectorAll(".date-btn");
-}
-
 function openCloseDatepickerPopup(e, method) {
   e.target.nextElementSibling.classList[method]("open");
 }
 
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("date-btn")) {
-    openCloseDatepickerPopup(e, "add");
-  }
-});
 document.addEventListener("DOMContentLoaded", function () {
-  setValueOnOdometer();
+  if(document.getElementById("odometer-one")) {
+    setValueOnOdometer();
+  }
+  
 });
 
 datepickerBtn.forEach((item) => {
@@ -34,4 +29,8 @@ datepickerBtn.forEach((item) => {
   });
 });
 
-
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("date-btn")) {
+    openCloseDatepickerPopup(e, "add");
+  }
+});
