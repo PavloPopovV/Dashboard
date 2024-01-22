@@ -21,8 +21,12 @@ html {
 
 .search-box {
     position: relative;
+<<<<<<< HEAD
 
     &::after {
+=======
+    &::after{
+>>>>>>> 7f061f3437e1f778129bf97429b9c602fdd52e84
         content: '';
         position: absolute;
         width: 20px;
@@ -53,4 +57,12 @@ html {
     background-color: #E6E9EF;
     color: #2563EB;
     border-radius: 4px;
+<<<<<<< HEAD
 }
+=======
+
+    &::after{
+        filter: invert(32%) sepia(98%) saturate(4220%) hue-rotate(217deg) brightness(98%) contrast(87%);
+    }
+}
+>>>>>>> 7f061f3437e1f778129bf97429b9c602fdd52e84
