@@ -80,4 +80,3 @@ document.addEventListener("click", (e) => {
 
 //------------------------------- Pagination --------------------------
 
-const airArr =
