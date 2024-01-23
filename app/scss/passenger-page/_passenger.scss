@@ -12,33 +12,6 @@
         border-bottom: 1px solid #E4E7ED;
     }
 
-    &__breadcrumbs {
-        position: relative;
-        padding: 20px 58px 19px 64px;
-        border-right: 1px solid #E4E7ED;
-        background-color: var(--Background-Light, #FBFBFC);
-        color: var(--Text-Primary, #2C2E30);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 150%;
-        letter-spacing: -0.176px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            width: 32px;
-            height: 32px;
-            top: 16px;
-            left: 24px;
-            border-radius: 50%;
-            border: 1px solid #E5E8EF;
-            background-image: url('../images/sprite.svg#passenger-breadcrumbs');
-            background-repeat: no-repeat;
-            background-size: 24px 24px;
-            background-position: center;
-        }
-    }
-
     &__tabs {
         display: flex;
         background-color: #FBFBFC;
