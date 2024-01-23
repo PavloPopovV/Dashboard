@@ -21,6 +21,8 @@ const tabBtns = document.querySelectorAll(".tab-btn");
 const tabsItems = document.querySelectorAll(".tab-content");
 const tabMediaBtns = document.querySelectorAll(".tab-media-btn");
 const tabsMediaItems = document.querySelectorAll(".tab-media-content");
+const tabOperationBtns = document.querySelectorAll(".tab-operation-btn");
+const tabsOperationItems = document.querySelectorAll(".tab-operation-content");
 
 function removeClass(items, className) {
   items.forEach((item) => {
@@ -163,11 +165,15 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("tab-btn")) {
     openTab(e.target, tabBtns, tabsItems);
   }
+
   if (e.target.classList.contains("pagination__btn")) {
     renderOnClickBtns(e.target);
   }
   if (e.target.classList.contains("pagination__arrows")) {
     renderOnClickArrows(e.target);
+  }
+  if (e.target.classList.contains("tab-operation-btn")) {
+    openTab(e.target, tabOperationBtns, tabsOperationItems);
   }
 });
 

@@ -1,7 +1,8 @@
-.passenger-wrapper{
+.passenger-wrapper {
     display: grid;
     grid-template-columns: 316px 1fr;
 }
+
 .passenger {
     width: 100%;
 
@@ -45,12 +46,17 @@
 
         &.show {
             display: block;
-            // display: flex;
             display: grid;
-            grid-template-columns: 320px 1fr 512px ;
+            grid-template-columns: 320px 1fr 512px;
             justify-content: space-between;
             height: calc(100vh - 65px);
 
+        }
+
+        &--operative {
+            &.show {
+                grid-template-columns: 320px 1fr 412px;
+            }
         }
     }
 
@@ -188,96 +194,25 @@
         margin-bottom: 16px;
     }
 
+    &__passport-item {
+        &--inner {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__passport-text {
+        &--inner {
+            margin: 14px 0 4px 0;
+        }
+    }
+
     &__passport-list {
         padding: 16px;
         border: 1px solid #E4E7ED;
         background-color: #fff;
         margin-bottom: 24px;
     }
-
-    // &__passport-item {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
-    //     padding: 14px 0;
-    //     border-bottom: 1px solid #E4E7ED;
-
-    //     &:first-child {
-    //         padding: 0 0 14px;
-    //     }
-
-    //     &:last-child {
-    //         padding: 14px 0 0 0;
-    //         border-bottom: none;
-    //     }
-    // }
-
-    // &__passport-text {
-    //     color: #A0A3A6;
-
-    //     span {
-    //         color: #EF4444;
-    //         font-size: 12px;
-    //         font-weight: 600;
-    //         line-height: 150%;
-    //         letter-spacing: 0.016px;
-    //         padding: 4px 8px;
-    //         border-radius: 12px;
-    //         background-color: rgba(255, 88, 88, 0.15);
-    //     }
-    // }
-
-    // &__passport-info {
-    //     position: relative;
-    //     display: block;
-    //     color: #172B4D;
-    //     font-size: 16px;
-    //     font-weight: 500;
-    //     line-height: 162.5%;
-    //     letter-spacing: -0.176px;
-
-
-    //     &--location,
-    //     &--calendar,
-    //     &--gender {
-    //         padding-right: 32px;
-
-    //         &::after {
-    //             content: '';
-    //             position: absolute;
-    //             width: 24px;
-    //             height: 24px;
-    //             top: 0;
-    //             right: 0;
-    //             background-repeat: no-repeat;
-    //             background-size: cover;
-    //             background-position: center;
-    //         }
-    //     }
-
-    //     &--location::after {
-    //         background-image: url("../images/sprite.svg#main-page-flight-location");
-    //     }
-
-    //     &--calendar::after {
-    //         background-image: url("../images/sprite.svg#passenger-calendar-icon");
-    //     }
-
-    //     &--gender::after {
-    //         background-image: url("../images/sprite.svg#passenger-gender-icon");
-    //     }
-
-    //     &--type {
-    //         padding: 3px 13px;
-    //         color: var(--Info-Primary, #3B82F6);
-    //         font-size: 12px;
-    //         font-weight: 600;
-    //         line-height: 150%;
-    //         letter-spacing: 0.016px;
-    //         border-radius: 12px;
-    //         background-color: #DBEAFE;
-    //     }
-    // }
 
     &__visa-info {
         display: block;
@@ -330,7 +265,7 @@
     }
 
     &__flight-list {
-        width: 464px;
+        // max-width: 464px;
         padding: 16px;
         border: 1px solid #E4E7ED;
         background-color: #fff;
@@ -368,6 +303,10 @@
 
         &--success {
             color: #41B871;
+        }
+
+        &--dengerous {
+            color: #DE350B;
         }
     }
 
@@ -528,4 +467,252 @@
         height: 894px;
         object-fit: cover;
     }
+
+    &__more-inforamation {
+        border-left: 1px solid #E4E7ED;
+        background: #FBFBFC;
+        padding: 24px 24px 24px 24px;
+    }
+
+    &__flight-travellers {
+        display: block;
+        color: #172B4D;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: -0.176px;
+        margin-bottom: 16px;
+    }
+
+    &__travellers-item {
+        position: relative;
+        padding: 14px 12px;
+        display: flex;
+        align-items: center;
+        background: #F5F5F7;
+        margin-bottom: 8px;
+    }
+
+    &__travellers-box {
+        position: relative;
+        margin-right: 10px;
+    }
+
+    &__travellers-img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__travellers-count {
+        position: absolute;
+        display: block;
+        color: #E9A800;
+        font-size: 11px;
+        line-height: normal;
+        padding: 2px 6px;
+        border-radius: 50px;
+        border: 1px solid #E7E8E9;
+        background-color: #fff;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &--orange {
+            color: #E9A800;
+        }
+
+        &--green {
+            color: #41B871;
+        }
+    }
+
+    &__travellers-name {
+        display: block;
+        color: #172B4D;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.44px;
+        margin-bottom: 4px;
+    }
+
+    &__travellers-history {
+        display: block;
+        color: #A0A3A6;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.44px;
+    }
+
+    &__travellers-account {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 18px;
+        right: 12px;
+        background-image: url('../images/sprite.svg#sidebar-searchCountry-icon');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform: rotate(180deg);
+    }
+
+    &__operation-list {
+        border: 1px solid #E4E7ED;
+        background: var(--white-100, #FFF);
+        display: none;
+
+        &.show {
+            display: block;
+            margin-bottom: 24px;
+        }
+
+    }
+
+    &__operation-item {
+        padding: 14px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #E4E7ED;
+    }
+
+    &__operation-text {
+        max-width: 221px;
+    }
+
+    &__operation-info {
+        max-width: 418px;
+        width: 100%;
+    }
+
+    &__protocol-list,
+    &__conclusion-list {
+        border: 1px solid #E4E7ED;
+        background-color: #fff;
+        margin-bottom: 16px;
+    }
+
+    &__protocol-item {
+        padding: 16px 40px 16px 0;
+        border-bottom: 1px solid #e4e7ed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__protocol-files {
+        position: relative;
+        padding-left: 45px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 0;
+            left: 15px;
+            background-image: url('../images/sprite.svg#passenger-doc-icon');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    &__protocol-name {
+        display: block;
+        position: relative;
+        display: block;
+        color: #2563EB;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 162.5%;
+        letter-spacing: -0.176px;
+        margin-bottom: 6px;
+    }
+
+    &__protocol-theme {
+        width: 280px;
+    }
+
+    &__protocol-description,
+    &__protocol-date {
+        display: block;
+        color: #A0A3A6;
+        line-height: normal;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    &__protocol-goal {
+        line-height: normal;
+        display: block;
+        color: #172B4D;
+        margin-bottom: 8px;
+    }
+
+
+    &__conclusion-item {
+        padding: 16px 16px 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e4e7ed;
+    }
+
+    &__conclusion-box{
+        max-width: 397px;
+        width: 100%;
+    }
+
+    &__conclusion-title {
+        color: #172B4D;
+        display: block;
+    }
+
+    &__conclusion-level {
+        position: relative;
+        color: #A0A3A6;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.016px;
+        padding-left: 14px;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+
+        &--green::after{
+            background-color: #41B871;
+        }
+        &--orange::after{
+            background-color: #E9A800;
+        }
+        &--red::after{
+            background-color: #DE350B;
+        }
+    }
+
+    &__conclusion-description{
+        p{
+            max-width: 308px;
+        }
+    }
+
+    
+
 }
