@@ -1,0 +1,108 @@
+.users {
+    background-color: #fff;
+    padding: 16px;
+
+    &__title {
+        padding: 8px 0 8px 4px;
+        color: #1C1C1C;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 155.556%;
+        letter-spacing: -0.256px;
+    }
+
+    &__flights-item{
+        position: relative;
+        padding: 8px 8px 8px 40px;
+        margin-bottom: 4px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border-radius: 8px;
+            background-color: #E5ECF6;
+            top: 8px;
+            left: 8px;
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+            background-position: center;
+        }
+
+        &--arrived::after {
+            background-image: url('../images/sprite.svg#main-page-arrived');
+        }
+
+        &--cancellation::after {
+            background-image: url('../images/sprite.svg#main-page-cancellation');
+        }
+
+        &--delay::after {
+            background-image: url('../images/sprite.svg#main-page-arrived');
+        }
+
+        &--flight::after {
+            background-image: url('../images/sprite.svg#main-page-flight');
+        }
+    }
+
+    &__flights-btn,
+    &__activity-btn,
+    &__suspicions-btn {
+        color: #172B4D;
+        font-weight: 450;
+        line-height: 157.143%;
+        letter-spacing: -0.128px;
+
+        span {
+            color: #2563EB;
+        }
+    }
+
+    &__flights-time,
+    &__activity-time {
+        display: block;
+        color: rgba(28, 28, 28, 0.40);
+        font-size: 12px;
+        font-weight: 450;
+        line-height: 150%;
+        letter-spacing: 0.016px;
+    }
+
+    &__activity-item,
+    &__suspicions-item{
+        position: relative;
+        padding: 8px 8px 8px 40px;
+        margin-bottom: 4px;
+    }
+
+    &__activity-item{
+        &::after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 14px;
+            background: var(--black-10, rgba(28, 28, 28, 0.10));
+            left: 19px;
+            top: 30px;
+        }
+    }
+
+    &__photo{
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        border-radius: 50%;
+    }
+
+
+
+    &__flights-list,
+    &__activity-list{
+        margin-bottom: 16px;
+    }
+}

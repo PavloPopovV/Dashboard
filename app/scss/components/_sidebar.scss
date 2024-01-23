@@ -1,11 +1,11 @@
-.sidebar{
+.sidebar {
     width: 316px;
     border-right: 1px solid #E4E7ED;
     display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
 
-    &__logo{
+    &__logo {
         display: block;
         width: 170px;
         height: 32px;
@@ -13,7 +13,7 @@
         margin: 16px 130px 16px 16px;
     }
 
-    &__navigation{
+    &__navigation {
         padding: 16px 8px;
         border-top: 1px solid #E4E7ED;
         border-bottom: 1px solid #E4E7ED;
@@ -23,18 +23,18 @@
         justify-content: space-between;
     }
 
-    &__search-box{
+    &__search-box {
         margin-bottom: 16px;
     }
 
-    &__btn{
+    &__btn {
         position: relative;
         padding: 9px 12px 9px 44px;
         width: 100%;
         display: inline-block;
         padding-left: 44px;
 
-        &::after{
+        &::after {
             content: '';
             position: absolute;
             width: 24px;
@@ -46,103 +46,117 @@
             background-position: center;
         }
 
-        &--main::after{
+        &--main::after {
             background-image: url('../images/sprite.svg#sidebar-main-icon');
         }
-        &--flights::after{
+
+        &--flights::after {
             background-image: url('../images/sprite.svg#sidebar-flights-icon');
         }
-        &--passengers::after{
+
+        &--passengers::after {
             background-image: url('../images/sprite.svg#sidebar-passengers-icon');
         }
-        &--planes::after{
+
+        &--planes::after {
             background-image: url('../images/sprite.svg#sidebar-planes-icon');
         }
-        &--notifications::after{
+
+        &--notifications::after {
             background-image: url('../images/sprite.svg#sidebar-notifications-icon');
         }
     }
 
-    &__location{
+    &__location {
         position: relative;
         width: 100%;
         background-color: #fff;
         padding: 8px 12px;
-       
-
-        &::after{
-            content: "";
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            top: 8px;
-            right: 16px;
-            background-image: url('../images/sprite.svg#sidebar-searchArrow-icon');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
     }
 
-    &__location-item{
+    &__location-item {
         height: 24px;
         display: flex;
         align-items: center;
     }
 
-    &__flag{
+    &__flag {
         width: 24px;
         height: 16px;
         object-fit: cover;
         margin-right: 8px;
     }
 
-    &__country{
+    &__country {
         position: relative;
         width: 100%;
-        text-align-last: left;
         font-weight: 600;
         color: #172B4D;
-        z-index: 10;
     }
 
-    &__account{
-        position: relative;
-        display: flex;
-        padding: 16px 32px 16px 8px;
-        &::after{
-            content: "";
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            top: 26px;
-            right: 8px;
+    &__select-country {
+        width: 32px;
+        height: 26px;
+        border-radius: 4px;
+        background-image: url('../images/sprite.svg#sidebar-searchArrow-icon');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 6px;
+        background-color:  #fff;
+
+        &:hover {
+    
+            background-color:  rgba(35, 55, 55, 0.05);
+            transition:background-color 0.3s linear ;
+        }
+    }
+        &__account {
+            display: flex;
+            padding: 16px 8px 16px 8px;
+        }
+
+        &__account-img {
+            margin-right: 12px;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        &__account-info {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+        }
+
+        &__account-name {
+            color: #172B4D;
+            font-weight: 600;
+        }
+
+        &__account-position {
+            display: block;
+            color: var(--Text-Secondary, #A0A3A6);
+            font-weight: 450;
+            font-size: 12px;
+        }
+
+        &__account-btn{
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
             background-image: url('../images/sprite.svg#sidebar-searchCountry-icon');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            border-radius: 6px;
+            background-color: #F5F5F7;
+    
+            &:hover {
+        
+                background-color:  rgba(35, 55, 55, 0.05);
+                transition:background-color 0.3s linear ;
+            }
         }
     }
-
-    &__account-img{
-        margin-right: 12px;
-        width: 40px;
-        height: 40px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-    &__account-info{
-        display: flex;
-        flex-direction: column;
-    }
-    &__account-name{
-        color: #172B4D;
-        font-weight: 600;
-    }
-    &__account-position{
-        display: block;
-        color: var(--Text-Secondary, #A0A3A6);
-        font-weight: 450;
-        font-size: 12px;
-    }
-}

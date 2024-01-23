@@ -42,7 +42,8 @@
         <div class="sidebar__location">
             <div class="sidebar__location-item">
                 <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
-                <button type="button" class="sidebar__country">Узбекистан</button>
+                <span class="sidebar__country">Узбекистан</span>
+                <button class="sidebar__select-country" type="button"></button>
             </div>
         </div>
     </div>
@@ -52,13 +53,15 @@
             <span class="sidebar__account-name">Kianna Press</span>
             <span class="sidebar__account-position">Сержант</span>
         </div>
+        <button class="sidebar__account-btn" type="button"></button>
     </div>
 </section>
 
 <main class="main">
-    <section class="statistics">
+    <div class="main-page">
+        <section class="statistics">
   <div class="statistics__top">
-    <h2 class="statistics__title title">Статистика</h2>
+    <h2 class="statistics__title title title--main">Статистика</h2>
     <a class="statistics__day" href="#">Today</a>
   </div>
   <ul class="statistics__box">
@@ -101,8 +104,8 @@
   </ul>
 </section>
 
-    <section class="flight">
-  <h2 class="flight__main-title title">Информация о рейсах</h2>
+        <section class="flight">
+  <h2 class="flight__main-title title title--main">Информация о рейсах</h2>
   <div class="flight__box">
     <div class="flight__img">
       <img src="images/main-page__map.png" alt="map" />
@@ -131,7 +134,7 @@
             >Васильев Максим Олександрович</span
           >
         </div>
-        <a class="flight__suspicions-details" href="">Детали</a>
+        <a class="flight__suspicions-details table__details" href="">Детали</a>
       </div>
       <p class="flight__suspicions-desrciption">
         Регулярный контакт с известными фигурами наркоторговли, согласно данным
@@ -141,9 +144,9 @@
   </div>
 </section>
 
-    <section class="suspicion">
+        <section class="suspicion">
     <div class="suspicion__top">
-    <h2 class="suspicion__title title">Подозрения</h2>
+    <h2 class="suspicion__title title title--main">Подозрения</h2>
     <div class="suspicion__pagination">
       <button type="button"
         class="suspicion__btn suspicion__btn--prev"
@@ -179,7 +182,7 @@
           <span class="suspicion__name"
             >Васильев Максим Олександрович</span
           >
-          <a href="" class="suspicion__details">Детали</a>
+          <a href="" class="suspicion__details table__details">Детали</a>
         </div>
 
         <p class="suspicion__text">
@@ -218,7 +221,101 @@
     </div>
   </div>
 </section>
+    </div>
 </main>
+<section class="users">
+  <h3 class="users__title">Уведомления</h3>
+  <ul class="users__flights-list">
+    <li class="users__flights-item users__flights-item--arrived">
+      <a class="users__flights-btn" href=""
+        >Прибыл рейс <span>145QP - 15</span></a
+      >
+      <span class="users__flights-time">Только что</span>
+    </li>
+    <li class="users__flights-item users__flights-item--cancellation">
+      <a class="users__flights-btn" href=""
+        >Отмена рейса <span>513SF - 13</span></a
+      >
+      <span class="users__flights-time">59 минут назад</span>
+    </li>
+    <li class="users__flights-item users__flights-item--delay">
+      <a class="users__flights-btn" href=""
+        >Задержка рейса <span>612ЕІ - 21</span></a
+      >
+      <span class="users__flights-time">12 часов назад</span>
+    </li>
+    <li class="users__flights-item users__flights-item--flight">
+      <a class="users__flights-btn" href=""
+        >Вылет рейса <span>752GS - 09</span></a
+      >
+      <span class="users__flights-time">Вчера, 11:59</span>
+    </li>
+  </ul>
+
+  <h3 class="users__title">Активность</h3>
+  <ul class="users__activity-list">
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="passenger.html">Дмитрий Иванов</a>
+      <span class="users__activity-time">Отправлен в обработку</span>
+    </li>
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="">Борис Егоров</a>
+      <span class="users__activity-time">Сняты все подозрения</span>
+    </li>
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="">Дмитрий Иванов</a>
+      <span class="users__activity-time">Отправлен в обработку</span>
+    </li>
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="">Борис Егоров</a>
+      <span class="users__activity-time">Сняты все подозрения</span>
+    </li>
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="">Дмитрий Иванов</a>
+      <span class="users__activity-time">Задержан</span>
+    </li>
+  </ul>
+  <h3 class="users__title">Подозрения</h3>
+  <ul class="users__suspicions-list">
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="">Борис Егоров</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="">Дмитрий Иванов</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="">Юра Васков</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="">Дмитрий Иванов</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="">Борис Егоров</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="">Дмитрий Иванов</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="">Юра Васков</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="">Борис Егоров</a>
+    </li>
+  </ul>
+</section>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

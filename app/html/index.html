@@ -3,10 +3,12 @@
 @include('components/_sidebar.html')
 
 <main class="main">
-    @include('main-page/_statistics.html')
-    @include('main-page/_flight.html')
-    @include('main-page/_suspicion.html')
+    <div class="main-page">
+        @include('main-page/_statistics.html')
+        @include('main-page/_flight.html')
+        @include('main-page/_suspicion.html')
+    </div>
 </main>
-
+@include('main-page/_users.html')
 
 @include('components/_footer_scripts.html')
