@@ -644,15 +644,14 @@ html {
     justify-content: center;
 
     &__left {
-        margin-right: 4px;
+        margin-right: 8px;
     }
 
     &__right {
         transform: rotate(180deg);
     }
 
-    &__left,
-    &__right {
+    &__arrows {
         width: var(--32, 32px);
         height: var(--32, 32px);
         border-radius: 6px;
