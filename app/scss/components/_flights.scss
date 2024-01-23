@@ -1,6 +1,15 @@
+.flights-wrapper{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 316px 1fr;
+}
+
 .flights {
 	width: 100%;
-
+	background: var(--white-100, #FFF);
+	&__container {
+		padding: 48px 40px 24px 40px;
+	}
 
 	&__title {
 		color: #172B4D;
@@ -28,18 +37,20 @@
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	margin-bottom: 24px;
+	margin-bottom: 16px;
 
 	&__left {
 		display: flex;
 	}
 
 	&__search {
-		max-width: 280px;
+		width: 280px;
 		margin-right: 24px;
 	}
 }
 
 .flights-table {
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 }
+
+

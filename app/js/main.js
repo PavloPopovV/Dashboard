@@ -76,3 +76,8 @@ document.addEventListener("click", (e) => {
     openCloseDatepickerPopup(e, "add");
   }
 });
+
+
+//------------------------------- Pagination --------------------------
+
+const airArr =
