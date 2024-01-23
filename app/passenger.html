@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-
-<section class="sidebar">
+<div class="passenger-wrapper">
+  <section class="sidebar">
     <img class="sidebar__logo" src="images/Logo.png" alt="logo">
     <div class="sidebar__navigation">
         <div class="sidebar__options">
@@ -57,8 +57,8 @@
     </div>
 </section>
 
-    <main class="main">
-        <section class="passenger">
+  <main class="main">
+    <section class="passenger">
   <div class="passenger__navigation">
     <button class="passenger__breadcrumbs">Вернуться к пассажирам</button>
     <ul class="passenger__tabs">
@@ -123,175 +123,191 @@
         Паспортные данные
       </h3>
       <ul class="passenger__passport-list">
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Тип документа</span>
-          <span class="passenger__passport-info">Национальный паспорт</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Тип документа</span>
+          <span class="passenger__passport-info info">Национальный паспорт</span>
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Номер документа</span>
-          <span class="passenger__passport-info">ab1234567</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Номер документа</span>
+          <span class="passenger__passport-info info">ab1234567</span>
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Идентификационный номер</span>
-          <span class="passenger__passport-info">ab1234567</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Идентификационный номер</span>
+          <span class="passenger__passport-info info">ab1234567</span>
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Гражданство</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Гражданство</span>
           <span
-            class="passenger__passport-info passenger__passport-info--location"
+            class="passenger__passport-info info info--location"
             >Румыния</span
           >
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Дата рождения</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Дата рождения</span>
           <span
-            class="passenger__passport-info passenger__passport-info--calendar"
+            class="passenger__passport-info info info--calendar"
             >23.09.2022</span
           >
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Место рождения</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Место рождения</span>
           <span
-            class="passenger__passport-info passenger__passport-info--location"
+            class="passenger__passport-info info info--location"
             >Румыния, г. Бухарест</span
           >
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Дата выдачи документа</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Дата выдачи документа</span>
           <span
-            class="passenger__passport-info passenger__passport-info--calendar"
+            class="passenger__passport-info info info--calendar"
             >23.09.2022</span
           >
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Место выдачи документа</span>
-          <span class="passenger__passport-info"
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Место выдачи документа</span>
+          <span class="passenger__passport-info info"
             >Отдел по выдаче паспортов</span
           >
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Пол</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Пол</span>
           <span
-            class="passenger__passport-info passenger__passport-info--gender"
+            class="passenger__passport-info info info--gender"
             >Женский</span
           >
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Срок действия документа</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Срок действия документа</span>
           <span
-            class="passenger__passport-info passenger__passport-info--calendar"
+            class="passenger__passport-info info info--calendar"
             >23.09.2022</span
           >
         </li>
       </ul>
       <span class="passenger__visa-info">Данные визы</span>
       <ul class="passenger__passport-list">
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Гражданин</span>
-          <span class="passenger__passport-info">VASILEV MAKSIM</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Гражданин</span>
+          <span class="passenger__passport-info info">VASILEV MAKSIM</span>
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Номер визы</span>
-          <span class="passenger__passport-info">E1234567</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Номер визы</span>
+          <span class="passenger__passport-info info">E1234567</span>
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Место выдачи</span>
-          <span class="passenger__passport-info">Kyiv, Ukraine</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Место выдачи</span>
+          <span class="passenger__passport-info info">Kyiv, Ukraine</span>
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Тип визы</span>
-          <span class="passenger__passport-info passenger__passport-info--type"
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Тип визы</span>
+          <span class="passenger__passport-info info info--type"
             >B1</span
           >
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Дата выдачи</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Дата выдачи</span>
           <span
-            class="passenger__passport-info passenger__passport-info--calendar"
+            class="passenger__passport-info info info--calendar"
             >23.09.2024</span
           >
         </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Срок действия</span>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Срок действия</span>
           <span
-            class="passenger__passport-info passenger__passport-info--calendar"
+            class="passenger__passport-info info info--calendar"
             >23.12.2024</span
           >
+        </li>
+        <li class="passenger__passport-item item">
+          <span class="passenger__passport-text text">Подлинность</span>
+          <span class="passenger__passport-text text">Виза с таким номером уже существует <span>Виза подделана</span></span>
         </li>
       </ul>
     </div>
 
     <div class="passenger__fligh">
-      <h3 class="passenger__flight-title title title--inner">
-        Поточный перелет
-      </h3>
-      <ul class="passenger__flight-list">
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Дата покупки билета</span>
-          <span class="passenger__flight-info passenger__flight-info--calendar"
-            >23.09.2022</span
-          >
-        </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Время и дата вылета</span>
-          <span class="passenger__flight-info passenger__flight-info--calendar"
-            >23.09.2022</span
-          >
-        </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Аэропорт вылета</span>
-          <span class="passenger__flight-info passenger__flight-info--location"
-            >Самарканд</span
-          >
-        </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Место в самолете</span>
-          <span class="passenger__flight-info">Б - 43</span>
-        </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text"
-            >Место дальнейшего следования</span
-          >
-          <span class="passenger__flight-info passenger__flight-info--location"
-            >Самарканд</span
-          >
-        </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Данные агента</span>
-          <span class="passenger__flight-info">POLAN DAVID</span>
-        </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text"
-            >Способ приобретения билета</span
-          >
-          <span class="passenger__flight-info">Интернет</span>
-        </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Способ оплаты</span>
-          <span class="passenger__flight-info">Банковская карта</span>
-        </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Документы</span>
-          <span class="passenger__flight-info passenger__passport-info--success"
-            >Подтверждены</span
-          >
-        </li>
-      </ul>
-      <span class="passenger__visa-info">Дополнительные данные</span>
-      <ul class="passenger__flight-list">
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Тип багажа</span>
-          <span class="passenger__flight-info">Ручная кладь</span>
-        </li>
-        <li class="passenger__passport-item">
-          <span class="passenger__passport-text">Вес багажа</span>
-          <span class="passenger__flight-info">3,5</span>
-        </li>
-      </ul>
+      <div class="passenger__flight-box">
+        <h3 class="passenger__flight-title title title--inner">
+          Поточный перелет
+        </h3>
+        <ul class="passenger__flight-list">
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text">Дата покупки билета</span>
+            <span
+              class="passenger__flight-info passenger__flight-info--calendar"
+              >23.09.2022</span
+            >
+          </li>
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text">Время и дата вылета</span>
+            <span
+              class="passenger__flight-info passenger__flight-info--calendar"
+              >23.09.2022</span
+            >
+          </li>
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text">Аэропорт вылета</span>
+            <span
+              class="passenger__flight-info passenger__flight-info--location"
+              >Самарканд</span
+            >
+          </li>
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text">Место в самолете</span>
+            <span class="passenger__flight-info">Б - 43</span>
+          </li>
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text"
+              >Место дальнейшего следования</span
+            >
+            <span
+              class="passenger__flight-info passenger__flight-info--location"
+              >Самарканд</span
+            >
+          </li>
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text">Данные агента</span>
+            <span class="passenger__flight-info">POLAN DAVID</span>
+          </li>
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text"
+              >Способ приобретения билета</span
+            >
+            <span class="passenger__flight-info">Интернет</span>
+          </li>
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text item">Способ оплаты</span>
+            <span class="passenger__flight-info">Банковская карта</span>
+          </li>
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text">Документы</span>
+            <span
+              class="passenger__flight-info passenger__flight-info--success"
+              >Подтверждены</span
+            >
+          </li>
+        </ul>
+        <span class="passenger__visa-info">Дополнительные данные</span>
+        <ul class="passenger__flight-list">
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text">Тип багажа</span>
+            <span class="passenger__flight-info">Ручная кладь</span>
+          </li>
+          <li class="passenger__passport-item item">
+            <span class="passenger__passport-text text">Вес багажа</span>
+            <span class="passenger__flight-info">3,5</span>
+          </li>
+        </ul>
+      </div>
+      <div class="passenger__flight-btn">
+        <button type="button" class="passenger__flight-processing passenger__flight-processing--proc">В обработку</button>
+        <button type="button" class="passenger__flight-processing passenger__flight-processing--remove">Снять все подозрения</button>
+      </div>
     </div>
   </div>
 
   <div class="passenger__info-box tab-content" id="#tab_2">
+
     <div class="passenger__main-info">
       <img class="passenger__photo" src="images/passenger-photo.png" alt="" />
       <span class="passenger__name"> Васильев Максим Олександрович </span>
@@ -323,6 +339,7 @@
     </div>
 
     <div class="passenger__passport-details">
+
       <div class="passenger__media-title">
         <h3 class="passenger__passport-title title title--main">
           Страницы в соц. сетях
@@ -331,7 +348,7 @@
           <li class="passenger__media-item">
             <button
               class="passenger__media-btn tab-media-btn active"
-              data-tab="#tab_5"
+              data-tab="#socialTab_1"
             >
               Instagram
             </button>
@@ -339,7 +356,7 @@
           <li class="passenger__media-item">
             <button
               class="passenger__media-btn tab-media-btn"
-              data-tab="#tab_6"
+              data-tab="#socialTab_2"
             >
               Facebook
             </button>
@@ -347,14 +364,19 @@
           <li class="passenger__media-item">
             <button
               class="passenger__media-btn tab-media-btn"
-              data-tab="#tab_7"
+              data-tab="#socialTab_3"
             >
               Twitter
             </button>
           </li>
         </ul>
       </div>
-      <div class="passenger__media-info tab-media-content show" id="#tab_5">
+      
+
+
+
+    
+      <div class="passenger__media-info tab-media-content show" id="#socialTab_1">
         <div class="passenger__link-box">
           <a class="passenger__media-link" href=""
             >instagram.com/profile/art.sample</a
@@ -374,7 +396,7 @@
               src="images/suspicions-photo.png"
               alt=""
             />
-            <span class="passenger__mate-name">Дмитро Иванов</span>
+            <span class="passenger__mate-name">Дмитро Сидоров</span>
             <a class="passenger__mate-link" href="">@dmitro.ivanov</a>
           </li>
           <li class="passenger__mate">
@@ -567,8 +589,15 @@
             <a class="passenger__mate-link" href="">@dmitro.ivanov</a>
           </li>
         </ul>
+
+
+        
       </div>
-      <div class="passenger__media-info tab-media-content" id="#tab_6">
+
+
+
+
+      <div class="passenger__media-info tab-media-content" id="#socialTab_2">
         <div class="passenger__link-box">
           <a class="passenger__media-link" href=""
             >facebook.com/profile/art.sample</a
@@ -588,7 +617,7 @@
               src="images/suspicions-photo.png"
               alt=""
             />
-            <span class="passenger__mate-name">Дмитро Иванов</span>
+            <span class="passenger__mate-name">Дмитро Петров</span>
             <a class="passenger__mate-link" href="">@dmitro.ivanov</a>
           </li>
           <li class="passenger__mate">
@@ -782,7 +811,11 @@
           </li>
         </ul>
       </div>
-      <div class="passenger__media-info tab-media-content" id="#tab_7">
+
+
+
+
+      <div class="passenger__media-info tab-media-content" id="#socialTab_3">
         <div class="passenger__link-box">
           <a class="passenger__media-link" href=""
             >twitter.com/profile/art.sample</a
@@ -996,12 +1029,21 @@
           </li>
         </ul>
       </div>
+
+
+
+
     </div>
+
     <div class="passenger__social-media">
       <h3 class="passenger__flight-title title title--inner">
         Анализ связей в соц. сетях
       </h3>
-      <img class="passenger__social-conection" src="images/passenger-social-conection.jpg" alt="">
+      <img
+        class="passenger__social-conection"
+        src="images/passenger-social-conection.jpg"
+        alt=""
+      />
     </div>
   </div>
 
@@ -1010,6 +1052,7 @@
     <div class="passenger__passport-details">Анализ оперативной информации</div>
     <div class="passenger__fligh">Доп. информация</div>
   </div>
+
   <div class="passenger__info-box tab-content" id="#tab_4">
     <div class="passenger__main-info">Васильев Максим Олександрович</div>
     <div class="passenger__passport-details">История перелетов</div>
@@ -1017,7 +1060,8 @@
   </div>
 </section>
 
-    </main>
+</main>
+</div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="js/main.min.js"></script>

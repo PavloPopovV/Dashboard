@@ -1,3 +1,7 @@
+.passenger-wrapper{
+    display: grid;
+    grid-template-columns: 316px 1fr;
+}
 .passenger {
     width: 100%;
 
@@ -68,8 +72,12 @@
 
         &.show {
             display: block;
-            display: flex;
+            // display: flex;
+            display: grid;
+            grid-template-columns: 320px 1fr 512px ;
+            justify-content: space-between;
             height: calc(100vh - 65px);
+
         }
     }
 
@@ -193,7 +201,14 @@
     }
 
     &__passport-details {
+        overflow-y: scroll;
+        height: auto;
         padding: 24px;
+
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     &__passport-title {
@@ -201,85 +216,95 @@
     }
 
     &__passport-list {
-        width: 724px;
         padding: 16px;
         border: 1px solid #E4E7ED;
         background-color: #fff;
         margin-bottom: 24px;
     }
 
-    &__passport-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 0;
-        border-bottom: 1px solid #E4E7ED;
+    // &__passport-item {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     padding: 14px 0;
+    //     border-bottom: 1px solid #E4E7ED;
 
-        &:first-child {
-            padding: 0 0 12px;
-        }
+    //     &:first-child {
+    //         padding: 0 0 14px;
+    //     }
 
-        &:last-child {
-            padding: 12px 0 0 0;
-            border-bottom: none;
-        }
-    }
+    //     &:last-child {
+    //         padding: 14px 0 0 0;
+    //         border-bottom: none;
+    //     }
+    // }
 
-    &__passport-text {
-        color: #A0A3A6;
-    }
+    // &__passport-text {
+    //     color: #A0A3A6;
 
-    &__passport-info {
-        position: relative;
-        display: block;
-        color: #172B4D;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 162.5%;
-        letter-spacing: -0.176px;
+    //     span {
+    //         color: #EF4444;
+    //         font-size: 12px;
+    //         font-weight: 600;
+    //         line-height: 150%;
+    //         letter-spacing: 0.016px;
+    //         padding: 4px 8px;
+    //         border-radius: 12px;
+    //         background-color: rgba(255, 88, 88, 0.15);
+    //     }
+    // }
+
+    // &__passport-info {
+    //     position: relative;
+    //     display: block;
+    //     color: #172B4D;
+    //     font-size: 16px;
+    //     font-weight: 500;
+    //     line-height: 162.5%;
+    //     letter-spacing: -0.176px;
 
 
-        &--location,
-        &--calendar,
-        &--gender {
-            padding-right: 32px;
+    //     &--location,
+    //     &--calendar,
+    //     &--gender {
+    //         padding-right: 32px;
 
-            &::after {
-                content: '';
-                position: absolute;
-                width: 24px;
-                height: 24px;
-                top: 0;
-                right: 0;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-            }
-        }
+    //         &::after {
+    //             content: '';
+    //             position: absolute;
+    //             width: 24px;
+    //             height: 24px;
+    //             top: 0;
+    //             right: 0;
+    //             background-repeat: no-repeat;
+    //             background-size: cover;
+    //             background-position: center;
+    //         }
+    //     }
 
-        &--location::after {
-            background-image: url("../images/sprite.svg#main-page-flight-location");
-        }
+    //     &--location::after {
+    //         background-image: url("../images/sprite.svg#main-page-flight-location");
+    //     }
 
-        &--calendar::after {
-            background-image: url("../images/sprite.svg#passenger-calendar-icon");
-        }
+    //     &--calendar::after {
+    //         background-image: url("../images/sprite.svg#passenger-calendar-icon");
+    //     }
 
-        &--gender::after {
-            background-image: url("../images/sprite.svg#passenger-gender-icon");
-        }
+    //     &--gender::after {
+    //         background-image: url("../images/sprite.svg#passenger-gender-icon");
+    //     }
 
-        &--type {
-            padding: 3px 13px;
-            color: var(--Info-Primary, #3B82F6);
-            font-size: 12px;
-            font-weight: 600;
-            line-height: 150%;
-            letter-spacing: 0.016px;
-            border-radius: 12px;
-            background-color: #DBEAFE;
-        }
-    }
+    //     &--type {
+    //         padding: 3px 13px;
+    //         color: var(--Info-Primary, #3B82F6);
+    //         font-size: 12px;
+    //         font-weight: 600;
+    //         line-height: 150%;
+    //         letter-spacing: 0.016px;
+    //         border-radius: 12px;
+    //         background-color: #DBEAFE;
+    //     }
+    // }
 
     &__visa-info {
         display: block;
@@ -295,6 +320,36 @@
         border-left: 1px solid #E4E7ED;
         background: #FBFBFC;
         padding: 24px 24px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__flight-btn {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__flight-processing {
+        padding: 18px 0;
+        text-align: center;
+        width: 224px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 92.308%;
+        letter-spacing: -0.04px;
+
+        &--proc {
+            background-color: #2563EB;
+        }
+
+        &--remove {
+            background-color: #fff;
+            border: 1px solid #E7E8E9;
+            color: #2C2E30;
+        }
     }
 
     &__flight-title {
@@ -306,7 +361,7 @@
         padding: 16px;
         border: 1px solid #E4E7ED;
         background-color: #fff;
-        margin-bottom: 32px;
+        margin-bottom: 20px;
     }
 
     &__flight-info {
@@ -427,7 +482,7 @@
         width: 724px;
         height: 505px;
         object-fit: cover;
-        margin-bottom: 24px;
+        margin-bottom: 0 auto 24px;
     }
 
     &__mates-list {
@@ -439,19 +494,20 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
 
-        ::-webkit-scrollbar {
-            width: 6px;
+        &::-webkit-scrollbar {
+            width: 10px;
         }
 
-        ::-webkit-scrollbar-track {
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 10px 10px #EBECF0;
             border-radius: 3px;
-            background-color: #EBECF0;
-            margin-block: 16px;
+            border: solid 3px transparent;
         }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #42526E;
+        &::-webkit-scrollbar-thumb {
+            box-shadow: inset 0 0 10px 10px #42526E;
             border-radius: 30px;
+            border: solid 3px transparent;
         }
     }
 
@@ -494,8 +550,8 @@
         padding: 16px 24px 24px 24px;
     }
 
-    &__social-conection{
-        width: 460px;
+    &__social-conection {
+        width: 465px;
         height: 894px;
         object-fit: cover;
     }

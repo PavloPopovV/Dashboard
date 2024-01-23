@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-
-<section class="sidebar">
+<body>  
+<div class="home-wrapper">
+    <section class="sidebar">
     <img class="sidebar__logo" src="images/Logo.png" alt="logo">
     <div class="sidebar__navigation">
         <div class="sidebar__options">
@@ -56,7 +56,6 @@
         <button class="sidebar__account-btn" type="button"></button>
     </div>
 </section>
-
 <main class="main">
     <div class="main-page">
         <section class="statistics">
@@ -103,7 +102,7 @@
     </li>
   </ul>
 </section>
-
+ 
         <section class="flight">
   <h2 class="flight__main-title title title--main">Информация о рейсах</h2>
   <div class="flight__box">
@@ -190,9 +189,9 @@
           обвинений не было предъявлено.
         </p>
         <div class="suspicion__buttons">
-          <a href="" class="suspicion__processing suspicion__processing--proc">В обработку</a>
-          <a href="" class="suspicion__processing suspicion__processing--remove"
-            >Снять все подозрения</a>
+          <button class="suspicion__processing processing-btn processing-btn--proc" type="button" >В обработку</и>
+          <button class="suspicion__processing processing-btn processing-btn--remove" type="button" 
+            >Снять все подозрения</button>
         </div>
       </div>
     </div>
@@ -316,6 +315,8 @@
     </li>
   </ul>
 </section>
+ 
+</div>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

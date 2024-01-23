@@ -143,27 +143,7 @@
         align-items: center;
     }
 
-    &__processing {
-        padding: 18px 0;
-        text-align: center;
-        width: 185px;
-        border-radius: 5px;
-        color: #fff;
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 92.308%;
-        letter-spacing: -0.04px;
 
-        &--proc {
-            background-color: #2563EB;
-        }
-
-        &--remove {
-            background-color: #fff;
-            border: 1px solid #E7E8E9;
-            color: #2C2E30;
-        }
-    }
 
     &__flight-name{
         display: block;

@@ -17,52 +17,42 @@ function openCloseDatepickerPopup(e, method) {
 }
 //------------------------------- Tabs for Passenger--------------------------
 
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabsItems = document.querySelectorAll('.tab-content');
-const tabMediaBtns = document.querySelectorAll('.tab-media-btn');
-const tabsMediaItems = document.querySelectorAll('.tab-media-content');
+const tabBtns = document.querySelectorAll(".tab-btn");
+const tabsItems = document.querySelectorAll(".tab-content");
+const tabMediaBtns = document.querySelectorAll(".tab-media-btn");
+const tabsMediaItems = document.querySelectorAll(".tab-media-content");
 
-function removeClassActive(btn) {
-  btn.forEach(btnItem => {
-    btnItem.classList.remove('active');
+function removeClass(items, className) {
+  items.forEach((item) => {
+    item.classList.remove(className);
   });
 }
 
-function removeClassShow(content) {
-  content.forEach(contentItem => {
-    contentItem.classList.remove('show');
-  });
+function openTab(target, btns, tabs) {
+  let id = target.getAttribute("data-tab");
+  const element = document.getElementById(id);
+  removeClass(btns, "active");
+  removeClass(tabs, "show");
+  element.classList.add("show");
+  target.classList.add("active");
 }
-
-function onTabClick(item, btn, content) {
-  item.addEventListener('click', () => {
-    removeClassActive(btn);
-    removeClassShow(content);
-    item.classList.add('active');
-    let currentBtn = item;
-    let tabId = currentBtn.getAttribute('data-tab');
-    content.forEach(contentItem => {
-      if (tabId === contentItem.getAttribute('id')) {
-        contentItem.classList.add('show');
-      }
-    });
-  });
-}
-
-tabBtns.forEach(item => onTabClick(item, tabBtns, tabsItems));
-tabMediaBtns.forEach(item => onTabClick(item, tabMediaBtns, tabsMediaItems));
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("date-btn")) {
     openCloseDatepickerPopup(e, "add");
   }
+  if (e.target.classList.contains("tab-media-btn")) {
+    openTab(e.target,tabMediaBtns, tabsMediaItems);
+  }
+  if (e.target.classList.contains("tab-btn")) {
+    openTab(e.target, tabBtns, tabsItems);
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  if(document.getElementById("odometer-one")) {
+  if (document.getElementById("odometer-one")) {
     setValueOnOdometer();
   }
-  
 });
 
 datepickerBtn.forEach((item) => {
