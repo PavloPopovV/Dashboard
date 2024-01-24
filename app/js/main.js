@@ -23,7 +23,7 @@ const tabMediaBtns = document.querySelectorAll(".tab-media-btn");
 const tabsMediaItems = document.querySelectorAll(".tab-media-content");
 const tabOperationBtns = document.querySelectorAll(".tab-operation-btn");
 const tabsOperationItems = document.querySelectorAll(".tab-operation-content");
-const tabDataBaseBtns = document.querySelectorAll(".database-btn");
+const tabDataBaseBtns = document.querySelectorAll(".database-btn-js");
 const tabsDataBaseItems = document.querySelectorAll(".database-content");
 
 function removeClass(items, className) {
@@ -205,7 +205,7 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("tab-operation-btn")) {
     openTab(e.target, tabOperationBtns, tabsOperationItems);
   }
-  if (e.target.classList.contains("database-btn")) {
+  if (e.target.classList.contains("database-btn-js")) {
     openTab(e.target, tabDataBaseBtns, tabsDataBaseItems);
   }
 });
