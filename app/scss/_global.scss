@@ -176,6 +176,7 @@ html {
 
 .text-under-popular-title {
     margin-bottom: 23px;
+
     p {
         color: var(--Text-Secondary, #A0A3A6);
         font-size: 14px;
@@ -328,11 +329,11 @@ html {
         margin-right: 20px;
         position: relative;
         transition: color .3s linear;
-    
+
         &:last-child {
             margin-right: 0;
         }
-    
+
         &::after {
             position: absolute;
             content: '';
@@ -346,22 +347,22 @@ html {
             background-repeat: no-repeat;
             filter: invert(70%) sepia(9%) saturate(107%) hue-rotate(169deg) brightness(92%) contrast(91%);
         }
-    
+
         &:focus {
             transition: border .3s ease-in-out;
             border: 1px solid #2563EB;
         }
-    
+
         &.active {
             color: #2563EB;
             text-overflow: ellipsis;
-    
+
             &::after {
                 transform: rotate(180deg);
                 filter: invert(25%) sepia(63%) saturate(3197%) hue-rotate(217deg) brightness(98%) contrast(89%);
             }
         }
-    
+
         &:hover {
             color: #172B4D;
         }
@@ -560,12 +561,17 @@ html {
         &:nth-child(2n - 1) {
             background-color: #fff;
         }
+
+        &--red {
+            background: linear-gradient(0deg, rgba(239, 68, 68, 0.10) 0%, rgba(239, 68, 68, 0.10) 100%), #FBFBFC;
+        }
     }
 
     &__cell {
         height: 48px;
         text-align: left;
         padding: 7px 16px;
+
         // flights
         &--id {
             width: 120px;
@@ -586,20 +592,38 @@ html {
         &--details {
             text-align: right;
         }
+
         // notices
         &--name {
             width: 274px;
         }
+
         &--gender {
             width: 156px;
         }
+
         &--notice {
             width: 272px;
         }
+
         &--flight,
         &--plain-name {
             width: 273px;
         }
+
+        //passengers
+        &--lastname,
+        &--firstname,
+        &--patronymic,
+        &--gender,
+        &--birthday,
+        &--suspicions {
+            width: 188px;
+        }
+        &--nationality {
+            width: 194px;
+        }
+         
     }
 
     &__cell:not(:last-child),
@@ -643,17 +667,17 @@ html {
         letter-spacing: 0.016px;
         border-radius: var(--12, 12px);
 
-        &--completed {
+        &--green {
             color: #41B871;
             background-color: rgba(110, 203, 144, 0.15);
         }
 
-        &--stagnation {
+        &--red {
             color: var(--Error-Primary, #EF4444);
             background-color: rgba(255, 88, 88, 0.15);
         }
 
-        &--pending {
+        &--yellow {
             background-color: #FBFCE3;
             color: #E9A800;
         }
@@ -673,6 +697,29 @@ html {
         &:hover {
             background-color: var(--Action-Light, rgba(35, 55, 55, 0.15));
         }
+    }
+
+    &__icon-btn {
+        width: 24px;
+        height: 24px;
+        margin-right: 9px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &--good {
+            background-image: url('../images/icons/table-document.svg');
+        }
+
+        &--bed {
+            background-image: url('../images/icons/table-warning.svg');
+        }
+
+        &--link {
+            display: inline-block;
+            background-image: url('../images/icons/table-arrow-right.svg');
+        }
+
     }
 }
 

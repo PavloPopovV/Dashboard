@@ -1,0 +1,69 @@
+.passengers-table {
+    &__container {
+        background: var(--white-100, #FFF);
+        padding: 48px 13px 0 41px;
+    }
+
+    &__filter {
+        margin-bottom: 24px;
+    }
+
+    &__tabs {
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    &__item {
+        margin-right: 16px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__btn {
+        padding: 6px 12px;
+        color: var(--Text-Secondary, #A0A3A6);
+        background-color: var(--Other-Divider, #F4F5F5);
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.83;
+        letter-spacing: -0.128px;
+        border-radius: 68px;
+        transition: color .3s linear, background-color .3s linear;
+
+        &.active {
+            background-color: #2563EB;
+            color: var(--white-100, #FFF);
+        }
+    }
+
+    &__box {
+        background-color: #fff;
+        height: calc(100vh - 235px);
+        overflow-y: auto;
+    }
+    &__box-gray {
+        padding: 32px 32px 32px 32px;
+        background-color: #fbfbfb;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__сaption {
+        color: #172B4D;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: -0.336px;
+        margin-bottom: 13px;
+        span {
+            color: #2563EB;
+        }
+    }
+
+
+}

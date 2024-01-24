@@ -105,7 +105,7 @@ function renderHtml(obj, i) {
         </span>
       </td>
       <td class="table__cell table__cell--type">
-        <span class="table__type table__type--completed" >${obj.type}</span>
+        <span class="table__type table__type--green" >${obj.type}</span>
       </td>
       <td class="table__cell table__cell--number">
         <span class="table__span gray-span">${obj.number}</span>
@@ -216,3 +216,86 @@ datepickerBtn.forEach((item) => {
     openCloseDatepickerPopup(e, "remove");
   });
 });
+
+
+let test = document.querySelectorAll('.passengers-table tbody')
+let html = `<tr class="table__row">
+<td class="table__cell table__cell--lastname">
+    <span class="table__span gray-span">Текстович</span>
+</td>
+<td class="table__cell table__cell--firstname">
+    <span class="table__span gray-span">
+        Борис
+    </span>
+</td>
+<td class="table__cell table__cell--patronymic">
+    <span class="table__span gray-span">Петрович</span>
+</td>
+<td class="table__cell table__cell--gender">
+    <span class="table__span gray-span">Мужской</span>
+</td>
+<td class="table__cell table__cell--birthday">
+    <span class="table__span gray-span">04/08/1998</span>
+</td>
+<td class="table__cell table__cell--suspicions">
+    <span class="table__type table__type--green">Отсутствуют</span>
+</td>
+<td class="table__cell table__cell--nationality">
+    <span class="table__span gray-span">Украина</span>
+</td>
+<td class="table__cell table__cell--actions">
+    <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+        type="button"></button>
+    <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+        type="button"></button>
+    <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+</td>
+
+</tr>`
+let htmlWarning = `<tr class="table__row table__row--red">
+<td class="table__cell table__cell--lastname">
+    <span class="table__span gray-span">Текстович</span>
+</td>
+<td class="table__cell table__cell--firstname">
+    <span class="table__span gray-span">
+        Борис
+    </span>
+</td>
+<td class="table__cell table__cell--patronymic">
+    <span class="table__span gray-span">Петрович</span>
+</td>
+<td class="table__cell table__cell--gender">
+    <span class="table__span gray-span">Мужской</span>
+</td>
+<td class="table__cell table__cell--birthday">
+    <span class="table__span gray-span">04/08/1998</span>
+</td>
+<td class="table__cell table__cell--suspicions">
+    <span class="table__type table__type--red">Задолженность</span>
+</td>
+<td class="table__cell table__cell--nationality">
+    <span class="table__span gray-span">Украина</span>
+</td>
+<td class="table__cell table__cell--actions">
+    <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+        type="button"></button>
+    <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+        type="button"></button>
+    <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+</td>
+
+</tr>`
+for(let i = 0; i < 30; i++) {
+  if(i === 1 || i === 9){
+    test[0].insertAdjacentHTML('beforeend', htmlWarning)
+  }else {
+    test[0].insertAdjacentHTML('beforeend', html)
+  }
+}
+for(let i = 0; i < 30; i++) {
+  if(i === 1 || i === 9){
+    test[1].insertAdjacentHTML('beforeend', htmlWarning)
+  }else {
+    test[1].insertAdjacentHTML('beforeend', html)
+  }
+}
