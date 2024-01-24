@@ -25,6 +25,8 @@ const tabOperationBtns = document.querySelectorAll(".tab-operation-btn");
 const tabsOperationItems = document.querySelectorAll(".tab-operation-content");
 const tabDataBaseBtns = document.querySelectorAll(".database-btn-js");
 const tabsDataBaseItems = document.querySelectorAll(".database-content");
+const tabsPassengersTableBtns = document.querySelectorAll('.passengers-table__btn')
+const tabsPassengersTableItems = document.querySelectorAll('.passengers-table__box-gray')
 
 function removeClass(items, className) {
   items.forEach((item) => {
@@ -35,10 +37,22 @@ function removeClass(items, className) {
 function openTab(target, btns, tabs) {
   let id = target.getAttribute("data-tab");
   const element = document.getElementById(id);
-  removeClass(btns, "active");
-  removeClass(tabs, "show");
-  element.classList.add("show");
-  target.classList.add("active");
+
+  if(id === 'All') {
+    removeClass(btns, "active");
+    target.classList.add('active')
+    tabs.forEach(item => {
+      item.classList.add('show')
+    })
+    return true
+  }
+
+  if(element) {
+    removeClass(btns, "active");
+    removeClass(tabs, "show");
+    element.classList.add("show");
+    target.classList.add("active");
+  }
 }
 
 //------------------------------- Pagination -------------------------
@@ -176,6 +190,9 @@ function renderOnClickArrows(target) {
       break;
   }
 }
+//
+
+
 
 //------------------------------- Listeners -------------------------
 
@@ -208,6 +225,9 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("database-btn-js")) {
     openTab(e.target, tabDataBaseBtns, tabsDataBaseItems);
   }
+  if(e.target.classList.contains('passengers-table__btn')) {
+    openTab(e.target, tabsPassengersTableBtns, tabsPassengersTableItems);
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -222,85 +242,3 @@ datepickerBtn.forEach((item) => {
   });
 });
 
-
-let test = document.querySelectorAll('.passengers-table tbody')
-let html = `<tr class="table__row">
-<td class="table__cell table__cell--lastname">
-    <span class="table__span gray-span">Текстович</span>
-</td>
-<td class="table__cell table__cell--firstname">
-    <span class="table__span gray-span">
-        Борис
-    </span>
-</td>
-<td class="table__cell table__cell--patronymic">
-    <span class="table__span gray-span">Петрович</span>
-</td>
-<td class="table__cell table__cell--sex">
-    <span class="table__span gray-span">Мужской</span>
-</td>
-<td class="table__cell table__cell--birthday">
-    <span class="table__span gray-span">04/08/1998</span>
-</td>
-<td class="table__cell table__cell--suspicions">
-    <span class="table__type table__type--green">Отсутствуют</span>
-</td>
-<td class="table__cell table__cell--nationality">
-    <span class="table__span gray-span">Украина</span>
-</td>
-<td class="table__cell table__cell--actions">
-    <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
-        type="button"></button>
-    <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
-        type="button"></button>
-    <a class="table__icon-btn table__icon-btn--link" href="#"></a>
-</td>
-
-</tr>`
-let htmlWarning = `<tr class="table__row table__row--red">
-<td class="table__cell table__cell--lastname">
-    <span class="table__span gray-span">Текстович</span>
-</td>
-<td class="table__cell table__cell--firstname">
-    <span class="table__span gray-span">
-        Борис
-    </span>
-</td>
-<td class="table__cell table__cell--patronymic">
-    <span class="table__span gray-span">Петрович</span>
-</td>
-<td class="table__cell table__cell--sex">
-    <span class="table__span gray-span">Мужской</span>
-</td>
-<td class="table__cell table__cell--birthday">
-    <span class="table__span gray-span">04/08/1998</span>
-</td>
-<td class="table__cell table__cell--suspicions">
-    <span class="table__type table__type--red">Задолженность</span>
-</td>
-<td class="table__cell table__cell--nationality">
-    <span class="table__span gray-span">Украина</span>
-</td>
-<td class="table__cell table__cell--actions">
-    <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
-        type="button"></button>
-    <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
-        type="button"></button>
-    <a class="table__icon-btn table__icon-btn--link" href="#"></a>
-</td>
-
-</tr>`
-for(let i = 0; i < 30; i++) {
-  if(i === 1 || i === 9){
-    test[0].insertAdjacentHTML('beforeend', htmlWarning)
-  }else {
-    test[0].insertAdjacentHTML('beforeend', html)
-  }
-}
-for(let i = 0; i < 30; i++) {
-  if(i === 1 || i === 9){
-    test[1].insertAdjacentHTML('beforeend', htmlWarning)
-  }else {
-    test[1].insertAdjacentHTML('beforeend', html)
-  }
-}
