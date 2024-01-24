@@ -1,4 +1,7 @@
 .notices {
+    &__container {
+        background-color: var(--white-100, #FFF);
+    }
     &__table {
         margin-bottom: 26px;
     }
