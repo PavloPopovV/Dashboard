@@ -1,0 +1,197 @@
+.database {
+    height: 100vh;
+    padding: 48px 40px 24px;
+    background-color: #fff;
+
+    &__top {
+        position: relative;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        color: #172B4D;
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 133.333%;
+        letter-spacing: -0.464px;
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        color: #A0A3A6;
+        font-weight: 450;
+    }
+
+    &__btn {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        position: absolute;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: -0.18px;
+        padding: 12px 20px;
+        background-color: #2563EB;
+    }
+
+    &__tab-list {
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    &__tab-item {
+        margin-right: 16px;
+    }
+
+    &__tab-btn {
+        color: #A0A3A6;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 22px;
+        border-radius: 68px;
+        background: #F4F5F5;
+        padding: 6px 12px;
+
+        &.active {
+            background-color: #2563EB;
+            color: #fff;
+        }
+    }
+
+    &__form {
+        display: none;
+
+        &.show {
+            display: block;
+            display: flex;
+            justify-content: space-between;
+
+        }
+    }
+
+    &__form-passport {
+        width: 742px;
+        padding: 24px;
+        background: #FBFBFC;
+        margin-bottom: 40px;
+
+        &--one {
+            margin-bottom: 0;
+        }
+    }
+
+    &__form-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__form-title {
+        color: #172B4D;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: -0.336px;
+    }
+
+    &__form-reset {
+        color: #172B4D;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 12px;
+        letter-spacing: -0.04px;
+        padding: 10px;
+        background: rgba(35, 55, 55, 0.05);
+    }
+
+    &__form-subtitle {
+        display: block;
+        color: #172B4D;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 12px;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #E4E7ED;
+
+        &--inner {
+            margin-top: 44px;
+        }
+    }
+
+    &__form-inputs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    &__input-group {
+        width: 335px;
+        position: relative;
+
+        &--gender,
+        &--date {
+            &::after {
+                content: '';
+                position: absolute;
+                width: 24px;
+                height: 24px;
+
+                right: 8px;
+                top: 36px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        &--gender::after {
+            background-image: url("../images/sprite.svg#sidebar-searchArrow-icon");
+        }
+
+        &--date::after {
+            background-image: url("../images/sprite.svg#form-calendar");
+        }
+    }
+
+    &__input-name {
+        color: #172B4D;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: -0.128px;
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    &__input-text {
+        position: relative;
+        width: 335px;
+        height: 40px;
+        display: block;
+        border: 1px solid #E7E8E9;
+        background-color: #fff;
+        box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+        padding: 5px 0 5px 12px;
+        color: #2C2E30;
+
+        &::placeholder {
+            color: #A0A3A6;
+        }
+
+        &--btn {
+            text-align: left;
+
+            span {
+                color: #A0A3A6;
+            }
+        }
+
+    }
+}

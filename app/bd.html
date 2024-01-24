@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="wrapper">
+  <section class="sidebar">
+    <img class="sidebar__logo" src="images/Logo.png" alt="logo">
+    <div class="sidebar__navigation">
+        <div class="sidebar__options">
+            <div class="sidebar__search-box search-box">
+                <input class="sidebar__search search" type="text" placeholder="Поиск"></input>
+            </div>
+            <nav class="sidebar__menu">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="index.html" class="sidebar__btn sidebar__btn--main sidebar-active">Главная</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="flights.html" class="sidebar__btn sidebar__btn--flights">Рейсы</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="" class="sidebar__btn sidebar__btn--passengers">Пассажиры</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="" class="sidebar__btn sidebar__btn--planes">Самолеты</a>
+                    </li>
+                    <li class="sidebar__item"> 
+                        <a href="" class="sidebar__btn sidebar__btn--notifications">Уведомления</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar__location">
+            <div class="sidebar__location-item">
+                <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
+                <span class="sidebar__country">Узбекистан</span>
+                <button class="sidebar__select-country" type="button"></button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar__account">
+        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="">
+        <div class="sidebar__account-info">
+            <span class="sidebar__account-name">Kianna Press</span>
+            <span class="sidebar__account-position">Сержант</span>
+        </div>
+        <button class="sidebar__account-btn" type="button"></button>
+    </div>
+</section>
+
+  <main class="main">
+    <section class="database">
+  <div class="database__top">
+    <h3 class="database__title">Поиск по БД</h3>
+    <div class="database__text">
+      <p>Найдите пассажира по паспортным данным или информации по перелету.</p>
+    </div>
+    <button class="database__btn" type="button">Поиск по БД</button>
+  </div>
+  <ul class="database__tab-list">
+    <li class="database__tab-item">
+      <button
+        class="database__tab-btn database-btn active"
+        type="button"
+        data-tab="#dataBase_1"
+      >
+        Поиск по данным
+      </button>
+    </li>
+    <li class="database__tab-item">
+      <button
+        class="database__tab-btn database-btn"
+        type="button"
+        data-tab="#dataBase_2"
+      >
+        Поиск по критериям
+      </button>
+    </li>
+  </ul>
+
+
+
+  <form class="database__form database-content show" action="" id="#dataBase_1">
+
+    <div class="database__form-passport database__form-passport--one">
+      <div class="database__form-top">
+        <span class="database__form-title">Паспортные данные</span>
+        <button class="database__form-reset">Сбросить</button>
+      </div>
+      <span class="database__form-subtitle">Персональная информация</span>
+      <div class="database__form-inputs">
+        <label class="database__input-group" for="name">
+            <span class="database__input-name">Имя</span>
+          <input class="database__input-text" type="text" id="name" name="name" value="Олег" readonly/>
+        </label>
+        <label class="database__input-group" for="name">
+            <span class="database__input-name">Фамилия</span>
+            <input class="database__input-text" type="text" id="name" name="name" value="Диба" readonly/>
+        </label>
+        <label class="database__input-group" for="name">
+            <span class="database__input-name">Отчество</span>
+            <input class="database__input-text" type="text" id="name" name="name" placeholder="Владимировна" readonly/>
+        </label>
+        <label class="database__input-group database__input-group--date" for="name">
+            <span class="database__input-name">Дата рождения</span>
+            <button class="database__input-text database__input-text--btn" type="button">16/03/1999</button>
+        </label>
+        <label class="database__input-group database__input-group--gender" for="name">
+            <span class="database__input-name">Пол</span>
+            <input class="database__input-text" type="text" id="name" name="name" value="Мужской" readonly/>
+        </label>
+        <label class="database__input-group" for="name">
+            <span class="database__input-name">Место рождения</span>
+            <input class="database__input-text " type="text" id="name" name="name" value="Укрина, г.Львов" readonly/>
+        </label>
+      </div>
+      <span class="database__form-subtitle database__form-subtitle--inner">Документы</span>
+      <div class="database__form-inputs">
+        <label class="database__input-group database__input-group--gender" for="name">
+            <span class="database__input-name">Тип документа</span>
+          <input class="database__input-text" type="text" id="name" name="name" placeholder="Национальный паспорт" readonly/>
+        </label>
+        <label class="database__input-group" for="name">
+            <span class="database__input-name">Номер документа</span>
+            <input class="database__input-text" type="text" id="name" name="name" placeholder="AB123456" readonly/>
+        </label>
+        <label class="database__input-group" for="name">
+            <span class="database__input-name">Идентификационный номер</span>
+            <input class="database__input-text" type="text" id="name" name="name" placeholder="12345678"/>
+        </label>
+        <label class="database__input-group database__input-group--date" for="name">
+            <span class="database__input-name">Дата выдачи документа</span>
+            <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
+        </label>
+        <label class="database__input-group database__input-group--date" for="name">
+            <span class="database__input-name">Срок действия документа</span>
+            <input class="database__input-text " type="text" id="name" name="name" placeholder="DD/MM/YY"  readonly/>
+        </label>
+        <label class="database__input-group database__input-group--gender" for="name">
+            <span class="database__input-name">Место выдачи документа</span>
+            <input class="database__input-text" type="text" id="name" name="name" placeholder="12345678" readonly/>
+        </label>
+        <label class="database__input-group database__input-group--gender" for="name">
+            <span class="database__input-name">Гражданство</span>
+            <input class="database__input-text " type="text" id="name" name="name" placeholder="Румыния"  readonly/>
+        </label>
+      </div>
+    </div>
+
+    <div class="database__form-right">
+        <div class="database__form-passport">
+            <div class="database__form-top">
+              <span class="database__form-title">Данные по перелету</span>
+              <button class="database__form-reset">Сбросить</button>
+            </div>
+            <div class="database__form-inputs">
+                <label class="database__input-group database__input-group--date" for="name">
+                  <span class="database__input-name">Дата бронирования/покупки билета</span>
+                  <button class="database__input-text database__input-text--btn" type="button"><span>DD/MM/YY</span></button>
+                </label>
+                <label class="database__input-group database__input-group--date" for="name">
+                  <span class="database__input-name">Время и дата вылета</span>
+                  <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY"/>
+                </label>
+                <label class="database__input-group" for="name">
+                  <span class="database__input-name">Аэропорт вылета</span>
+                  <input class="database__input-text" type="text" id="name" name="name" placeholder="Бишкек, Киргизия (FRU)" readonly/>
+                </label>
+                <label class="database__input-group" for="name">
+                  <span class="database__input-name">Аэропорт прибытия</span>
+                  <input class="database__input-text" type="text" id="name" name="name" placeholder="Бишкек, Киргизия (FRU)">
+                </label>
+                <label class="database__input-group" for="name">
+                  <span class="database__input-name">Место в самолете</span>
+                  <input class="database__input-text" type="text" id="name" name="name" placeholder="F-16" readonly/>
+                </label>
+                <label class="database__input-group" for="name">
+                  <span class="database__input-name">Данные агента</span>
+                  <input class="database__input-text " type="text" id="name" name="name" placeholder="POLAN DAVID" readonly/>
+                </label>
+                <label class="database__input-group database__input-group--date" for="name">
+                    <span class="database__input-name">Дата приобретения билета</span>
+                    <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
+                </label>
+                <label class="database__input-group database__input-group--date" for="name">
+                    <span class="database__input-name">Дата приобретения билета</span>
+                    <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
+                </label>
+            </div>
+        </div>
+        <div class="database__form-passport">
+            <div class="database__form-top">
+              <span class="database__form-title">Дополнительные данные</span>
+              <button class="database__form-reset">Сбросить</button>
+            </div>
+            <div class="database__form-inputs">
+              <label class="database__input-group" for="name">
+                  <span class="database__input-name">Номер визы</span>
+                <input class="database__input-text" type="text" id="name" name="name" placeholder="12345678" readonly/>
+              </label>
+              <label class="database__input-group" for="name">
+                  <span class="database__input-name">Тип визы</span>
+                  <input class="database__input-text" type="text" id="name" name="name" placeholder="D" />
+              </label>
+              <label class="database__input-group database__input-group--date" for="name">
+                  <span class="database__input-name">Дата выдачи</span>
+                  <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
+              </label>
+              <label class="database__input-group database__input-group--date" for="name">
+                <span class="database__input-name">Срок действия</span>
+                <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
+            </label>
+    
+            </div>
+        </div>
+    </div>
+
+  </form>
+
+  <form class="database__form database-content" action="" id="#dataBase_2">
+    <div class="p">dasdadasdas</div>
+  </form>
+</section>
+
+</main>
+</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/main.min.js"></script>
+
+
+
+    </body>
+
+</html>
