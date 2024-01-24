@@ -59,13 +59,13 @@
 </section>
 
     <main class="main">
-
         <section class="flights">
     <div class="flights__container">
         <h1 class=" flights__title ">Рейсы</h1>
         <div class="flights__text">
             <p>Информация о запланированых рейсах</p>
         </div>
+        <!-- Header filters -->
         <div class="flights-filters">
             <div class="flights-filters__left">
                 <div class="flights-filters__search search-box">
@@ -233,7 +233,9 @@
                 <button class="flight-filter__descending filter-selector" type="button">По убыванию</button>
             </div>
         </div>
+        <!-- --- -->
 
+        <!-- Table -->
         <table class="flights-table table" width="100%">
             <thead>
                 <tr class="flights-table__row table__row">
@@ -248,202 +250,39 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <!-- <tr>
                     <td class="table__id"><span>5152</span></td>
                     <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
                     <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
+                    <td class="table__airport"><span>Аэропорт LVA</span></td>
                     <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
                     <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
                     <td class="table__type"><span>Завершен</span></td>
                     <td class="table__number"><span>95</span></td>
                     <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
-                <tr>
-                    <td class="table__id"><span>5152</span></td>
-                    <td class="table__march"><span><span>Lviv</span> - <span>Budapest</span></span></td>
-                    <td class="table__date"><span>24.12.2023</span><span>12:25</span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LVA</span></span></td>
-                    <td class="table__airport"><span>Аэропорт <span>LAAS</span></span></td>
-                    <td class="table__plain"><span><span>BOEING 315</span> / <span>B-315-2</span></span></td>
-                    <td class="table__type"><span>Завершен</span></td>
-                    <td class="table__number"><span>95</span></td>
-                    <td><button class="table__details">Детали</button></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
+        <!-- --- -->
 
+        <!-- Pagination -->
         <div class="flights__pagination pagination">
-            <button class="pagination__left"></button>
+            <button class="pagination__left pagination__arrows" type="button" value="<"></button>
             <ul class="pagination__list">
                 <li class="pagination__item">
-                    <button class="pagination__btn" type="button">1</button>
+                    <button class="pagination__btn active" type="button" value="1">1</button>
                 </li>
                 <li class="pagination__item">
-                    <button class="pagination__btn active" type="button">2</button>
+                    <button class="pagination__btn" type="button" value="2">2</button>
                 </li>
                 <li class="pagination__item">
-                    <button class="pagination__btn" type="button">3</button>
+                    <button class="pagination__btn" type="button" value="3">3</button>
                 </li>
                 <li class="pagination__item">
-                    <button class="pagination__btn" type="button">4</button>
+                    <button class="pagination__btn" type="button" value="4">4</button>
                 </li>
                 <li class="pagination__item">
-                    <button class="pagination__btn" type="button">10</button>
+                    <button class="pagination__btn" type="button" value="10" >10</button>
                 </li>
                 <li class="pagination__item">
                     <button class="pagination__btn pagination__btn--dots" type="button">...</button>
@@ -452,13 +291,12 @@
                     <button class="pagination__btn" type="button">40</button>
                 </li>
             </ul>
-            <button class="pagination__right"></button>
+            <button class="pagination__right pagination__arrows" type="button" value=">"></button>
         </div>
-
+        <!-- --- -->
 
     </div>
 </section>
-
     </main>
 </div>
 
