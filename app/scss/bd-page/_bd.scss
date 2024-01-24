@@ -9,35 +9,6 @@
         margin-bottom: 24px;
     }
 
-    &__title {
-        color: #172B4D;
-        font-family: Inter;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 133.333%;
-        letter-spacing: -0.464px;
-        margin-bottom: 4px;
-    }
-
-    &__text {
-        color: #A0A3A6;
-        font-weight: 450;
-    }
-
-    &__btn {
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        position: absolute;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 150%;
-        letter-spacing: -0.18px;
-        padding: 12px 20px;
-        background-color: #2563EB;
-    }
-
     &__tab-list {
         display: flex;
         margin-bottom: 24px;
@@ -67,10 +38,16 @@
 
         &.show {
             display: block;
-            display: flex;
-            justify-content: space-between;
-
         }
+
+        &--flex {
+            &.show {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+
     }
 
     &__form-passport {
@@ -187,11 +164,144 @@
 
         &--btn {
             text-align: left;
-
-            span {
-                color: #A0A3A6;
-            }
         }
 
+        &--placeholder {
+            color: #A0A3A6;
+        }
+
+    }
+
+    &__datapicker {
+        top: 130%;
+    }
+
+    &__checkbox-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__checkbox-item {
+        padding: 24px;
+        background-color: #FBFBFC;
+        width: 285px;
+    }
+
+    &__checkbox-title {
+        color: #172B4D;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 12px;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+        font-style: normal;
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    &__privacy {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        color: #172B4D;
+        font-weight: 600;
+        line-height: 16px;
+        margin-bottom: 16px;
+        cursor: pointer;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__variant {
+        @extend %radio-hidden;
+
+        &:checked {
+            &+.database__checkbox {
+                border: transparent;
+
+                &::after {
+                    content: '';
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: 1px solid #d4d4d4;
+        border-radius: 6px;
+        margin-right: 12px;
+        background-color: #f1f1f2;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #3B82F6;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+            border-radius: 6px;
+            background-image: url('../images/sprite.svg#check-icon');
+            background-repeat: no-repeat;
+            background-size: 18px 20px;
+            background-position: center;
+        }
+    }
+
+    &__manual-search {
+        width: 620px;
+    }
+
+    &__manual-item {
+
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    &__manual-input {
+        padding: 9px 0 9px 12px;
+        width: 258px;
+        border: 1px solid #E7E8E9;
+        background: #fff;
+        box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        color: #2C2E30;
+
+        &::placeholder {
+            color: #A0A3A6;
+        }
+    }
+
+    &__manual-select{
+        position: relative;
+        border: 1px solid #E7E8E9;
+        background: #fff;
+        box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+        color: #A0A3A6;
+        padding: 7.5px 38px 7.5px 20px;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 8px;
+            background-image: url("../images/sprite.svg#sidebar-searchArrow-icon");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
     }
 }

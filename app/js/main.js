@@ -1,5 +1,5 @@
 const datepickerPopup = document.querySelectorAll(".datepicker");
-const datepickerBtn = document.querySelectorAll(".date-btn");
+const datepickerBtn = document.querySelectorAll(".datapicker-btn");
 
 function setValueOnOdometer() {
   let oneValue = 7265;
@@ -23,6 +23,8 @@ const tabMediaBtns = document.querySelectorAll(".tab-media-btn");
 const tabsMediaItems = document.querySelectorAll(".tab-media-content");
 const tabOperationBtns = document.querySelectorAll(".tab-operation-btn");
 const tabsOperationItems = document.querySelectorAll(".tab-operation-content");
+const tabDataBaseBtns = document.querySelectorAll(".database-btn");
+const tabsDataBaseItems = document.querySelectorAll(".database-content");
 
 function removeClass(items, className) {
   items.forEach((item) => {
@@ -78,22 +80,39 @@ function renderHtml(obj, i) {
   tableBody.insertAdjacentHTML(
     "beforeend",
     `
-   <tr>
-      <td class="table__id"><span>${obj.id} - ${i}</span></td>
-      <td class="table__march"><span><span>${obj.march.start}</span> - <span>${
-      obj.march.end
-    }</span></span></td>
-      <td class="table__date"><span>${obj.fullDate.date}</span><span>${
-      obj.fullDate.time
-    }</span></td>
-      <td class="table__airport"><span>${obj.airports.start}</span></td>
-      <td class="table__airport"><span>${obj.airports.end}</span></td>
-      <td class="table__plain"><span><span>${obj.plain.name}</span> / <span>${
-      obj.plain.cod
-    }</span></span></td>
-      <td class="table__type"><span>${obj.type}</span></td>
-      <td class="table__number"><span>${obj.number}</span></td>
-      <td><a class="table__details" href="${obj.detailsLink.trim()}">Детали</a></td>
+   <tr class="table__row">
+      <td class="table__cell table__cell--id">
+        <span class="table__span gray-span">${obj.id} - ${i}</span>
+      </td>
+      <td class="table__cell table__cell--march">
+        <span class="table__span gray-span">
+          <span>${obj.march.start}</span> - <span>${obj.march.end}</span>
+        </span>
+      </td>
+      <td class="table__cell table__cell--date">
+        <span class="table__span gray-span">${obj.fullDate.date}</span>
+        <span class="table__span gray-span">${obj.fullDate.time}</span>
+      </td>
+      <td class="table__cell table__cell--airport">
+        <span class="table__span blue-span">${obj.airports.start}</span>
+      </td>
+      <td class="table__cell table__cell--airport">
+        <span class="table__span blue-span">${obj.airports.end}</span>
+      </td>
+      <td class="table__cell table__cell--plain-info">
+        <span class="gray-span">
+          <span class="table__span  blue-span">${obj.plain.name}</span>
+          / 
+          <span class="table__span  blue-span">${obj.plain.cod}</span>
+        </span>
+      </td>
+      <td class="table__cell table__cell--type">
+        <span class="table__type table__type--completed" >${obj.type}</span>
+      </td>
+      <td class="table__cell table__cell--number">
+        <span class="table__span gray-span">${obj.number}</span>
+      </td>
+      <td class="table__cell table__cell--details"><a class="table__btn" href="${obj.detailsLink.trim()}">Детали</a></td>
     </tr>
    `
   );
@@ -104,6 +123,7 @@ function renderOnLoad() {
     renderHtml(allFlights[i], i);
   }
 }
+
 if (tableBody) {
   renderOnLoad();
 }
@@ -121,7 +141,11 @@ function renderOnClickBtns(target) {
   const activePageValue = document.querySelector(
     ".pagination__btn.active"
   ).value;
-  if (clickPageValue !== activePageValue && clickPageValue) {
+  if (
+    clickPageValue !== activePageValue &&
+    clickPageValue < 5 &&
+    clickPageValue
+  ) {
     removeClass(allBtns, "active");
     target.classList.add("active");
     tableBody.innerHTML = "";
@@ -156,7 +180,7 @@ function renderOnClickArrows(target) {
 //------------------------------- Listeners -------------------------
 
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("date-btn")) {
+  if (e.target.classList.contains("datapicker-btn")) {
     openCloseDatepickerPopup(e, "add");
   }
   if (e.target.classList.contains("tab-media-btn")) {
@@ -167,13 +191,22 @@ document.addEventListener("click", (e) => {
   }
 
   if (e.target.classList.contains("pagination__btn")) {
-    renderOnClickBtns(e.target);
+    let closestParentId = e.target.closest(".pagination").id;
+    if (closestParentId === "flights") {
+      renderOnClickBtns(e.target);
+    }
   }
   if (e.target.classList.contains("pagination__arrows")) {
-    renderOnClickArrows(e.target);
+    let closestParentId = e.target.closest(".pagination").id;
+    if (closestParentId === "flights") {
+      renderOnClickArrows(e.target);
+    }
   }
   if (e.target.classList.contains("tab-operation-btn")) {
     openTab(e.target, tabOperationBtns, tabsOperationItems);
+  }
+  if (e.target.classList.contains("database-btn")) {
+    openTab(e.target, tabDataBaseBtns, tabsDataBaseItems);
   }
 });
 
