@@ -74,7 +74,7 @@
             </div>
             <div class="flights-filters__box">
                 <div class="flights-filters__date">
-                    <button class="flights-filters__btn" type="button">01 ноября 2020</button>
+                    <button class="flights-filters__btn datapicker-btn" type="button">01 ноября 2020</button>
 
                     <div class="flights-filters__datepicker datepicker">
                         <div class="datepicker__header">
@@ -150,7 +150,7 @@
                     </div>
                 </div>
                 <div class="flights-filters__date ">
-                    <button class="flights-filters__btn" type="button">07 января 2021</button>
+                    <button class="flights-filters__btn datapicker-btn" type="button">07 января 2021</button>
 
                     <div class="flights-filters__datepicker datepicker">
                         <div class="datepicker__header">
@@ -230,33 +230,33 @@
 
         <ul class="passengers-table__tabs">
             <li class="passengers-table__item">
-                <button class="passengers-table__btn active" data-filter="All" type="button">Все рейсы</button>
+                <button class="passengers-table__btn active" data-tab="All" type="button">Все рейсы</button>
             </li>
             <li class="passengers-table__item">
-                <button class="passengers-table__btn" data-filter="312HG - 01" type="button">312HG - 01</button>
+                <button class="passengers-table__btn" data-tab="312HG - 01" type="button">312HG - 01</button>
             </li>
             <li class="passengers-table__item">
-                <button class="passengers-table__btn" data-filter="513SF - 13" type="button">513SF - 13</button>
+                <button class="passengers-table__btn" data-tab="312HG - 02" type="button">312HG - 02</button>
             </li>
             <li class="passengers-table__item">
-                <button class="passengers-table__btn" data-filter="45QP - 154" type="button">45QP - 154</button>
+                <button class="passengers-table__btn" data-tab="45QP - 154" type="button">45QP - 154</button>
             </li>
             <li class="passengers-table__item">
-                <button class="passengers-table__btn" data-filter="312HG - 01" type="button">312HG - 01</button>
+                <button class="passengers-table__btn" data-tab="312HG - 01" type="button">312HG - 01</button>
             </li>
             <li class="passengers-table__item">
-                <button class="passengers-table__btn" data-filter="312HG - 01" type="button">312HG - 01</button>
+                <button class="passengers-table__btn" data-tab="312HG - 01" type="button">312HG - 01</button>
             </li>
             <li class="passengers-table__item">
-                <button class="passengers-table__btn" data-filter="312HG - 01" type="button">312HG - 01</button>
+                <button class="passengers-table__btn" data-tab="312HG - 01" type="button">312HG - 01</button>
             </li>
             <li class="passengers-table__item">
-                <button class="passengers-table__btn" data-filter="312HG - 01" type="button">312HG - 01</button>
+                <button class="passengers-table__btn" data-tab="312HG - 01" type="button">312HG - 01</button>
             </li>
         </ul>
 
         <div class="passengers-table__box">
-            <div class="passengers-table__box-gray">
+            <div class="passengers-table__box-gray show" id="312HG - 01">
                 <h6 class="passengers-table__сaption">Рейс <span>312HG - 01</span></h6>
                 <table class="passengers-table table" width="100%">
                     <thead>
@@ -272,44 +272,627 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <tr class="table__row">
-                        <td class="table__cell table__cell--lastname">
-                            <span class="table__span gray-span">Текстович</span>
-                        </td>
-                        <td class="table__cell table__cell--firstname">
-                            <span class="table__span gray-span">
-                                Борис
-                            </span>
-                        </td>
-                        <td class="table__cell table__cell--patronymic">
-                            <span class="table__span gray-span">Петрович</span>
-                        </td>
-                        <td class="table__cell table__cell--gender">
-                            <span class="table__span gray-span">Мужской</span>
-                        </td>
-                        <td class="table__cell table__cell--birthday">
-                            <span class="table__span gray-span">04/08/1998</span>
-                        </td>
-                        <td class="table__cell table__cell--suspicions">
-                            <span class="table__type table__type--green">Отсутствуют</span>
-                        </td>
-                        <td class="table__cell table__cell--nationality">
-                            <span class="table__span gray-span">Украина</span>
-                        </td>
-                        <td class="table__cell table__cell--actions">
-                            <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
-                                type="button"></button>
-                            <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
-                                type="button"></button>
-                            <a class="table__icon-btn table__icon-btn--link" href="#"></a>
-                        </td>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row table__row--red">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--red">Задолженность</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
 
-                    </tr> -->
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row table__row--red">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--red">Задолженность</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
 
-            <div class="passengers-table__box-gray">
+            <div class="passengers-table__box-gray" id="312HG - 02">
                 <h6 class="passengers-table__сaption">Рейс <span>312HG - 02</span></h6>
                 <table class="passengers-table table" width="100%">
                     <thead>
@@ -325,39 +908,622 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <tr class="table__row">
-                        <td class="table__cell table__cell--lastname">
-                            <span class="table__span gray-span">Текстович</span>
-                        </td>
-                        <td class="table__cell table__cell--firstname">
-                            <span class="table__span gray-span">
-                                Борис
-                            </span>
-                        </td>
-                        <td class="table__cell table__cell--patronymic">
-                            <span class="table__span gray-span">Петрович</span>
-                        </td>
-                        <td class="table__cell table__cell--gender">
-                            <span class="table__span gray-span">Мужской</span>
-                        </td>
-                        <td class="table__cell table__cell--birthday">
-                            <span class="table__span gray-span">04/08/1998</span>
-                        </td>
-                        <td class="table__cell table__cell--suspicions">
-                            <span class="table__type table__type--green">Отсутствуют</span>
-                        </td>
-                        <td class="table__cell table__cell--nationality">
-                            <span class="table__span gray-span">Украина</span>
-                        </td>
-                        <td class="table__cell table__cell--actions">
-                            <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
-                                type="button"></button>
-                            <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
-                                type="button"></button>
-                            <a class="table__icon-btn table__icon-btn--link" href="#"></a>
-                        </td>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row table__row--red">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--red">Задолженность</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
 
-                    </tr> -->
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row table__row--red">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--red">Задолженность</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+
+                        <tr class="table__row">
+                            <td class="table__cell table__cell--lastname">
+                                <span class="table__span gray-span">Текстович</span>
+                            </td>
+                            <td class="table__cell table__cell--firstname">
+                                <span class="table__span gray-span">
+                                    Борис
+                                </span>
+                            </td>
+                            <td class="table__cell table__cell--patronymic">
+                                <span class="table__span gray-span">Петрович</span>
+                            </td>
+                            <td class="table__cell table__cell--sex">
+                                <span class="table__span gray-span">Мужской</span>
+                            </td>
+                            <td class="table__cell table__cell--birthday">
+                                <span class="table__span gray-span">04/08/1998</span>
+                            </td>
+                            <td class="table__cell table__cell--suspicions">
+                                <span class="table__type table__type--green">Отсутствуют</span>
+                            </td>
+                            <td class="table__cell table__cell--nationality">
+                                <span class="table__span gray-span">Украина</span>
+                            </td>
+                            <td class="table__cell table__cell--actions">
+                                <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                                    type="button"></button>
+                                <a class="table__icon-btn table__icon-btn--link" href="#"></a>
+                            </td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>

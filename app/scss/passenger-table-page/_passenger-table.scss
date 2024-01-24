@@ -49,14 +49,19 @@
 
     &__box {
         background-color: #fff;
-        height: calc(100vh - 235px);
+        height: calc(100vh - 251px);
         overflow-y: auto;
     }
     &__box-gray {
         padding: 32px 32px 32px 32px;
         background-color: #fbfbfb;
         margin-bottom: 30px;
+        display: none;
 
+        &.show {
+            display: block;
+        }
+        
         &:last-child {
             margin-bottom: 0;
         }
