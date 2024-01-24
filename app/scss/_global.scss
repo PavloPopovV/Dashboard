@@ -561,6 +561,10 @@ html {
         &:nth-child(2n - 1) {
             background-color: #fff;
         }
+
+        &--red {
+            background: linear-gradient(0deg, rgba(239, 68, 68, 0.10) 0%, rgba(239, 68, 68, 0.10) 100%), #FBFBFC;
+        }
     }
 
     &__cell {
@@ -606,6 +610,20 @@ html {
         &--plain-name {
             width: 273px;
         }
+
+        //passengers
+        &--lastname,
+        &--firstname,
+        &--patronymic,
+        &--sex,
+        &--birthday,
+        &--suspicions {
+            width: 188px;
+        }
+        &--nationality {
+            width: 194px;
+        }
+         
     }
 
     &__cell:not(:last-child),
@@ -649,17 +667,17 @@ html {
         letter-spacing: 0.016px;
         border-radius: var(--12, 12px);
 
-        &--completed {
+        &--green {
             color: #41B871;
             background-color: rgba(110, 203, 144, 0.15);
         }
 
-        &--stagnation {
+        &--red {
             color: var(--Error-Primary, #EF4444);
             background-color: rgba(255, 88, 88, 0.15);
         }
 
-        &--pending {
+        &--yellow {
             background-color: #FBFCE3;
             color: #E9A800;
         }
@@ -679,6 +697,29 @@ html {
         &:hover {
             background-color: var(--Action-Light, rgba(35, 55, 55, 0.15));
         }
+    }
+
+    &__icon-btn {
+        width: 24px;
+        height: 24px;
+        margin-right: 9px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &--good {
+            background-image: url('../images/icons/table-document.svg');
+        }
+
+        &--bed {
+            background-image: url('../images/icons/table-warning.svg');
+        }
+
+        &--link {
+            display: inline-block;
+            background-image: url('../images/icons/table-arrow-right.svg');
+        }
+
     }
 }
 
