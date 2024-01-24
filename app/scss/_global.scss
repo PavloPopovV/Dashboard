@@ -615,7 +615,7 @@ html {
         &--lastname,
         &--firstname,
         &--patronymic,
-        &--gender,
+        &--sex,
         &--birthday,
         &--suspicions {
             width: 188px;
@@ -1003,8 +1003,6 @@ html {
             background-size: cover;
             background-position: center;
         }
-
-
     }
 
     &__right {
@@ -1058,4 +1056,18 @@ html {
         display: block;
         color: #172B4D;
     }
+}
+
+.database-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -0.18px;
+    padding: 12px 20px;
+    background-color: #2563EB;
 }

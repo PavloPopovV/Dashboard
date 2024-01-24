@@ -4,6 +4,15 @@
         padding: 48px 13px 0 41px;
     }
 
+    &__absolute {
+        position: relative;
+    }
+    &__bd {
+        top: 0;
+        right: 28px;
+        transform: translateY(0);
+    }
+
     &__filter {
         margin-bottom: 24px;
     }
