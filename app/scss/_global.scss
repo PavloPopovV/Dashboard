@@ -46,6 +46,10 @@ html {
     grid-template-columns: 316px 1fr;
 }
 
+.container-table-page {
+    padding: 48px 40px 24px 40px;
+}
+
 .breadcrumbs {
     position: relative;
     padding: 20px 58px 19px 64px;
@@ -125,12 +129,6 @@ html {
     }
 }
 
-
-.search-active {
-    transition: border .3s ease-in-out;
-    border: 1px solid #2563EB;
-}
-
 .title {
     display: block;
     position: relative;
@@ -165,6 +163,26 @@ html {
         background-image: url('../images/sprite.svg#title-plane');
     }
 
+}
+
+.popular-title {
+    color: #172B4D;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.464px;
+    margin-bottom: 4px;
+}
+
+.text-under-popular-title {
+    margin-bottom: 23px;
+    p {
+        color: var(--Text-Secondary, #A0A3A6);
+        font-size: 14px;
+        font-weight: 450;
+        line-height: 22px;
+        letter-spacing: -0.128px;
+    }
 }
 
 .flight-info {
@@ -217,63 +235,136 @@ html {
 
 }
 
-//-------------------- Flight - page
-
+//-------------------- Flights - page
 //-- date filter
-.date-wrapper {
+.flights-filters {
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 1px;
-        border-radius: 8px;
-        background-color: #737373;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    &__left {
+        display: flex;
     }
-}
 
-.date-box {
-    position: relative;
-
-    &:first-child {
-        margin-right: 36px;
+    &__search {
+        width: 280px;
+        margin-right: 24px;
     }
-}
 
-.date-btn {
-    position: relative;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: normal;
-    padding: 12px 50px 12px 15px;
-    color: #979A9D;
-    border: 1px solid #E7E8E9;
-    background-color: #fff;
-    box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
-    width: 160px;
+    &__box {
+        display: flex;
+        position: relative;
 
-    &::placeholder {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 1px;
+            border-radius: 8px;
+            background-color: #737373;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__date {
+        position: relative;
+
+        &:first-child {
+            margin-right: 36px;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: normal;
+        padding: 12px 50px 12px 15px;
         color: #979A9D;
+        border: 1px solid #E7E8E9;
+        background-color: #fff;
+        box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+        width: 160px;
+
+        &::placeholder {
+            color: #979A9D;
+        }
+
+        &::after {
+            z-index: 1;
+            position: absolute;
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-image: url('../images/icons/flights-calendar.svg');
+            right: 16px;
+            top: 8px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
     }
 
-    &::after {
-        z-index: 1;
-        position: absolute;
-        content: '';
-        width: 24px;
-        height: 24px;
-        background-image: url('../images/icons/flights-calendar.svg');
-        right: 16px;
-        top: 8px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        cursor: pointer;
+    //-- selectors filter
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__selector {
+        color: #A0A3A6;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: -0.128px;
+        padding: 9px 40px 9px 12px;
+        border: 1px solid #E7E8E9;
+        background-color: #fff;
+        margin-right: 20px;
+        position: relative;
+        transition: color .3s linear;
+    
+        &:last-child {
+            margin-right: 0;
+        }
+    
+        &::after {
+            position: absolute;
+            content: '';
+            width: 24px;
+            height: 24px;
+            top: 8px;
+            right: 8px;
+            background-image: url('../images/icons/Chevron-Down-Small.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: invert(70%) sepia(9%) saturate(107%) hue-rotate(169deg) brightness(92%) contrast(91%);
+        }
+    
+        &:focus {
+            transition: border .3s ease-in-out;
+            border: 1px solid #2563EB;
+        }
+    
+        &.active {
+            color: #2563EB;
+            text-overflow: ellipsis;
+    
+            &::after {
+                transform: rotate(180deg);
+                filter: invert(25%) sepia(63%) saturate(3197%) hue-rotate(217deg) brightness(98%) contrast(89%);
+            }
+        }
+    
+        &:hover {
+            color: #172B4D;
+        }
     }
 }
 
@@ -441,67 +532,6 @@ html {
     }
 }
 
-//-- selectors filter
-.filter-selector-box {
-    display: flex;
-    align-items: center;
-}
-
-.filter-selector {
-    color: #A0A3A6;
-    text-overflow: ellipsis;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: -0.128px;
-    padding: 9px 40px 9px 12px;
-    border: 1px solid #E7E8E9;
-    background-color: #fff;
-    margin-right: 24px;
-    position: relative;
-    transition: color .3s linear;
-
-    &:last-child {
-        margin-right: 0;
-    }
-
-    &::after {
-        position: absolute;
-        content: '';
-        width: 24px;
-        height: 24px;
-        top: 8px;
-        right: 8px;
-        background-image: url('../images/icons/Chevron-Down-Small.svg');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        filter: invert(70%) sepia(9%) saturate(107%) hue-rotate(169deg) brightness(92%) contrast(91%);
-    }
-
-    &:focus {
-        transition: border .3s ease-in-out;
-        border: 1px solid #2563EB;
-    }
-
-    &.active {
-        color: #2563EB;
-        text-overflow: ellipsis;
-
-        &::after {
-            transform: rotate(180deg);
-            filter: invert(25%) sepia(63%) saturate(3197%) hue-rotate(217deg) brightness(98%) contrast(89%);
-        }
-    }
-
-    &:hover {
-        color: #172B4D;
-    }
-
-
-
-}
-
 //------------------------------------------ Table
 .table {
     border-collapse: collapse;
@@ -509,24 +539,87 @@ html {
     background: var(--white-100, #FFF);
     box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 
-    td span {
+    &__header {
+        background-color: #FBFBFC;
+    }
 
+    &__head-cell {
+        text-align: left;
+        color: #172B4D;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: -0.128px;
+        padding: 13px 16px;
+    }
+
+    &__row {
+        border: 1px solid var(--Border-Light, #E7E8E9);
+        background-color: #FBFBFC;
+
+        &:nth-child(2n - 1) {
+            background-color: #fff;
+        }
+    }
+
+    &__cell {
+        height: 48px;
+        text-align: left;
+        padding: 7px 16px;
+        // flights
+        &--id {
+            width: 120px;
+        }
+
+        &--march {
+            width: 215px;
+        }
+
+        &--date {
+            width: 206px;
+        }
+
+        &--airport {
+            width: 210px;
+        }
+
+        &--details {
+            text-align: right;
+        }
+        // notices
+        &--name {
+            width: 274px;
+        }
+        &--gender {
+            width: 156px;
+        }
+        &--notice {
+            width: 272px;
+        }
+        &--flight,
+        &--plain-name {
+            width: 273px;
+        }
+    }
+
+    &__cell:not(:last-child),
+    &__head-cell:not(:last-child) {
+        border-right: none;
+        border-color: inherit;
+    }
+
+    &__span {
         font-size: 14px;
         font-weight: 550;
         line-height: 22px;
         letter-spacing: -0.128px;
     }
 
-    &__id span,
-    &__march span,
-    &__date span,
-    &__plain>span,
-    &__number span {
+    .gray-span {
         color: #979A9D;
     }
 
-    &__airport>span,
-    &__plain>span>span {
+    .blue-span {
         position: relative;
         color: #2563EB;
 
@@ -539,11 +632,9 @@ html {
             background-color: #2563EB;
             left: 0;
         }
-
     }
 
-    &__type>span {
-        color: #41B871;
+    &__type {
         padding: 4px 8px;
         text-align: center;
         font-size: 12px;
@@ -551,14 +642,28 @@ html {
         line-height: 18px;
         letter-spacing: 0.016px;
         border-radius: var(--12, 12px);
-        background: rgba(110, 203, 144, 0.15);
+
+        &--completed {
+            color: #41B871;
+            background-color: rgba(110, 203, 144, 0.15);
+        }
+
+        &--stagnation {
+            color: var(--Error-Primary, #EF4444);
+            background-color: rgba(255, 88, 88, 0.15);
+        }
+
+        &--pending {
+            background-color: #FBFCE3;
+            color: #E9A800;
+        }
     }
 
-    &__details {
+    &__btn {
         border-radius: 6px;
         background-color: var(--Action-Light, rgba(35, 55, 55, 0.05));
         color: var(--Text-Primary, #2C2E30);
-        text-align: center;
+        text-align: right;
         font-size: 13px;
         font-weight: 600;
         line-height: 12px;
@@ -569,72 +674,6 @@ html {
             background-color: var(--Action-Light, rgba(35, 55, 55, 0.15));
         }
     }
-}
-
-.table thead th {
-    text-align: left;
-    color: #172B4D;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: -0.128px;
-    padding: 13px 16px;
-}
-
-.table thead tr {
-    background-color: #FBFBFC;
-}
-
-.table tbody tr {
-    border: 1px solid var(--Border-Light, #E7E8E9);
-    background-color: #FBFBFC;
-
-    &:nth-child(2n - 1) {
-        background-color: #fff;
-    }
-}
-
-.table tbody td {
-    height: 48px;
-    text-align: left;
-    color: #172B4D;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: -0.128px;
-    padding: 7px 16px;
-}
-
-.table td:not(:last-child),
-.table th:not(:last-child) {
-    border-right: none;
-    border-color: inherit;
-}
-
-.table tbody .table__id {
-    width: 120px;
-}
-
-.table tbody .table__march {
-    width: 215px;
-}
-
-.table tbody .table__date {
-    width: 206px;
-}
-
-.table tbody .table__airport {
-    width: 210px;
-}
-
-.table tbody .table__type {
-    span {
-        font-size: 12px;
-    }
-}
-
-.table td:last-child {
-    text-align: right;
 }
 
 //------------------------------------------ Pagination
