@@ -1,0 +1,26 @@
+.bd-result{
+    height: 100vh;
+    padding: 48px 40px 24px;
+    background-color: #fff;
+
+    &__top{
+        position: relative;
+    }
+
+    &__btn{
+        padding-left: 44px;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 12px;
+            background-image: url("../images/sprite.svg#database-arrow");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
