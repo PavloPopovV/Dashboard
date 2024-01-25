@@ -1,6 +1,28 @@
 .flights {
 	width: 100%;
 	background: var(--white-100, #FFF);
+
+	.table__cell {
+		&--id {
+            width: 120px;
+        }
+
+        &--march {
+            width: 215px;
+        }
+
+        &--date {
+            width: 206px;
+        }
+
+        &--airport {
+            width: 210px;
+        }
+
+        &--details {
+            text-align: right;
+        }
+	}
 }
 
 .flights-table {

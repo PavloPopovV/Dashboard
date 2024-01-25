@@ -25,8 +25,18 @@ const tabOperationBtns = document.querySelectorAll(".tab-operation-btn");
 const tabsOperationItems = document.querySelectorAll(".tab-operation-content");
 const tabDataBaseBtns = document.querySelectorAll(".database-btn-js");
 const tabsDataBaseItems = document.querySelectorAll(".database-content");
-const tabsPassengersTableBtns = document.querySelectorAll('.passengers-table__btn')
-const tabsPassengersTableItems = document.querySelectorAll('.passengers-table__box-gray')
+const tabsPassengersTableBtns = document.querySelectorAll(
+  ".passengers-table__btn"
+);
+const tabsPassengersTableItems = document.querySelectorAll(
+  ".passengers-table__box-gray"
+);
+const tabsAirplaneDetailsBtn = document.querySelectorAll(
+  '.js-airplaneDetailsBtn'
+);
+const tabsAirplaneDetailsItem = document.querySelectorAll(
+  '.js-airplaneDetailsItem'
+);
 
 function removeClass(items, className) {
   items.forEach((item) => {
@@ -38,16 +48,16 @@ function openTab(target, btns, tabs) {
   let id = target.getAttribute("data-tab");
   const element = document.getElementById(id);
 
-  if(id === 'All') {
+  if (id === "All") {
     removeClass(btns, "active");
-    target.classList.add('active')
-    tabs.forEach(item => {
-      item.classList.add('show')
-    })
-    return true
+    target.classList.add("active");
+    tabs.forEach((item) => {
+      item.classList.add("show");
+    });
+    return true;
   }
 
-  if(element) {
+  if (element) {
     removeClass(btns, "active");
     removeClass(tabs, "show");
     element.classList.add("show");
@@ -192,8 +202,6 @@ function renderOnClickArrows(target) {
 }
 //
 
-
-
 //------------------------------- Listeners -------------------------
 
 document.addEventListener("click", (e) => {
@@ -225,8 +233,11 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("database-btn-js")) {
     openTab(e.target, tabDataBaseBtns, tabsDataBaseItems);
   }
-  if(e.target.classList.contains('passengers-table__btn')) {
+  if (e.target.classList.contains("passengers-table__btn")) {
     openTab(e.target, tabsPassengersTableBtns, tabsPassengersTableItems);
+  }
+  if (e.target.classList.contains("js-airplaneDetailsBtn")) {
+    openTab(e.target, tabsAirplaneDetailsBtn, tabsAirplaneDetailsItem);
   }
 });
 
@@ -242,3 +253,132 @@ datepickerBtn.forEach((item) => {
   });
 });
 
+let html = "";
+for (let i = 0; i < 4; i++) {
+  html += `<tr class="table__row">
+    <td class="table__cell table__cell--name">
+        <span class="table__span gray-span">BOEING 315</span>
+    </td>
+    <td class="table__cell table__cell--march">
+        <span class="table__span blue-span">
+            312HG - 01
+        </span>
+    </td>
+    <td class="table__cell table__cell--location">
+        <span class="table__span gray-span">Аэропорт LVV</span>
+    </td>
+    <td class="table__cell table__cell--date">
+        <span class="table__span gray-span">24.12.2023</span>
+        <span class="table__span gray-span">12:25</span>
+    </td>
+    <td class="table__cell table__cell--number">
+        <span class="table__span blue-span">95 пассажиров</span>
+    </td>
+    <td class="table__cell table__cell--status">
+        <span class="table__type table__type--yellow">Ожидает вылет</span>
+    </td>
+    <td class="table__cell table__cell--plain">
+        <span class="table__span gray-span">
+            B-315-2
+        </span>
+    </td>
+    <td class="table__cell table__cell--details">
+        <a class="table__btn" href="airplane-details.html">Детали</a>
+    </td>
+</tr>`;
+  html += `<tr class="table__row">
+    <td class="table__cell table__cell--name">
+        <span class="table__span gray-span">BOEING 315</span>
+    </td>
+    <td class="table__cell table__cell--march">
+        <span class="table__span blue-span">
+            312HG - 01
+        </span>
+    </td>
+    <td class="table__cell table__cell--location">
+        <span class="table__span gray-span">Аэропорт LVV</span>
+    </td>
+    <td class="table__cell table__cell--date">
+        <span class="table__span gray-span">24.12.2023</span>
+        <span class="table__span gray-span">12:25</span>
+    </td>
+    <td class="table__cell table__cell--number">
+        <span class="table__span blue-span">95 пассажиров</span>
+    </td>
+    <td class="table__cell table__cell--status">
+        <span class="table__type table__type--green">Выполняет рейс</span>
+    </td>
+    <td class="table__cell table__cell--plain">
+        <span class="table__span gray-span">
+            B-315-2
+        </span>
+    </td>
+    <td class="table__cell table__cell--details">
+        <a class="table__btn" href="airplane-details.html">Детали</a>
+    </td>
+</tr>`;
+  html += `<tr class="table__row">
+    <td class="table__cell table__cell--name">
+        <span class="table__span gray-span">BOEING 315</span>
+    </td>
+    <td class="table__cell table__cell--march">
+        <span class="table__span blue-span">
+            312HG - 01
+        </span>
+    </td>
+    <td class="table__cell table__cell--location">
+        <span class="table__span gray-span">Аэропорт LVV</span>
+    </td>
+    <td class="table__cell table__cell--date">
+        <span class="table__span gray-span">24.12.2023</span>
+        <span class="table__span gray-span">12:25</span>
+    </td>
+    <td class="table__cell table__cell--number">
+        <span class="table__span gray-span"><span>95</span> пассажиров</span>
+    </td>
+    <td class="table__cell table__cell--status">
+        <span class="table__type table__type--red">Простой</span>
+    </td>
+    <td class="table__cell table__cell--plain">
+        <span class="table__span gray-span">
+            B-315-2
+        </span>
+    </td>
+    <td class="table__cell table__cell--details">
+        <a class="table__btn" href="airplane-details.html">Детали</a>
+    </td>
+</tr>`;
+  html += `<tr class="table__row">
+    <td class="table__cell table__cell--name">
+        <span class="table__span gray-span">BOEING 315</span>
+    </td>
+    <td class="table__cell table__cell--march">
+        <span class="table__span blue-span">
+            312HG - 01
+        </span>
+    </td>
+    <td class="table__cell table__cell--location">
+        <span class="table__span gray-span">Аэропорт LVV</span>
+    </td>
+    <td class="table__cell table__cell--date">
+        <span class="table__span gray-span">24.12.2023</span>
+        <span class="table__span gray-span">12:25</span>
+    </td>
+    <td class="table__cell table__cell--number">
+        <span class="table__span gray-span">95 пассажиров</span>
+    </td>
+    <td class="table__cell table__cell--status">
+        <span class="table__type table__type--yellow">Ожидает вылет</span>
+    </td>
+    <td class="table__cell table__cell--plain">
+        <span class="table__span gray-span">
+            B-315-2
+        </span>
+    </td>
+    <td class="table__cell table__cell--details">
+        <a class="table__btn" href="airplane-details.html">Детали</a>
+    </td>
+</tr>`;
+}
+
+// document.querySelector(".airplane__table tbody").innerHTML = html;
