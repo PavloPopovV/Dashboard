@@ -616,27 +616,32 @@ html {
         &--suspicions {
             width: 188px;
         }
+
         &--nationality {
             width: 194px;
         }
 
-        &--secondname{
+        //bd-result
+        &--secondname {
             width: 196px;
         }
-        &--name{
+
+        &--nickname {
             width: 200px;
         }
-        &--paternity{
+
+        &--paternity {
             width: 195px;
         }
 
-        &--gender-roll{
+        &--gender-roll {
             width: 200px;
         }
-        &--day{
+
+        &--day {
             width: 208px;
         }
-         
+
     }
 
     &__cell:not(:last-child),
@@ -1049,15 +1054,10 @@ html {
     }
 
     &__info {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 157px 139px 1fr;
+        gap: 16px 25px;
     }
-
-    &__servisec {
-        width: 145px;
-        margin: 0 30px 20px 0;
-    }
-
 
     &__description {
         display: block;
@@ -1066,8 +1066,31 @@ html {
     }
 
     &__text {
-        display: block;
+        position: relative;
+        display: inline-block;
         color: #172B4D;
+        padding-right: 34px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &--location::after {
+            background-image: url("../images/sprite.svg#main-page-flight-location");
+        }
+
+        &--calendar::after {
+            background-image: url('../images/sprite.svg#passenger-calendar-icon');
+        }
     }
 }
 
