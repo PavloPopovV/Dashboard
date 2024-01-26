@@ -50,7 +50,6 @@
             grid-template-columns: 320px 1fr 512px;
             justify-content: space-between;
             height: calc(100vh - 65px);
-
         }
 
         &--operative {
@@ -180,14 +179,17 @@
     }
 
     &__passport-details {
-        overflow-y: scroll;
+        overflow-y: auto;
         height: auto;
         padding: 24px;
-
-
+        
         &::-webkit-scrollbar {
             display: none;
         }
+    }
+
+    &__passport-details-inner{
+        padding: 24px 24px 0 24px;
     }
 
     &__passport-title {

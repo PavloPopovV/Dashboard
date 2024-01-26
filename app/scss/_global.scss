@@ -867,10 +867,23 @@ html {
 }
 
 .ticket {
+    overflow-y: auto;
+    height: auto;
+    height: calc(100vh - 145px);
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     &__item {
         background: #fff;
-        display: flex;
-        height: 198px;
+        display: grid;
+        grid-template-columns: 242px 1fr;
+        height: auto;
+        justify-content: space-between;
+        border-top: 1px solid #E4E7ED;
+        border-right: 1px solid #E4E7ED;
+        border-bottom: 1px solid #E4E7ED;
     }
 
     &__box {
@@ -882,12 +895,10 @@ html {
     }
 
     &__left {
-        width: 242px;
+
         position: relative;
         padding: 24px 24px 24px 19px;
         border-left: 5px solid #2563EB;
-        border-top: 1px solid #E4E7ED;
-        border-bottom: 1px solid #E4E7ED;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -963,12 +974,9 @@ html {
 
     &__right {
         position: relative;
-        border-top: 1px solid #E4E7ED;
-        border-right: 1px solid #E4E7ED;
-        border-bottom: 1px solid #E4E7ED;
-        background: var(--white-100, #FFF);
+        background: #fff;
         padding: 24px 24px 24px 24px;
-        width: 582px;
+
 
         &::after {
             content: '';
@@ -992,15 +1000,10 @@ html {
     }
 
     &__info {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 157px 139px 1fr;
+        gap: 16px 25px;
     }
-
-    &__servisec {
-        width: 145px;
-        margin: 0 30px 20px 0;
-    }
-
 
     &__description {
         display: block;
@@ -1009,8 +1012,31 @@ html {
     }
 
     &__text {
-        display: block;
+        position: relative;
+        display: inline-block;
         color: #172B4D;
+        padding-right: 34px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &--location::after {
+            background-image: url("../images/sprite.svg#main-page-flight-location");
+        }
+
+        &--calendar::after {
+            background-image: url('../images/sprite.svg#passenger-calendar-icon');
+        }
     }
 }
 

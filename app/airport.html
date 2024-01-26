@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="airport-wrapper">
+  <section class="sidebar">
+    <img class="sidebar__logo" src="images/Logo.png" alt="logo">
+    <div class="sidebar__navigation">
+        <div class="sidebar__options">
+            <div class="sidebar__search-box search-box">
+                <input class="sidebar__search search" type="text" placeholder="Поиск"></input>
+            </div>
+            <nav class="sidebar__menu">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="index.html" class="sidebar__btn sidebar__btn--main sidebar-active">Главная</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="flights.html" class="sidebar__btn sidebar__btn--flights">Рейсы</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="passengers-table.html" class="sidebar__btn sidebar__btn--passengers">Пассажиры</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="airplane.html" class="sidebar__btn sidebar__btn--planes">Самолеты</a>
+                    </li>
+                    <li class="sidebar__item"> 
+                        <a href="notices.html" class="sidebar__btn sidebar__btn--notifications">Уведомления</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar__location">
+            <div class="sidebar__location-item">
+                <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
+                <span class="sidebar__country">Узбекистан</span>
+                <button class="sidebar__select-country" type="button"></button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar__account">
+        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="">
+        <div class="sidebar__account-info">
+            <span class="sidebar__account-name">Kianna Press</span>
+            <span class="sidebar__account-position">Сержант</span>
+        </div>
+        <button class="sidebar__account-btn" type="button"></button>
+    </div>
+</section>
+
+  <main class="main">
+    <section class="airport">
+  <div class="airport__navigation">
+    <button class="airport__breadcrumbs breadcrumbs">
+      Вернуться к пассажирам
+    </button>
+    <ul class="airport__tabs">
+      <li class="airport__item">
+        <button
+          class="passenger__btn tab-airport-btn active"
+          data-tab="#airportTab_1"
+        >
+          Рейсы
+        </button>
+      </li>
+      <li class="airport__item">
+        <button class="airport__btn tab-airport-btn" data-tab="#airportTab_2">
+          История рейсов
+        </button>
+      </li>
+      <li class="airport__item">
+        <button class="airport__btn tab-airport-btn" data-tab="#airportTab_3">
+          Самолеты
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="airport__info-box tab-airport-content show" id="#airportTab_1">
+    <div class="airport__main-info">
+      <h5 class="airport__main-title">Аэропорт LVV</h5>
+      <ul class="airport__main-list">
+        <li class="airport__main-item">
+          <span class="airport__text">Местонахождение</span>
+          <span class="airport__info">Ukraine, Lviv</span>
+        </li>
+        <li class="airport__main-item">
+          <span class="airport__text">Код</span>
+          <span class="airport__info">161-51</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="airport__details">
+      <h6 class="airport__details-title title title--main">Исходящие рейсы</h6>
+    </div>
+
+    <div class="airport__statistic">
+      <h3 class="airport__statistic-title title title--inner">
+        Доп. информация
+      </h3>
+      <ul class="airport__statistic-list">
+        <li class="airport__statistic-item item">
+          <span class="airport__statistic-text text"
+            >Запланированые рейсы
+          </span>
+          <span class="airport__statistic-info">14</span>
+        </li>
+        <li class="airport__statistic-item item">
+          <span class="airport__statistic-text text"
+            >Самолетов в аэропорту</span
+          >
+          <span class="airport__statistic-info">16</span>
+        </li>
+        <li class="airport__statistic-item item">
+          <span class="airport__statistic-text text">Всего рейсов</span>
+          <span class="airport__statistic-info">451</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="airport__info-box tab-airport-content" id="#airportTab_2">
+    <div class="airport__main-info">
+      <h5 class="airport__main-title">Аэропорт LVV</h5>
+      <ul class="airport__main-list">
+        <li class="airport__main-item">
+          <span class="airport__text">Местонахождение</span>
+          <span class="airport__info">Ukraine, Lviv</span>
+        </li>
+        <li class="airport__main-item">
+          <span class="airport__text">Код</span>
+          <span class="airport__info">161-51</span>
+        </li>
+      </ul>
+    </div>
+    <div class="airport__details"></div>
+    <div class="airport__statistic">
+      <h3 class="airport__statistic-title title title--inner">
+        Доп. информация
+      </h3>
+      <ul class="airport__statistic-list">
+        <li class="airport__statistic-item item">
+          <span class="airport__statistic-text text"
+            >Запланированые рейсы
+          </span>
+          <span class="airport__statistic-info">14</span>
+        </li>
+        <li class="airport__statistic-item item">
+          <span class="airport__statistic-text text"
+            >Самолетов в аэропорту</span
+          >
+          <span class="airport__statistic-info">16</span>
+        </li>
+        <li class="airport__statistic-item item">
+          <span class="airport__statistic-text text">Всего рейсов</span>
+          <span class="airport__statistic-info">451</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="airport__info-box tab-airport-content" id="#airportTab_3">
+    <div class="airport__main-info">
+      <h5 class="airport__main-title">Аэропорт LVV</h5>
+      <ul class="airport__main-list">
+        <li class="airport__main-item">
+          <span class="airport__text">Местонахождение</span>
+          <span class="airport__info">16</span>
+        </li>
+        <li class="airport__main-item">
+          <span class="airport__text">Рейсов запланировано</span>
+          <span class="airport__info">161-51</span>
+        </li>
+        <li class="airport__main-item">
+          <span class="airport__text">Самолетов в аэропорту</span>
+          <span class="airport__info">14</span>
+        </li>
+      </ul>
+    </div>
+    <div class="airport__details airport__details--scroll">
+      <div class="airport__details-top">
+        <h6 class="airport__details-title title title--main">Самолеты</h6>
+        <span class="airport__details-count">16</span>
+      </div>
+      <ul class="airport__card-list">
+        <li class="airport__card-item">
+            <div class="airport__card-left">
+                <div class="airport__card-info">
+                    <h5 class="airport__card-title">BOEING 315</h5>
+                    <span class="airport__card-number">B-315-2</span>
+                    <a class="airport__card-btn" href=""></a>
+                </div>
+                <span class="airport__card-type airport__card-type--red">Простой</span>
+            </div>
+            <div class="airport__card-right">
+                <ul class="airport__info-list">
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Рейс
+                            <span class="airport__info-text airport__info-text--blue">312HG - 01</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Максимальная масса
+                            <span class="airport__info-text">340,2 т</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Вместительность
+                            <span class="airport__info-text">95 пассажира</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Тип
+                            <span class="airport__info-text">Пассажирский</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="airport__card-item">
+            <div class="airport__card-left">
+                <div class="airport__card-info">
+                    <h5 class="airport__card-title">BOEING 315</h5>
+                    <span class="airport__card-number">B-315-2</span>
+                    <a class="airport__card-btn" href=""></a>
+                </div>
+                <span class="airport__card-type airport__card-type--orange">Ожидает вылет</span>
+            </div>
+            <div class="airport__card-right">
+                <ul class="airport__info-list">
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Рейс
+                            <span class="airport__info-text airport__info-text--blue">312HG - 01</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Максимальная масса
+                            <span class="airport__info-text">340,2 т</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Вместительность
+                            <span class="airport__info-text">95 пассажира</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Тип
+                            <span class="airport__info-text">Пассажирский</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="airport__card-item">
+            <div class="airport__card-left">
+                <div class="airport__card-info">
+                    <h5 class="airport__card-title">BOEING 315</h5>
+                    <span class="airport__card-number">B-315-2</span>
+                    <a class="airport__card-btn" href=""></a>
+                </div>
+                <span class="airport__card-type airport__card-type--green">Выполняет рейс</span>
+            </div>
+            <div class="airport__card-right">
+                <ul class="airport__info-list">
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Рейс
+                            <span class="airport__info-text airport__info-text--blue">-</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Максимальная масса
+                            <span class="airport__info-text">340,2 т</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Вместительность
+                            <span class="airport__info-text">95 пассажира</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Тип
+                            <span class="airport__info-text">Пассажирский</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="airport__card-item">
+            <div class="airport__card-left">
+                <div class="airport__card-info">
+                    <h5 class="airport__card-title">BOEING 315</h5>
+                    <span class="airport__card-number">B-315-2</span>
+                    <a class="airport__card-btn" href=""></a>
+                </div>
+                <span class="airport__card-type airport__card-type--red">Простой</span>
+            </div>
+            <div class="airport__card-right">
+                <ul class="airport__info-list">
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Рейс
+                            <span class="airport__info-text airport__info-text--blue">312HG - 01</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Максимальная масса
+                            <span class="airport__info-text">340,2 т</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Вместительность
+                            <span class="airport__info-text">95 пассажира</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Тип
+                            <span class="airport__info-text">Пассажирский</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="airport__card-item">
+            <div class="airport__card-left">
+                <div class="airport__card-info">
+                    <h5 class="airport__card-title">BOEING 315</h5>
+                    <span class="airport__card-number">B-315-2</span>
+                    <a class="airport__card-btn" href=""></a>
+                </div>
+                <span class="airport__card-type airport__card-type--orange">Ожидает вылет</span>
+            </div>
+            <div class="airport__card-right">
+                <ul class="airport__info-list">
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Рейс
+                            <span class="airport__info-text airport__info-text--blue">312HG - 01</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Максимальная масса
+                            <span class="airport__info-text">340,2 т</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Вместительность
+                            <span class="airport__info-text">95 пассажира</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Тип
+                            <span class="airport__info-text">Пассажирский</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="airport__card-item">
+            <div class="airport__card-left">
+                <div class="airport__card-info">
+                    <h5 class="airport__card-title">BOEING 315</h5>
+                    <span class="airport__card-number">B-315-2</span>
+                    <a class="airport__card-btn" href=""></a>
+                </div>
+                <span class="airport__card-type airport__card-type--green">Выполняет рейс</span>
+            </div>
+            <div class="airport__card-right">
+                <ul class="airport__info-list">
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Рейс
+                            <span class="airport__info-text airport__info-text--blue">-</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Максимальная масса
+                            <span class="airport__info-text">340,2 т</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Вместительность
+                            <span class="airport__info-text">95 пассажира</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Тип
+                            <span class="airport__info-text">Пассажирский</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="airport__card-item">
+            <div class="airport__card-left">
+                <div class="airport__card-info">
+                    <h5 class="airport__card-title">BOEING 315</h5>
+                    <span class="airport__card-number">B-315-2</span>
+                    <a class="airport__card-btn" href=""></a>
+                </div>
+                <span class="airport__card-type airport__card-type--red">Простой</span>
+            </div>
+            <div class="airport__card-right">
+                <ul class="airport__info-list">
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Рейс
+                            <span class="airport__info-text airport__info-text--blue">312HG - 01</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Максимальная масса
+                            <span class="airport__info-text">340,2 т</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Вместительность
+                            <span class="airport__info-text">95 пассажира</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Тип
+                            <span class="airport__info-text">Пассажирский</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="airport__card-item">
+            <div class="airport__card-left">
+                <div class="airport__card-info">
+                    <h5 class="airport__card-title">BOEING 315</h5>
+                    <span class="airport__card-number">B-315-2</span>
+                    <a class="airport__card-btn" href=""></a>
+                </div>
+                <span class="airport__card-type airport__card-type--orange">Ожидает вылет</span>
+            </div>
+            <div class="airport__card-right">
+                <ul class="airport__info-list">
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Рейс
+                            <span class="airport__info-text airport__info-text--blue">312HG - 01</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Максимальная масса
+                            <span class="airport__info-text">340,2 т</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Вместительность
+                            <span class="airport__info-text">95 пассажира</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Тип
+                            <span class="airport__info-text">Пассажирский</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="airport__card-item">
+            <div class="airport__card-left">
+                <div class="airport__card-info">
+                    <h5 class="airport__card-title">BOEING 315</h5>
+                    <span class="airport__card-number">B-315-2</span>
+                    <a class="airport__card-btn" href=""></a>
+                </div>
+                <span class="airport__card-type airport__card-type--green">Выполняет рейс</span>
+            </div>
+            <div class="airport__card-right">
+                <ul class="airport__info-list">
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Рейс
+                            <span class="airport__info-text airport__info-text--blue">-</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Максимальная масса
+                            <span class="airport__info-text">340,2 т</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Вместительность
+                            <span class="airport__info-text">95 пассажира</span>
+                        </span>
+                    </li>
+                    <li class="airport__info-item">
+                        <span class="airport__info-name">
+                            Тип
+                            <span class="airport__info-text">Пассажирский</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </li>
+      </ul>
+    </div>
+    <div class="airport__statistic">
+      <h3 class="airport__statistic-title title title--inner">
+        Доп. информация
+      </h3>
+      <ul class="airport__statistic-list">
+        <li class="airport__statistic-item item">
+          <span class="airport__statistic-text text"
+            >Запланированые рейсы
+          </span>
+          <span class="airport__statistic-info">14</span>
+        </li>
+        <li class="airport__statistic-item item">
+          <span class="airport__statistic-text text"
+            >Самолетов в аэропорту</span
+          >
+          <span class="airport__statistic-info">16</span>
+        </li>
+        <li class="airport__statistic-item item">
+          <span class="airport__statistic-text text">Всего рейсов</span>
+          <span class="airport__statistic-info">451</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/main.min.js"></script>
+
+
+
+    </body>
+
+</html>

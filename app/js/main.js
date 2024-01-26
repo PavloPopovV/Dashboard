@@ -37,6 +37,8 @@ const tabsAirplaneDetailsBtn = document.querySelectorAll(
 const tabsAirplaneDetailsItem = document.querySelectorAll(
   '.js-airplaneDetailsItem'
 );
+const tabAirportBtns = document.querySelectorAll(".tab-airport-btn");
+const tabsAirportItems = document.querySelectorAll(".tab-airport-content");
 
 function removeClass(items, className) {
   items.forEach((item) => {
@@ -238,6 +240,9 @@ document.addEventListener("click", (e) => {
   }
   if (e.target.classList.contains("js-airplaneDetailsBtn")) {
     openTab(e.target, tabsAirplaneDetailsBtn, tabsAirplaneDetailsItem);
+  }
+  if(e.target.classList.contains('tab-airport-btn')) {
+    openTab(e.target, tabAirportBtns, tabsAirportItems);
   }
 });
 

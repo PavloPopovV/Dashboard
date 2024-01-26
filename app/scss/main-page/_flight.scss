@@ -5,7 +5,9 @@
         margin-bottom: 24px;
     }
     &__box {
-        display: flex;
+        display: grid;
+        grid-template-columns: 460px 1fr;
+        gap: 24px;
         justify-content: space-between;
         align-items: center;
     }
@@ -13,10 +15,8 @@
     &__img {
         width: 458px;
         height: 351px;
-        margin-right: 24px;
 
         img {
-            
             object-fit: cover;
         }
     }

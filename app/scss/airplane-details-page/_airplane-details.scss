@@ -46,23 +46,11 @@
             }
         }
 
-        &__ticket-item {
-            border: 1px solid #E4E7ED;
-        }
-
         &__center {
             padding: 24px 24px 0 24px;
         }
 
-        &__ticket-list {
-            overflow-y: auto;
-            // height: calc(100vh - 6%);   
-            height: calc(100vh - 168px);
-        }
-
         &__ticket-right {
-            width: unset;
-            border: transparent;
             &::after {
                 display: none;
             }
@@ -94,12 +82,9 @@
         }
 
         &__ticket-info {
-            display: grid ;
-            grid-template-columns: repeat(2, 145px);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 16px 40px;
-        }
-        &__ticket-services {
-            margin: 0;
         }
     }
 
