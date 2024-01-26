@@ -91,10 +91,6 @@
         letter-spacing: -0.176px;
     }
 
-
-
-
-
     &__details {
         padding: 24px;
 
@@ -113,7 +109,7 @@
     }
 
     &__details-title {
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
 
     &__details-count {
@@ -133,16 +129,15 @@
 
 
     &__card-item {
-        display: flex;
-        width: 824px;
-        height: 168px;
+        display: grid;
+        grid-template-columns: 256px 1fr;
         margin-bottom: 24px;
     }
 
     &__card-left {
-        width: 256px;
-        padding: 24px 24px 24px 19px;
+        padding: 24px 24px 24px 24px;
         display: flex;
+        height: 168px;
         flex-direction: column;
         justify-content: space-between;
         border-left: 5px solid #2563EB;
@@ -228,7 +223,6 @@
 
     &__card-right {
         position: relative;
-        width: 570px;
         padding: 24px;
         border: 1px solid #E4E7ED;
         background-color: #fff;
@@ -249,15 +243,14 @@
     }
 
     &__info-list {
-        width: 318px;
+
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px 16px;
+        grid-template-columns: 122px 150px;
+        gap: 16px 48px;
     }
 
     &__info-name {
         color: #A0A3A6;
-
     }
 
     &__info-text {
@@ -279,7 +272,7 @@
     }
 
     &__statistic-title {
-        margin-bottom: 16px;
+        margin-bottom: 24px;
     }
 
     &__statistic-list {
@@ -290,5 +283,63 @@
 
     &__statistic-info {
         color: #172B4D;
+    }
+
+    &__table {
+        margin-bottom: 26px;
+
+        &--history {
+            margin-bottom: 18px;
+        }
+    }
+
+    &__table-row {
+        color: #979A9D;
+    }
+
+    &__table-item {
+
+        &--blue {
+            color: #0052CC;
+        }
+    }
+
+    &__table-text {
+        padding: 2px 0 8px 16px;
+
+        &--id {
+            width: 112px;
+        }
+
+        &--airport {
+            width: 190px;
+        }
+
+        &--departure {
+            width: 195px;
+        }
+
+        &--boeing {
+            width: 135px;
+        }
+
+        &--terminal {
+            padding: 6px 16px 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__pagination {
+        margin-bottom: 26px;
+
+        &--bottom {
+            margin-bottom: 0;
+        }
+    }
+
+    &__filters {
+        margin-bottom: 24px;
     }
 }

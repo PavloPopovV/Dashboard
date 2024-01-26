@@ -310,13 +310,13 @@
       <div class="passenger__flight-btn">
         <button
           type="button"
-          class="passenger__flight-processing passenger__flight-processing--proc"
+          class="passenger__flight-processing passenger__flight-processing--proc addProcessing"
         >
           В обработку
         </button>
         <button
           type="button"
-          class="passenger__flight-processing passenger__flight-processing--remove"
+          class="passenger__flight-processing passenger__flight-processing--remove removeProcessing"
         >
           Снять все подозрения
         </button>
@@ -1909,6 +1909,19 @@
           <span class="passenger__flight-info">0</span>
         </li>
       </ul>
+    </div>
+  </div>
+
+
+  <div class="popup">
+    <div class="popup__card">
+      <span class="popup__title"></span>
+      <span class="popup__text">Подтвердите действие</span>
+      <div class="popup__buttons">
+        <button class="popup__processing processing-btn processing-btn--proc succesProcessing" type="button" >Подтвердить</и>
+        <button class="popup__processing processing-btn processing-btn--remove stopProcessing" type="button" 
+          >Отмена</button>
+      </div>
     </div>
   </div>
 </section>

@@ -25,8 +25,12 @@ const tabOperationBtns = document.querySelectorAll(".tab-operation-btn");
 const tabsOperationItems = document.querySelectorAll(".tab-operation-content");
 const tabDataBaseBtns = document.querySelectorAll(".database-btn-js");
 const tabsDataBaseItems = document.querySelectorAll(".database-content");
-const tabsPassengersTableBtns = document.querySelectorAll('.passengers-table__btn')
-const tabsPassengersTableItems = document.querySelectorAll('.passengers-table__box-gray')
+const tabsPassengersTableBtns = document.querySelectorAll(
+  ".passengers-table__btn"
+);
+const tabsPassengersTableItems = document.querySelectorAll(
+  ".passengers-table__box-gray"
+);
 const tabAirportBtns = document.querySelectorAll(".tab-airport-btn");
 const tabsAirportItems = document.querySelectorAll(".tab-airport-content");
 
@@ -40,16 +44,16 @@ function openTab(target, btns, tabs) {
   let id = target.getAttribute("data-tab");
   const element = document.getElementById(id);
 
-  if(id === 'All') {
+  if (id === "All") {
     removeClass(btns, "active");
-    target.classList.add('active')
-    tabs.forEach(item => {
-      item.classList.add('show')
-    })
-    return true
+    target.classList.add("active");
+    tabs.forEach((item) => {
+      item.classList.add("show");
+    });
+    return true;
   }
 
-  if(element) {
+  if (element) {
     removeClass(btns, "active");
     removeClass(tabs, "show");
     element.classList.add("show");
@@ -192,9 +196,6 @@ function renderOnClickArrows(target) {
       break;
   }
 }
-//
-
-
 
 //------------------------------- Listeners -------------------------
 
@@ -208,7 +209,6 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("tab-btn")) {
     openTab(e.target, tabBtns, tabsItems);
   }
-
   if (e.target.classList.contains("pagination__btn")) {
     let closestParentId = e.target.closest(".pagination").id;
     if (closestParentId === "flights") {
@@ -227,11 +227,25 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("database-btn-js")) {
     openTab(e.target, tabDataBaseBtns, tabsDataBaseItems);
   }
-  if(e.target.classList.contains('passengers-table__btn')) {
+  if (e.target.classList.contains("passengers-table__btn")) {
     openTab(e.target, tabsPassengersTableBtns, tabsPassengersTableItems);
   }
-  if(e.target.classList.contains('tab-airport-btn')) {
+  if (e.target.classList.contains("tab-airport-btn")) {
     openTab(e.target, tabAirportBtns, tabsAirportItems);
+  }
+  if (e.target.classList.contains("addProcessing")) {
+    document.querySelector(".popup").classList.add("active");
+    document.querySelector(".popup__title").innerHTML = "Отправить в обработку";
+  }
+  if (e.target.classList.contains("removeProcessing")) {
+    document.querySelector(".popup").classList.add("active");
+    document.querySelector(".popup__title").innerHTML = "Снять все подозрения";
+  }
+  if (e.target.classList.contains("succesProcessing")) {
+    document.querySelector(".popup").classList.remove("active");
+  }
+  if (e.target.classList.contains("stopProcessing")) {
+    document.querySelector(".popup").classList.remove("active");
   }
 });
 
@@ -246,4 +260,3 @@ datepickerBtn.forEach((item) => {
     openCloseDatepickerPopup(e, "remove");
   });
 });
-

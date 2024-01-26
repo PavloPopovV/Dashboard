@@ -1,5 +1,5 @@
 <section class="suspicion">
-    <div class="suspicion__top">
+  <div class="suspicion__top">
     <h2 class="suspicion__title title title--main">Подозрения</h2>
     <div class="suspicion__pagination">
       <button type="button"
@@ -30,13 +30,13 @@
             <span> 1 RED NOTICE </span>
           </span>
       </div>
-    </div>
+      </div>
       <div class="suspicion__data">
         <div class="suspicion__name-details">
           <span class="suspicion__name"
             >Васильев Максим Олександрович</span
           >
-          <a href="" class="suspicion__details table__details">Детали</a>
+          <a href="passenger.html" class="suspicion__details table__btn">Детали</a>
         </div>
 
         <p class="suspicion__text">
@@ -44,14 +44,14 @@
           обвинений не было предъявлено.
         </p>
         <div class="suspicion__buttons">
-          <button class="suspicion__processing processing-btn processing-btn--proc" type="button" >В обработку</и>
-          <button class="suspicion__processing processing-btn processing-btn--remove" type="button" 
+          <button class="suspicion__processing processing-btn processing-btn--proc addProcessing" type="button" >В обработку</и>
+          <button class="suspicion__processing processing-btn processing-btn--remove removeProcessing" type="button"
             >Снять все подозрения</button>
         </div>
       </div>
     </div>
     <div class="suspicion__flight">
-        <a href="" class="suspicion__flight-name">
+        <a href="flight-details.html" class="suspicion__flight-name">
             Рейс <span>752GS - 09</span>
         </a>
       <ul class="suspicion__flight-list flight-info__list">
@@ -72,6 +72,17 @@
           <span class="suspicion__flight-location flight-info__location">Б - 43</span>
         </li>
       </ul>
+    </div>
+  </div>
+  <div class="popup">
+    <div class="popup__card">
+      <span class="popup__title"></span>
+      <span class="popup__text">Подтвердите действие</span>
+      <div class="popup__buttons">
+        <button class="popup__processing processing-btn processing-btn--proc succesProcessing" type="button" >Подтвердить</и>
+        <button class="popup__processing processing-btn processing-btn--remove stopProcessing" type="button" 
+          >Отмена</button>
+      </div>
     </div>
   </div>
 </section>
