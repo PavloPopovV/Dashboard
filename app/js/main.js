@@ -34,9 +34,7 @@ const tabsPassengersTableItems = document.querySelectorAll(
 const tabsAirplaneDetailsBtn = document.querySelectorAll(
   '.js-airplaneDetailsBtn'
 );
-const tabsAirplaneDetailsItem = document.querySelectorAll(
-  '.js-airplaneDetailsItem'
-);
+
 const tabAirportBtns = document.querySelectorAll(".tab-airport-btn");
 const tabsAirportItems = document.querySelectorAll(".tab-airport-content");
 
@@ -202,7 +200,6 @@ function renderOnClickArrows(target) {
       break;
   }
 }
-//
 
 //------------------------------- Listeners -------------------------
 
@@ -216,7 +213,6 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("tab-btn")) {
     openTab(e.target, tabBtns, tabsItems);
   }
-
   if (e.target.classList.contains("pagination__btn")) {
     let closestParentId = e.target.closest(".pagination").id;
     if (closestParentId === "flights") {
@@ -238,11 +234,22 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("passengers-table__btn")) {
     openTab(e.target, tabsPassengersTableBtns, tabsPassengersTableItems);
   }
-  if (e.target.classList.contains("js-airplaneDetailsBtn")) {
-    openTab(e.target, tabsAirplaneDetailsBtn, tabsAirplaneDetailsItem);
-  }
-  if(e.target.classList.contains('tab-airport-btn')) {
+  if (e.target.classList.contains("tab-airport-btn")) {
     openTab(e.target, tabAirportBtns, tabsAirportItems);
+  }
+  if (e.target.classList.contains("addProcessing")) {
+    document.querySelector(".popup").classList.add("active");
+    document.querySelector(".popup__title").innerHTML = "Отправить в обработку";
+  }
+  if (e.target.classList.contains("removeProcessing")) {
+    document.querySelector(".popup").classList.add("active");
+    document.querySelector(".popup__title").innerHTML = "Снять все подозрения";
+  }
+  if (e.target.classList.contains("succesProcessing")) {
+    document.querySelector(".popup").classList.remove("active");
+  }
+  if (e.target.classList.contains("stopProcessing")) {
+    document.querySelector(".popup").classList.remove("active");
   }
 });
 

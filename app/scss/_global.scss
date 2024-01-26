@@ -566,7 +566,7 @@ html {
     &__cell {
         height: 48px;
         text-align: left;
-        padding: 7px 16px;    
+        padding: 7px 16px;
     }
 
     &__cell:not(:last-child),
@@ -665,6 +665,7 @@ html {
 
     }
 }
+
 .blue-span {
     position: relative;
     color: #2563EB;
@@ -679,6 +680,7 @@ html {
         left: 0;
     }
 }
+
 //------------------------------------------ Pagination
 
 .pagination {
@@ -881,9 +883,7 @@ html {
         grid-template-columns: 242px 1fr;
         height: auto;
         justify-content: space-between;
-        border-top: 1px solid #E4E7ED;
-        border-right: 1px solid #E4E7ED;
-        border-bottom: 1px solid #E4E7ED;
+        border: 1px solid #E4E7ED;
     }
 
     &__box {
@@ -1117,6 +1117,7 @@ html {
         margin-bottom: 16px;
         box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
         transition: background-color .3s linear;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -1126,7 +1127,7 @@ html {
         }
 
         &:hover {
-            background-color: rgba(37,99,235, .8);
+            background-color: rgba(37, 99, 235, .8);
         }
     }
 
@@ -1152,6 +1153,7 @@ html {
 
         &.active {
             color: var(--Accent-Primary, #2563EB);
+
             &::after {
                 content: '';
                 position: absolute;
@@ -1271,5 +1273,52 @@ html {
     &__item {
         margin-bottom: 16px;
     }
+}
 
+.popup {
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: rgba(58, 58, 58, 0.7);
+    z-index: 10000;
+
+    &.active {
+        display: block;
+        max-height: 100%;
+    }
+
+
+    &__card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 451px;
+        padding: 24px;
+        background: #fff;
+    }
+
+    &__title {
+        display: block;
+        color: #172B4D;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.336px;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        display: block;
+        color: #A0A3A6;
+        margin-bottom: 32px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
