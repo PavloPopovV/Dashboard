@@ -1,0 +1,36 @@
+.airplane {
+    background: var(--white-100, #FFF);
+
+    &__table {
+        margin-bottom: 20px;
+    }
+
+    .table__head-cell {
+        padding: 9px 16px;
+    }
+
+    &__filters {
+        margin-bottom: 22px;
+    }
+
+    .table__cell {
+        &--name,
+        &--date {
+            width: 216px;
+        }
+
+        &--march,
+        &--status {
+            width: 220px;
+        }
+
+        &--location {
+            width: 218px;
+        }
+
+        &--details {
+            width: 100px;
+        }
+    }
+
+}

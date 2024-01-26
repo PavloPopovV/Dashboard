@@ -23,4 +23,23 @@
             background-position: center;
         }
     }
+
+    .table__cell {
+        &--secondname{
+            width: 196px;
+        }
+        &--nickname{
+            width: 200px;
+        }
+        &--paternity{
+            width: 195px;
+        }
+
+        &--gender-roll{
+            width: 200px;
+        }
+        &--day{
+            width: 208px;
+        }
+    }
 }

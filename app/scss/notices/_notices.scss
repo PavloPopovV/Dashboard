@@ -1,8 +1,28 @@
 .notices {
     &__container {
         background-color: var(--white-100, #FFF);
+        padding: 48px 40px 18px 40px;
     }
     &__table {
         margin-bottom: 26px;
+    }
+
+    .table__cell {
+        &--name {
+            width: 274px;
+        }
+
+        &--gender {
+            width: 156px;
+        }
+
+        &--notice {
+            width: 272px;
+        }
+
+        &--flight,
+        &--plain-name {
+            width: 273px;
+        }
     }
 }

@@ -1,72 +1,11 @@
-<!DOCTYPE html>
-<html lang="ua">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashBoard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
+<section class="airplane">
+    <div class="airplane__container container-table-page">
+        <h5 class="airplane__title popular-title">Самолеты</h5>
+        <div class="airplane__text text-under-popular-title">
+            <p>Информация о самолетах аэропорта</p>
+        </div>
 
-<div class="wrapper">
-    <section class="sidebar">
-    <img class="sidebar__logo" src="images/Logo.png" alt="logo">
-    <div class="sidebar__navigation">
-        <div class="sidebar__options">
-            <div class="sidebar__search-box search-box">
-                <input class="sidebar__search search" type="text" placeholder="Поиск"></input>
-            </div>
-            <nav class="sidebar__menu">
-                <ul class="sidebar__list">
-                    <li class="sidebar__item">
-                        <a href="index.html" class="sidebar__btn sidebar__btn--main sidebar-active">Главная</a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a href="flights.html" class="sidebar__btn sidebar__btn--flights">Рейсы</a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a href="passengers-table.html" class="sidebar__btn sidebar__btn--passengers">Пассажиры</a>
-                    </li>
-                    <li class="sidebar__item">
-                        <a href="airplane.html" class="sidebar__btn sidebar__btn--planes">Самолеты</a>
-                    </li>
-                    <li class="sidebar__item"> 
-                        <a href="notices.html" class="sidebar__btn sidebar__btn--notifications">Уведомления</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="sidebar__location">
-            <div class="sidebar__location-item">
-                <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
-                <span class="sidebar__country">Узбекистан</span>
-                <button class="sidebar__select-country" type="button"></button>
-            </div>
-        </div>
-    </div>
-    <div class="sidebar__account">
-        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="">
-        <div class="sidebar__account-info">
-            <span class="sidebar__account-name">Kianna Press</span>
-            <span class="sidebar__account-position">Сержант</span>
-        </div>
-        <button class="sidebar__account-btn" type="button"></button>
-    </div>
-</section>
-
-    <main class="main">
-        <section class="flights">
-    <div class="flights__container container-table-page">
-        <h5 class=" flights__title popular-title">Рейсы</h5>
-        <div class="flights__text text-under-popular-title">
-            <p>Информация о запланированых рейсах</p>
-        </div>
-        <!-- Header filters -->
-        <div class="flights__filters flights-filters">
+        <div class="airplane__filters flights-filters">
             <div class="flights-filters__left">
                 <div class="flights-filters__search search-box">
                     <input class="search" type="text" name="search" placeholder="Поиск">
@@ -233,65 +172,56 @@
                 <button class="flights-filters__selector" type="button">По убыванию</button>
             </div>
         </div>
-        <!-- --- -->
 
-        <!-- Table -->
-        <table class="flights__table flights-table table" width="100%">
+        <table class="airplane__table table" width="100%">
             <thead>
                 <tr class="flights-table__header table__header">
-                    <th class="table__head-cell">ID рейса</th>
-                    <th class="table__head-cell">Маршрут</th>
-                    <th class="table__head-cell">Дата вылета</th>
-                    <th class="table__head-cell">Аэропорт вылета</th>
-                    <th class="table__head-cell">Аэропорт прибытия</th>
                     <th class="table__head-cell">Самолет</th>
+                    <th class="table__head-cell">Рейс</th>
+                    <th class="table__head-cell">Местонахождение</th>
+                    <th class="table__head-cell">Вылет/Прибытие</th>
+                    <th class="table__head-cell">Кол-во пассажиров</th>
                     <th class="table__head-cell">Статус</th>
-                    <th class="table__head-cell" colspan="2">Кол-во пассажиров</th>
+                    <th class="table__head-cell" colspan="2">Номер</th>
+                    <!-- <th class="table__head-cell" colspan="2">Кол-во пассажиров</th> -->
                 </tr>
             </thead>
             <tbody>
                 <!-- <tr class="table__row">
-                    <td class="table__cell table__cell--id">
-                        <span class="table__span gray-span">5152 - 13</span>
+                    <td class="table__cell table__cell--name">
+                        <span class="table__span gray-span">BOEING 315</span>
                     </td>
                     <td class="table__cell table__cell--march">
-                        <span class="table__span gray-span">
-                            <span>Lviv</span> - <span>Budapest</span>
+                        <span class="table__span blue-span">
+                            312HG - 01
                         </span>
+                    </td>
+                    <td class="table__cell table__cell--location">
+                        <span class="table__span gray-span">Аэропорт LVV</span>
                     </td>
                     <td class="table__cell table__cell--date">
                         <span class="table__span gray-span">24.12.2023</span>
                         <span class="table__span gray-span">12:25</span>
                     </td>
-                    <td class="table__cell table__cell--airport">
-                        <span class="table__span blue-span">Аэропорт LVA</span>
+                    <td class="table__cell table__cell--number">
+                        <span class="table__span blue-span">95 пассажиров</span>
                     </td>
-                    <td class="table__cell table__cell--airport">
-                        <span class="table__span blue-span">Аэропорт LAAS</span>
+                    <td class="table__cell table__cell--status">
+                        <span class="table__type table__type--yellow">Ожидает вылет</span>
                     </td>
                     <td class="table__cell table__cell--plain">
-                        <span class="gray-span">
-                            <span class="table__span  blue-span">BOEING 315</span>
-                            /
-                            <span class="table__span  blue-span">B-315-2</span>
+                        <span class="table__span gray-span">
+                            B-315-2
                         </span>
                     </td>
-                    <td class="table__cell table__cell--type">
-                        <span class="table__type table__type--completed">Завершен</span>
-                    </td>
-                    <td class="table__cell table__cell--number">
-                        <span class="table__span gray-span">95</span>
-                    </td>
                     <td class="table__cell table__cell--details">
-                        <a class="table__btn" href="flight-details.html">Детали</a>
+                        <a class="table__btn" href="plane-details.html">Детали</a>
                     </td>
                 </tr> -->
             </tbody>
         </table>
-        <!-- --- -->
 
-        <!-- Pagination -->
-        <div class="flights__pagination pagination" id="flights">
+        <div class="airplane__pagination pagination" id="airplane">
             <button class="pagination__left pagination__arrows" type="button" value="<"></button>
             <ul class="pagination__list">
                 <li class="pagination__item">
@@ -318,18 +248,5 @@
             </ul>
             <button class="pagination__right pagination__arrows" type="button" value=">"></button>
         </div>
-        <!-- --- -->
-
     </div>
 </section>
-    </main>
-</div>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="js/main.min.js"></script>
-
-
-
-    </body>
-
-</html>

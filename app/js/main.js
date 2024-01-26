@@ -31,6 +31,10 @@ const tabsPassengersTableBtns = document.querySelectorAll(
 const tabsPassengersTableItems = document.querySelectorAll(
   ".passengers-table__box-gray"
 );
+const tabsAirplaneDetailsBtn = document.querySelectorAll(
+  '.js-airplaneDetailsBtn'
+);
+
 const tabAirportBtns = document.querySelectorAll(".tab-airport-btn");
 const tabsAirportItems = document.querySelectorAll(".tab-airport-content");
 
@@ -260,3 +264,133 @@ datepickerBtn.forEach((item) => {
     openCloseDatepickerPopup(e, "remove");
   });
 });
+
+let html = "";
+for (let i = 0; i < 4; i++) {
+  html += `<tr class="table__row">
+    <td class="table__cell table__cell--name">
+        <span class="table__span gray-span">BOEING 315</span>
+    </td>
+    <td class="table__cell table__cell--march">
+        <span class="table__span blue-span">
+            312HG - 01
+        </span>
+    </td>
+    <td class="table__cell table__cell--location">
+        <span class="table__span gray-span">Аэропорт LVV</span>
+    </td>
+    <td class="table__cell table__cell--date">
+        <span class="table__span gray-span">24.12.2023</span>
+        <span class="table__span gray-span">12:25</span>
+    </td>
+    <td class="table__cell table__cell--number">
+        <span class="table__span blue-span">95 пассажиров</span>
+    </td>
+    <td class="table__cell table__cell--status">
+        <span class="table__type table__type--yellow">Ожидает вылет</span>
+    </td>
+    <td class="table__cell table__cell--plain">
+        <span class="table__span gray-span">
+            B-315-2
+        </span>
+    </td>
+    <td class="table__cell table__cell--details">
+        <a class="table__btn" href="airplane-details.html">Детали</a>
+    </td>
+</tr>`;
+  html += `<tr class="table__row">
+    <td class="table__cell table__cell--name">
+        <span class="table__span gray-span">BOEING 315</span>
+    </td>
+    <td class="table__cell table__cell--march">
+        <span class="table__span blue-span">
+            312HG - 01
+        </span>
+    </td>
+    <td class="table__cell table__cell--location">
+        <span class="table__span gray-span">Аэропорт LVV</span>
+    </td>
+    <td class="table__cell table__cell--date">
+        <span class="table__span gray-span">24.12.2023</span>
+        <span class="table__span gray-span">12:25</span>
+    </td>
+    <td class="table__cell table__cell--number">
+        <span class="table__span blue-span">95 пассажиров</span>
+    </td>
+    <td class="table__cell table__cell--status">
+        <span class="table__type table__type--green">Выполняет рейс</span>
+    </td>
+    <td class="table__cell table__cell--plain">
+        <span class="table__span gray-span">
+            B-315-2
+        </span>
+    </td>
+    <td class="table__cell table__cell--details">
+        <a class="table__btn" href="airplane-details.html">Детали</a>
+    </td>
+</tr>`;
+  html += `<tr class="table__row">
+    <td class="table__cell table__cell--name">
+        <span class="table__span gray-span">BOEING 315</span>
+    </td>
+    <td class="table__cell table__cell--march">
+        <span class="table__span blue-span">
+            312HG - 01
+        </span>
+    </td>
+    <td class="table__cell table__cell--location">
+        <span class="table__span gray-span">Аэропорт LVV</span>
+    </td>
+    <td class="table__cell table__cell--date">
+        <span class="table__span gray-span">24.12.2023</span>
+        <span class="table__span gray-span">12:25</span>
+    </td>
+    <td class="table__cell table__cell--number">
+        <span class="table__span gray-span"><span>95</span> пассажиров</span>
+    </td>
+    <td class="table__cell table__cell--status">
+        <span class="table__type table__type--red">Простой</span>
+    </td>
+    <td class="table__cell table__cell--plain">
+        <span class="table__span gray-span">
+            B-315-2
+        </span>
+    </td>
+    <td class="table__cell table__cell--details">
+        <a class="table__btn" href="airplane-details.html">Детали</a>
+    </td>
+</tr>`;
+  html += `<tr class="table__row">
+    <td class="table__cell table__cell--name">
+        <span class="table__span gray-span">BOEING 315</span>
+    </td>
+    <td class="table__cell table__cell--march">
+        <span class="table__span blue-span">
+            312HG - 01
+        </span>
+    </td>
+    <td class="table__cell table__cell--location">
+        <span class="table__span gray-span">Аэропорт LVV</span>
+    </td>
+    <td class="table__cell table__cell--date">
+        <span class="table__span gray-span">24.12.2023</span>
+        <span class="table__span gray-span">12:25</span>
+    </td>
+    <td class="table__cell table__cell--number">
+        <span class="table__span gray-span">95 пассажиров</span>
+    </td>
+    <td class="table__cell table__cell--status">
+        <span class="table__type table__type--yellow">Ожидает вылет</span>
+    </td>
+    <td class="table__cell table__cell--plain">
+        <span class="table__span gray-span">
+            B-315-2
+        </span>
+    </td>
+    <td class="table__cell table__cell--details">
+        <a class="table__btn" href="airplane-details.html">Детали</a>
+    </td>
+</tr>`;
+}
+
+// document.querySelector(".airplane__table tbody").innerHTML = html;
