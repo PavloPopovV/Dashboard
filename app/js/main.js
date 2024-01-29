@@ -30,6 +30,9 @@ const tabsPassengersTableItems = document.querySelectorAll(
 const tabsAirplaneDetailsBtn = document.querySelectorAll(
   ".js-airplaneDetailsBtn"
 );
+const tabsAirplaneDetailsItem = document.querySelectorAll(
+  '.js-airplaneDetailsItem'
+);
 
 const tabAirportBtns = document.querySelectorAll(".tab-airport-btn");
 const tabsAirportItems = document.querySelectorAll(".tab-airport-content");
@@ -132,7 +135,9 @@ function renderHtml(obj, i) {
       <td class="table__cell table__cell--number">
         <span class="table__span gray-span">${obj.number}</span>
       </td>
-      <td class="table__cell table__cell--details"><a class="table__btn" href="${obj.detailsLink.trim()}">Детали</a></td>
+      <td class="table__cell table__cell--details">
+        <a class="table__btn" href="${obj.detailsLink.trim()}">Детали</a>
+      </td>
     </tr>
    `
   );
@@ -232,6 +237,9 @@ document.addEventListener("click", (e) => {
   }
   if (e.target.classList.contains("tab-airport-btn")) {
     openTab(e.target, tabAirportBtns, tabsAirportItems);
+  }
+  if (e.target.classList.contains("js-airplaneDetailsBtn")) {
+    openTab(e.target, tabsAirplaneDetailsBtn, tabsAirplaneDetailsItem);
   }
   if (e.target.classList.contains("addProcessing")) {
     document.querySelector(".popup").classList.add("active");
@@ -368,17 +376,17 @@ for (let i = 0; i < 4; i++) {
     <td class="table__cell table__cell--status">
         <span class="table__type table__type--yellow">Ожидает вылет</span>
     </td>
-    <td class="table__cell table__cell--plain">
+    <td class="table__cell ">
         <span class="table__span gray-span">
             B-315-2
         </span>
     </td>
-    <td class="table__cell table__cell--details">
+    <td class="table__cell ">
         <a class="table__btn" href="airplane-details.html">Детали</a>
     </td>
 </tr>`;
 }
-// document.querySelector(".airplane__table tbody").innerHTML = html;
+document.querySelector(".airplane__table tbody").innerHTML = html;
 
 
 //------------------------------- Animation Rolling Numbers -------------------------
@@ -409,3 +417,4 @@ function rollNumbersOnLoad() {
 rollNumbersOnLoad();
 
 document.addEventListener("mouseover", rollNumbersOnHover);
+

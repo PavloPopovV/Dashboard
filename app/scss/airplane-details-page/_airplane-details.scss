@@ -57,6 +57,7 @@
         }
 
         &__ticket-name {
+            margin-right: 0;
             &::after {
                 display: none;
             }
@@ -64,7 +65,7 @@
 
         &__ticket-details {
             position: absolute;
-            right: 0;
+            right: 12px;
             top: 15px;
             border-radius: 6px;
             background-color: var(--Action-Light, rgba(35, 55, 55, 0.05));
@@ -83,7 +84,7 @@
 
         &__ticket-info {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 163px 1fr;
             gap: 16px 40px;
         }
     }

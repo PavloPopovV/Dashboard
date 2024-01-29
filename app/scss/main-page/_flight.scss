@@ -1,5 +1,5 @@
 .flight {
-    margin-bottom: 32px;
+    margin-bottom: 29px;
 
     &__main-title{
         margin-bottom: 24px;
@@ -24,7 +24,7 @@
     &__info {
         background-color: #fff;
         border: 1px solid var(--Border-Light, #E7E8E9);
-        padding: 21px 35px 18px;
+        padding: 21px 34px 18px;
     }
 
     &__title {
@@ -42,13 +42,17 @@
         }
     }
 
+    &__list {
+        margin-bottom: 26px;
+    }
+
     &__suspicions-title {
         color: #172B4D;
         font-size: 20px;
         font-weight: 600;
         line-height: 140%;
         letter-spacing: -0.336px;
-        margin: 26px 0 20px;
+        margin-bottom: 16px;
     }
 
     &__suspicions {
@@ -66,7 +70,7 @@
             width: 24px;
             height: 24px;
             object-fit: cover;
-            margin-right: 8px;
+            margin-right: 6px;
         }
     }
 
@@ -76,6 +80,7 @@
         font-weight: 500;
         line-height: 162.5%;
         letter-spacing: -0.176px;
+        font-size: 16px;
     }
 
     &__suspicions-desrciption {

@@ -1,9 +1,9 @@
 .users {
     background-color: #fff;
-    padding: 16px;
+    padding: 12px;
 
     &__title {
-        padding: 8px 0 8px 4px;
+        padding: 8px 0 9px 4px;
         color: #1C1C1C;
         font-size: 18px;
         font-weight: 600;
@@ -74,7 +74,7 @@
     &__suspicions-item{
         position: relative;
         padding: 8px 8px 8px 40px;
-        margin-bottom: 4px;
+        margin-bottom: 5px;
     }
 
     &__activity-item{
@@ -103,6 +103,6 @@
 
     &__flights-list,
     &__activity-list{
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
 }
