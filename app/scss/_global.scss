@@ -682,7 +682,6 @@ html {
 }
 
 //------------------------------------------ Pagination
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -753,6 +752,7 @@ html {
 
 
 }
+//------------------------------------------
 
 .processing-btn {
     padding: 18px 0;
@@ -1275,6 +1275,8 @@ html {
     }
 }
 
+
+// Popup
 .popup {
     display: none;
     top: 0;
@@ -1322,3 +1324,5 @@ html {
         align-items: center;
     }
 }
+
+

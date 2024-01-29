@@ -1,21 +1,17 @@
+//------------------------------- Datepicker -------------------------
 const datepickerPopup = document.querySelectorAll(".datepicker");
 const datepickerBtn = document.querySelectorAll(".datapicker-btn");
 
-function setValueOnOdometer() {
-  let oneValue = 7265;
-  let twoValue = 3671;
-  let threeValue = 156;
-  let fourValue = 231;
-  document.getElementById("odometer-one").innerHTML = oneValue;
-  document.getElementById("odometer-two").innerHTML = twoValue;
-  document.getElementById("odometer-three").innerHTML = threeValue;
-  document.getElementById("odometer-four").innerHTML = fourValue;
-}
-
 function openCloseDatepickerPopup(e, method) {
   e.target.nextElementSibling.classList[method]("open");
+
+  datepickerBtn.forEach((item) => {
+    item.addEventListener("blur", (e) => {
+      openCloseDatepickerPopup(e, "remove");
+    });
+  });
 }
-//------------------------------- Tabs for Passenger--------------------------
+//------------------------------- Tabs --------------------------
 
 const tabBtns = document.querySelectorAll(".tab-btn");
 const tabsItems = document.querySelectorAll(".tab-content");
@@ -32,7 +28,7 @@ const tabsPassengersTableItems = document.querySelectorAll(
   ".passengers-table__box-gray"
 );
 const tabsAirplaneDetailsBtn = document.querySelectorAll(
-  '.js-airplaneDetailsBtn'
+  ".js-airplaneDetailsBtn"
 );
 
 const tabAirportBtns = document.querySelectorAll(".tab-airport-btn");
@@ -201,7 +197,7 @@ function renderOnClickArrows(target) {
   }
 }
 
-//------------------------------- Listeners -------------------------
+//------------------------------- Listener - CLick  -------------------------
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("datapicker-btn")) {
@@ -253,17 +249,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (document.getElementById("odometer-one")) {
-    setValueOnOdometer();
-  }
-});
-
-datepickerBtn.forEach((item) => {
-  item.addEventListener("blur", (e) => {
-    openCloseDatepickerPopup(e, "remove");
-  });
-});
+//------------------------------- Airplane render table -------------------------
 
 let html = "";
 for (let i = 0; i < 4; i++) {
@@ -392,5 +378,34 @@ for (let i = 0; i < 4; i++) {
     </td>
 </tr>`;
 }
-
 // document.querySelector(".airplane__table tbody").innerHTML = html;
+
+
+//------------------------------- Animation Rolling Numbers -------------------------
+function rollNumbersOnHover(event) {
+  let hoveredElement = event.target;
+  const el = hoveredElement.closest(".digits")
+    ? hoveredElement.closest(".digits")
+    : false;
+  if (el && !el.classList.contains("hover")) {
+    el.classList.add("hover");
+    setTimeout(() => {
+      el.classList.remove("hover");
+    }, 2000);
+  }
+}
+
+function rollNumbersOnLoad() {
+  const allDigits = document.querySelectorAll(".digits");
+
+  allDigits.forEach((item) => {
+    item.classList.add("hover");
+    setTimeout(() => {
+      item.classList.remove("hover");
+    }, 2000);
+  });
+}
+
+rollNumbersOnLoad();
+
+document.addEventListener("mouseover", rollNumbersOnHover);
