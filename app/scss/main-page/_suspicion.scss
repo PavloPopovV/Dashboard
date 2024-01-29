@@ -11,6 +11,7 @@
     &__pagination {
         display: flex;
         justify-content: space-between;
+        transform: translate(-19px, 3px);
     }
 
 
@@ -33,12 +34,12 @@
         }
 
         &--prev::after {
-            left: 0;
+            left: -5px;
             background-image: url('../images/sprite.svg#sidebar-searchCountry-icon');
         }
 
         &--next::after {
-            right: 0;
+            right: -7px;
             background-image: url('../images/sprite.svg#sidebar-searchCountry-icon');
             transform: rotate(180deg);
             filter: invert(32%) sepia(98%) saturate(4220%) hue-rotate(217deg) brightness(98%) contrast(87%);
@@ -147,7 +148,7 @@
     &__flight-name{
         display: block;
         color: #172B4D;
-        font-size: 20px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 600;
         line-height: 140%;

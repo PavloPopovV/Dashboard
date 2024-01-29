@@ -7,6 +7,7 @@
     &__absolute {
         position: relative;
     }
+
     &__bd {
         top: 0;
         right: 0;
@@ -52,6 +53,7 @@
         height: calc(100vh - 251px);
         overflow-y: auto;
     }
+
     &__box-gray {
         padding: 32px 32px 32px 32px;
         background-color: #fbfbfb;
@@ -61,7 +63,7 @@
         &.show {
             display: block;
         }
-        
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -74,6 +76,7 @@
         line-height: 1.4;
         letter-spacing: -0.336px;
         margin-bottom: 13px;
+
         span {
             color: #2563EB;
         }
@@ -82,6 +85,7 @@
 
 
     .table__cell {
+
         &--lastname,
         &--firstname,
         &--patronymic,
@@ -90,11 +94,13 @@
         &--suspicions {
             width: 188px;
         }
+
         // &--nationality {
         //     width: 194px;
         // }
-        &--actions{
+        &--actions {
             width: 130px;
+
         }
     }
 }

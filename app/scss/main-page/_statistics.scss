@@ -1,6 +1,6 @@
-.statistics{
+.statistics {
     margin-bottom: 32px;
-    
+
     &__top {
         display: flex;
         justify-content: space-between;
@@ -32,8 +32,11 @@
     }
 
     &__box {
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 24px;
     }
 
     &__item {
@@ -44,12 +47,14 @@
     }
 
     &__text {
+        cursor: default;
         display: block;
         color: #1C1C1C;
         font-weight: 600;
-        line-height: 150%;
+        line-height: 1.5;
+        font-size: 12px;
         letter-spacing: 0.016px;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
     }
 
     &__odometer {
@@ -67,13 +72,7 @@
     }
 
     &__percentage {
-        display: block;
         position: relative;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
-        padding-right: 20px;
 
         &::after {
             content: '';
@@ -81,11 +80,54 @@
             width: 16px;
             height: 16px;
             right: 0;
+            top: 2px;
             background-image: url('../images/sprite.svg#main-page-percentage');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
         }
+
+        &--success {
+            color: #41B871;
+
+            &::after {
+                filter: invert(58%) sepia(40%) saturate(627%) hue-rotate(91deg) brightness(98%) contrast(86%);
+            }
+        }
+
+        &--lose {
+            color: #EF4444;
+            filter: invert(49%) sepia(99%) saturate(4159%) hue-rotate(335deg) brightness(95%) contrast(97%);
+        }
+
+        &:hover {
+            .statistics__percentage-number {
+                transform: translateX(-40px);
+            }
+        }
+    }
+
+    &__percentage-number {
+        display: block;
+        position: relative;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        padding-right: 20px;
+        transition: transform .3s linear;
+        cursor: default;
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     width: 16px;
+        //     height: 16px;
+        //     right: 0;
+        //     background-image: url('../images/sprite.svg#main-page-percentage');
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+        //     background-position: center;
+        // }
 
         &--success {
             color: #41B871;
