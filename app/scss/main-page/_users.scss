@@ -1,4 +1,10 @@
 .users {
+    @include mxw($lg) {
+        zoom: 90%;
+    }
+    @include mxw($md) {
+        zoom: 80%;
+    }
     background-color: #fff;
     padding: 16px;
 

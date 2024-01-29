@@ -32,12 +32,32 @@ html {
 .main-page {
     padding: 48px 40px 24px;
     height: 100vh;
+    @include mxw($lg) {
+        zoom: 90%;
+    }
+
+    @include mxw($md) {
+        zoom: 80%;
+    }
+
+    @include mxw($sm) {
+        zoom: 70%;
+    }
 }
 
 .home-wrapper {
     display: grid;
     grid-template-columns: 316px 1fr 280px;
     justify-content: space-between;
+    @include mxw($lg) {
+        height: 100vh;
+        grid-template-columns: 220px 1fr 240px;
+    }
+    
+    @include mxw($md) {
+        height: 100vh;
+        grid-template-columns: 185px 1fr 210px;
+    }
 }
 
 .wrapper {
