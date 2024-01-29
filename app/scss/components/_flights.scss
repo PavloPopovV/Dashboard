@@ -1,4 +1,5 @@
 .flights {
+    height: 100vh;
 	width: 100%;
 	background: var(--white-100, #FFF);
 
@@ -21,6 +22,14 @@
 
         &--details {
             text-align: right;
+        }
+
+        &--plain-info{
+            width: 214px;
+        }
+
+        &--type{
+            width: 137px;
         }
 	}
 }

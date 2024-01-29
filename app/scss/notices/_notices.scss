@@ -1,10 +1,12 @@
 .notices {
+    height: 100vh;
     &__container {
+        height: 100vh;
         background-color: var(--white-100, #FFF);
         padding: 48px 40px 18px 40px;
     }
     &__table {
-        margin-bottom: 26px;
+        margin-bottom: 24px;
     }
 
     .table__cell {
@@ -23,6 +25,10 @@
         &--flight,
         &--plain-name {
             width: 273px;
+        }
+
+        &--details{
+            width: 100px;
         }
     }
 }

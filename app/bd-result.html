@@ -64,7 +64,7 @@
         <div class="bd-result__text text-under-popular-title">
             <p>Найдите пассажира по паспортным данным или информации по перелету.</p>
         </div>
-        <a class="bd-result__btn database-btn" href="bd-result.html">Назад к поиску</a>
+        <a class="bd-result__btn database-btn" href="passengers-table.html">Назад к поиску</a>
     </div>
     <div class="flights-filters">
         <div class="flights-filters__left">
@@ -150,9 +150,9 @@
                     <span class="table__span gray-span">Украина</span>
                 </td>
                 <td class="table__cell table__cell--actions">
-                    <button class="table__icon-btn table__icon-btn--good js-popup__removeAllSuspicion"
+                    <button class="table__icon-btn table__icon-btn--good removeProcessing"
                         type="button"></button>
-                    <button class="table__icon-btn table__icon-btn--bed js-popup__SendToProcessing"
+                    <button class="table__icon-btn table__icon-btn--bed addProcessing"
                         type="button"></button>
                     <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                 </td>
@@ -191,6 +191,17 @@
             </tr>
         </tbody>
     </table>
+    <div class="popup">
+        <div class="popup__card">
+          <span class="popup__title"></span>
+          <span class="popup__text">Подтвердите действие</span>
+          <div class="popup__buttons">
+            <button class="popup__processing processing-btn processing-btn--proc succesProcessing" type="button" >Подтвердить</и>
+            <button class="popup__processing processing-btn processing-btn--remove stopProcessing" type="button" 
+              >Отмена</button>
+          </div>
+        </div>
+      </div>
 </section>
 </main>
 </div>

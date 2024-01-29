@@ -643,9 +643,10 @@ html {
     }
 
     &__icon-btn {
+
         width: 24px;
         height: 24px;
-        margin-right: 9px;
+        margin-right: 4px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -659,6 +660,7 @@ html {
         }
 
         &--link {
+            margin-right: 0;
             display: inline-block;
             background-image: url('../images/icons/table-arrow-right.svg');
         }
@@ -1052,6 +1054,10 @@ html {
     letter-spacing: -0.18px;
     padding: 12px 20px;
     background-color: #2563EB;
+
+    &:hover{
+        background-color: rgba(37,99,235,.8);
+    }
 }
 
 
@@ -1167,6 +1173,7 @@ html {
     }
 
     &__box {
+        height: calc(100vh - 65px);
         display: grid;
         grid-template-columns: 1fr 512px;
     }
@@ -1192,7 +1199,8 @@ html {
         grid-template-columns: repeat(2, 1fr);
         gap: 14px;
         margin-bottom: 0;
-        max-height: 295px;
+        height: calc(100vh - 783px);
+        // max-height: 295px;
         overflow-y: auto;
     }
 }
@@ -1266,7 +1274,8 @@ html {
     }
 
     &__list {
-        height: 830px;
+        height: calc(100vh - 237px);
+        // height: 830px;
         overflow-y: auto;
     }
 

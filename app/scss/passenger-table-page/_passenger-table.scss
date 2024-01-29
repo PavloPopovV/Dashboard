@@ -1,7 +1,7 @@
 .passengers-table {
     &__container {
         background: var(--white-100, #FFF);
-        padding: 48px 13px 0 41px;
+        padding: 48px 40px 0 41px;
     }
 
     &__absolute {
@@ -9,7 +9,7 @@
     }
     &__bd {
         top: 0;
-        right: 28px;
+        right: 0;
         transform: translateY(0);
     }
 
@@ -90,8 +90,11 @@
         &--suspicions {
             width: 188px;
         }
-        &--nationality {
-            width: 194px;
+        // &--nationality {
+        //     width: 194px;
+        // }
+        &--actions{
+            width: 130px;
         }
     }
 }
