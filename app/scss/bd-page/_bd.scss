@@ -43,10 +43,21 @@
         &--flex {
             &.show {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
+
+         
             }
         }
-
+        @include mxw($lg) {
+            &--flex {
+                &.show {
+                    display: flex;
+                    justify-content: space-between;
+    
+             
+                }
+            }
+        }
 
     }
 

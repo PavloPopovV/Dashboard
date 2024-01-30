@@ -1,7 +1,7 @@
 $xs: 1280;
 $sm: 1400;
 $md: 1600;
-$lg: 1919;
+$lg: 1920;
 
 @mixin mxw($width) {
     @media (max-width: #{$width}px) {
