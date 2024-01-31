@@ -1,9 +1,14 @@
 .flights {
 	width: 100%;
 	background: var(--white-100, #FFF);
-    @include mxw($lg) {
-        overflow-y: auto;
+
+    &__container{
+        @include mxw($lg) {
+            height: 100vh;
+            overflow-y: auto;
+        }
     }
+
     &__table{
         @include mxw($sm) {
             zoom: 75%;
