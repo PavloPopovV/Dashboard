@@ -2,6 +2,12 @@
     height: 100vh;
     background: var(--white-100, #FFF);
 
+    &__container{
+        
+        height: 100vh;
+        overflow-y: auto;
+    }
+
     &__table {
         margin-bottom: 20px;
     }
@@ -12,21 +18,33 @@
 
     &__filters {
         margin-bottom: 22px;
+        @include mxw($lg) {
+            margin-bottom: 16px;
+        }
     }
 
     .table__cell {
         &--name,
         &--date {
             width: 216px;
+            @include mxw($md) {
+                width: 170px;
+            }
         }
 
         &--march,
         &--status {
             width: 220px;
+            @include mxw($md) {
+                width: 170px;
+            }
         }
 
         &--location {
             width: 218px;
+            @include mxw($md) {
+                width: 170px;
+            }
         }
 
         &--details {

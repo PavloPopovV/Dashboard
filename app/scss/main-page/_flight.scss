@@ -1,15 +1,35 @@
 .flight {
     margin-bottom: 29px;
 
-    &__main-title{
-        margin-bottom: 24px;
+    @include mxw($lg) {
+        margin-bottom: 20px;
     }
+
+    &__main-title {
+        margin-bottom: 24px;
+        height: 40px;
+
+        @include mxw($sm) {
+            margin-bottom: 18px;
+        }
+    }
+
     &__box {
         display: grid;
         grid-template-columns: 460px 1fr;
         gap: 24px;
-        justify-content: space-between;
-        align-items: center;
+
+        @include mxw($lg) {
+            zoom: 90%;
+        }
+
+        @include mxw($md) {
+            zoom: 80%;
+        }
+
+        @include mxw($sm) {
+            zoom: 76%;
+        }
     }
 
     &__img {
@@ -25,6 +45,17 @@
         background-color: #fff;
         border: 1px solid var(--Border-Light, #E7E8E9);
         padding: 21px 34px 18px;
+
+        @include mxw($sm) {
+            padding: 10px 18px;
+        }
+    }
+
+    &__item {
+        @include mxw($lg) {
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+        }
     }
 
     &__title {
@@ -40,10 +71,15 @@
         span {
             color: #2563EB;
         }
+
     }
 
     &__list {
         margin-bottom: 26px;
+
+        @include mxw($lg) {
+            margin-bottom: 8px;
+        }
     }
 
     &__suspicions-title {
@@ -59,6 +95,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 15px;
+
+        @include mxw($lg) {
+            margin-bottom: 8px;
+        }
     }
 
     &__suspicions-user {

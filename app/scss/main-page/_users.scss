@@ -3,8 +3,14 @@
         zoom: 90%;
     }
     @include mxw($md) {
+        overflow-y: auto;
         zoom: 80%;
     }
+    
+    @include mxw($sm) {
+
+    }
+
     background-color: #fff;
     padding: 12px;
 

@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<div class="passenger-wrapper">
+<div class="wrapper">
   <section class="sidebar">
-    <img class="sidebar__logo" src="images/Logo.png" alt="logo">
+    <div class="sidebar__logo">
+        <img src="images/Logo.png" alt="logo">
+    </div>
     <div class="sidebar__navigation">
         <div class="sidebar__options">
             <div class="sidebar__search-box search-box">
@@ -89,7 +91,10 @@
 
   <div class="passenger__info-box tab-content show" id="#tab_1">
     <div class="passenger__main-info">
-      <img class="passenger__photo" src="images/passenger-photo.png" alt="" />
+      <div class="passenger__photo">
+        <img src="images/passenger-photo.png" alt="" />
+
+      </div>
       <span class="passenger__name"> Васильев Максим Олександрович </span>
       <ul class="passenger__contacts">
         <li class="passenger__contact-method">
@@ -222,7 +227,7 @@
         </li>
         <li class="passenger__passport-item item">
           <span class="passenger__passport-text text">Подлинность</span>
-          <span class="passenger__passport-text text"
+          <span class="passenger__passport-text passenger__passport-text--visa text"
             >Виза с таким номером уже существует
             <span>Виза подделана</span></span
           >
@@ -398,11 +403,13 @@
           >
           <button class="passenger__media-reload" type="button"></button>
         </div>
-        <img
-          class="passenger__media-img"
+
+          <img class="passenger__media-img"
           src="images/madia-instagram.jpg"
           alt=""
         />
+ 
+
         <span class="passenger__visa-info">Контакты</span>
         <ul class="passenger__mates-list">
           <li class="passenger__mate">
@@ -1105,11 +1112,10 @@
       <h3 class="passenger__flight-title title title--inner">
         Анализ связей в соц. сетях
       </h3>
-      <img
-        class="passenger__social-conection"
-        src="images/passenger-social-conection.jpg"
-        alt=""
-      />
+      <div class="passenger__social-conection">
+        <img src="images/passenger-social-conection.jpg" alt="" />
+      </div>
+
     </div>
   </div>
 

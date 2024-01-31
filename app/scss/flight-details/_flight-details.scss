@@ -10,6 +10,16 @@
         display: grid;
         grid-template-columns: 320px 1fr;
         justify-content: space-between;
+
+        @include mxw($md) {
+            grid-template-columns: 245px 1fr;
+        }
+    }
+
+    &__left{
+        background-color: var(--Background-Light, #FBFBFC);
+        border: 1px solid #e4e7ed;
+        border-left: transparent;
     }
 }
 

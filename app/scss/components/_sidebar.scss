@@ -1,15 +1,20 @@
 .sidebar {
+    @include mxw($md) {
+        zoom: 80%;
+    }
+
     border-right: 1px solid #E4E7ED;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     &__logo {
-        display: block;
-        width: 170px;
-        height: 32px;
-        object-fit: cover;
-        margin: 16px 130px 16px 16px;
+        padding: 16px 0 16px 16px;
+        img {
+            width: 170px;
+            height: 32px;
+            object-fit: cover;
+        }
     }
 
     &__navigation {
@@ -102,60 +107,63 @@
         background-size: cover;
         background-position: center;
         border-radius: 6px;
-        background-color:  #fff;
+        background-color: #fff;
 
         &:hover {
-    
-            background-color:  rgba(35, 55, 55, 0.05);
-            transition:background-color 0.3s linear ;
+
+            background-color: rgba(35, 55, 55, 0.05);
+            transition: background-color 0.3s linear;
         }
     }
-        &__account {
-            display: flex;
-            padding: 16px 8px 16px 8px;
-        }
 
-        &__account-img {
-            margin-right: 12px;
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+    &__account {
+        display: flex;
+        padding: 16px 8px 16px 8px;
+    }
 
-        &__account-info {
-            display: flex;
-            flex-direction: column;
-            width: 70%;
-        }
+    &__account-img {
+        margin-right: 12px;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
 
-        &__account-name {
-            color: #172B4D;
-            font-weight: 600;
-        }
+    &__account-info {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
 
-        &__account-position {
-            display: block;
-            color: var(--Text-Secondary, #A0A3A6);
-            font-weight: 450;
-            font-size: 12px;
-        }
+    &__account-name {
+        color: #172B4D;
+        font-weight: 600;
+        line-height: 22px; /* 157.143% */
+    }
 
-        &__account-btn{
-            width: 32px;
-            height: 32px;
-            border-radius: 4px;
-            background-image: url('../images/sprite.svg#sidebar-searchCountry-icon');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            border-radius: 6px;
-            background-color: #F5F5F7;
-    
-            &:hover {
-        
-                background-color:  rgba(35, 55, 55, 0.05);
-                transition:background-color 0.3s linear ;
-            }
+    &__account-position {
+        display: block;
+        color: var(--Text-Secondary, #A0A3A6);
+        font-weight: 450;
+        font-size: 12px;
+        line-height: 18px; /* 150% */
+    }
+
+    &__account-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        background-image: url('../images/sprite.svg#sidebar-searchCountry-icon');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 6px;
+        background-color: #F5F5F7;
+
+        &:hover {
+
+            background-color: rgba(35, 55, 55, 0.05);
+            transition: background-color 0.3s linear;
         }
     }
+}
