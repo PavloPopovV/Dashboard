@@ -2,6 +2,10 @@
     height: 100vh;
     padding: 48px 40px 24px;
     background-color: #fff;
+    @include mxw($sm) {
+        overflow-y: auto;
+        padding: 20px 15px 14px 20px;
+    }
 
     &__top {
         position: relative;
@@ -12,11 +16,30 @@
     &__tab-list {
         display: flex;
         margin-bottom: 24px;
+
+        @include mxw($sm) {
+            zoom: 80%;
+        }
     }
 
     &__tab-item {
         margin-right: 16px;
     }
+
+    &__title-inner{
+        zoom: 100%;
+    }
+
+    @include mxw($lg) {
+        &__text-inner{
+            p{  
+                zoom: 100%;
+            }
+    
+        }
+    }
+
+
 
     &__tab-btn {
         color: #A0A3A6;
@@ -49,14 +72,29 @@
             }
         }
         @include mxw($lg) {
+            zoom: 85%;
             &--flex {
                 &.show {
                     display: flex;
                     justify-content: space-between;
-    
-             
                 }
             }
+        }
+
+        @include mxw($md) {
+            zoom: 72%;
+        }
+
+        @include mxw($sm) {
+            zoom: 68%;
+
+            // &.show {
+            //     display: flex;
+            //     flex-direction: column;
+            //     justify-content: center;
+            //     align-items: center;
+         
+            // }
         }
 
     }
@@ -118,6 +156,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
+
+        @include mxw($sm) {
+            gap: 20px;
+        }
     }
 
     &__input-group {
@@ -198,6 +240,11 @@
         padding: 24px;
         background-color: #FBFBFC;
         width: 285px;
+
+        @include mxw($sm) {
+            width: 255px;
+            padding: 16px;
+        }
     }
 
     &__checkbox-title {

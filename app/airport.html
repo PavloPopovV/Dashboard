@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<div class="airport-wrapper">
+<div class="wrapper">
   <section class="sidebar">
-    <img class="sidebar__logo" src="images/Logo.png" alt="logo">
+    <div class="sidebar__logo">
+        <img src="images/Logo.png" alt="logo">
+    </div>
     <div class="sidebar__navigation">
         <div class="sidebar__options">
             <div class="sidebar__search-box search-box">
@@ -66,7 +68,7 @@
     <ul class="airport__tabs">
       <li class="airport__item">
         <button
-          class="passenger__btn tab-airport-btn active"
+          class="airport__btn tab-airport-btn active"
           data-tab="#airportTab_1"
         >
           Рейсы
@@ -100,7 +102,7 @@
       </ul>
     </div>
 
-    <div class="airport__details">
+    <div class="airport__details airport__details--scroll">
       <h6 class="airport__details-title title title--main">Исходящие рейсы</h6>
       <table class="airport__table table" width="100%">
         <thead>

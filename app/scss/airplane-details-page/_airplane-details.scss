@@ -3,6 +3,14 @@
         display: grid;
         grid-template-columns: 320px 1fr;
         justify-content: space-between;
+        @include mxw($md) {
+            grid-template-columns: 250px 1fr;
+        }
+    }
+
+    &__left{
+        border-right: 1px solid #e4e7ed;
+        background: var(--Background-Light, #FBFBFC);
     }
 
 
@@ -35,6 +43,10 @@
 
             &.show {
                 display: grid;
+            }
+
+            @include mxw($md) {
+                grid-template-columns: 1fr 280px;
             }
         }
 
@@ -99,6 +111,10 @@
             align-items: center;
             border: 1px solid #E4E7ED;
             background: var(--white-100, #FFF);
+
+            @include mxw($md) {
+                zoom: 80%;
+            }
         }
 
         &__input,

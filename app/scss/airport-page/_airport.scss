@@ -11,9 +11,26 @@
         border-bottom: 1px solid #E4E7ED;
     }
 
+    &__breadcrumbs{
+        padding: 20px 63px 19px 64px;
+        border-bottom: none;
+
+        @include mxw($sm) {
+            padding: 20px 30px 20px 50px;
+            &::after{
+                left: 10px;
+            }
+        }
+    }
+
     &__tabs {
+        align-items: center;
         display: flex;
         background-color: #FBFBFC;
+        border-left:1px solid #E4E7ED ;
+        @include mxw($md) {
+            zoom: 80%;
+        }
     }
 
     &__btn {
@@ -49,6 +66,24 @@
             justify-content: space-between;
             height: calc(100vh - 65px);
         }
+
+        @include mxw($lg) {
+            &.show {
+                grid-template-columns: 320px 1fr  380px;
+            }
+        }
+        @include mxw($md) {
+            &.show {
+                grid-template-columns: 256px 1fr  280px;
+                height: calc(100vh - 53px);
+            }
+        }
+
+        @include mxw($sm) {
+            &.show {
+                grid-template-columns: 219px 1fr  240px;
+            }
+        }
     }
 
 
@@ -56,6 +91,9 @@
         padding: 24px;
         border-right: 1px solid #E4E7ED;
         background: #FBFBFC;
+        @include mxw($md) {
+            zoom: 80%;
+        }
     }
 
     &__main-title {
@@ -95,12 +133,16 @@
         padding: 24px;
 
         &--scroll {
-            overflow-y: scroll;
+            overflow-y: auto;
             height: auto;
 
             &::-webkit-scrollbar {
                 display: none;
             }
+        }
+
+        @include mxw($sm) {
+            padding: 16px;
         }
     }
 
@@ -132,12 +174,18 @@
         display: grid;
         grid-template-columns: 256px 1fr;
         margin-bottom: 24px;
+
+        @include mxw($lg) {
+            zoom: 90%;
+        }
+        @include mxw($sm) {
+            zoom: 78%;
+        }
     }
 
     &__card-left {
         padding: 24px 24px 24px 24px;
         display: flex;
-        height: 168px;
         flex-direction: column;
         justify-content: space-between;
         border-left: 5px solid #2563EB;
@@ -265,10 +313,13 @@
     }
 
     &__statistic {
-
         border-left: 1px solid #E4E7ED;
         background: #FBFBFC;
         padding: 24px 24px 24px 19px;
+
+        @include mxw($sm) {
+            padding: 16px;
+        }
     }
 
     &__statistic-title {
@@ -279,6 +330,10 @@
         padding: 16px;
         border: 1px solid #E4E7ED;
         background-color: #fff;
+
+        @include mxw($md) {
+            zoom: 80%;
+        }
     }
 
     &__statistic-info {
@@ -317,6 +372,9 @@
 
         &--departure {
             width: 195px;
+            @include mxw($sm) {
+                width: 140px;
+            }
         }
 
         &--boeing {

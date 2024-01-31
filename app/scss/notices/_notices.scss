@@ -4,6 +4,11 @@
         height: 100vh;
         background-color: var(--white-100, #FFF);
         padding: 48px 40px 18px 40px;
+
+        @include mxw($sm) {
+            padding: 20px 20px 14px 20px;
+            overflow-y: auto;
+        }
     }
     &__table {
         margin-bottom: 24px;
@@ -12,6 +17,9 @@
     .table__cell {
         &--name {
             width: 274px;
+            @include mxw($sm) {
+                width: 320px;
+            }
         }
 
         &--gender {
@@ -25,6 +33,10 @@
         &--flight,
         &--plain-name {
             width: 273px;
+            @include mxw($sm) {
+                width: 160px;
+            }
+
         }
 
         &--details{

@@ -3,21 +3,43 @@
 	width: 100%;
 	background: var(--white-100, #FFF);
 
+    @include mxw($sm) {
+        overflow-y: auto;
+    }
+
+    &__table{
+        @include mxw($sm) {
+            zoom: 75%;
+        }
+    }
+
 	.table__cell {
 		&--id {
             width: 120px;
+            @include mxw($md) {
+                width: 100px;
+            }
         }
 
         &--march {
             width: 215px;
+            @include mxw($md) {
+                width: 175px;
+            }
         }
 
         &--date {
             width: 206px;
+            @include mxw($md) {
+                width: 155px;
+            }
         }
 
         &--airport {
             width: 210px;
+            @include mxw($md) {
+                width: 180px;
+            }
         }
 
         &--details {

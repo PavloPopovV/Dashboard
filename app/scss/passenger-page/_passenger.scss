@@ -14,9 +14,18 @@
         border-bottom: 1px solid #E4E7ED;
     }
 
+    &__breadcrumbs {
+        border-bottom: none;
+    }
+
     &__tabs {
         display: flex;
         background-color: #FBFBFC;
+        border-left: 1px solid #E4E7ED;
+
+        @include mxw($md) {
+            zoom: 80%;
+        }
     }
 
     &__btn {
@@ -25,7 +34,8 @@
         font-weight: 600;
         line-height: 16px;
         letter-spacing: -0.128px;
-        padding: 21px 26px 20px 26px;;
+        padding: 28px 26px 20px 26px;
+        ;
 
         &.active {
             color: #2563EB;
@@ -58,20 +68,62 @@
                 grid-template-columns: 320px 1fr 412px;
             }
         }
+
+        @include mxw($lg) {
+            &.show {
+                grid-template-columns: 320px 1fr 480px;
+            }
+            &--operative {
+                &.show {
+                    grid-template-columns: 320px 1fr 380px;
+                }
+            }
+        }
+
+        @include mxw($md) {
+            &.show {
+                grid-template-columns: 256px 1fr 400px;
+                height: calc(100vh - 53px);
+            }
+
+        }
+
+        @include mxw($sm) {
+            &.show {
+                grid-template-columns: 256px 1fr 320px;
+            }
+            &--operative {
+                &.show {
+                    grid-template-columns: 256px 1fr 290px;
+                }
+            }
+
+        }
     }
 
     &__main-info {
-        width: 320px;
-        padding-top: 24px;
         border-right: 1px solid #E4E7ED;
         background: #FBFBFC;
+
+        @include mxw($md) {
+            zoom: 80%;
+        }
     }
 
     &__photo {
-        margin: 0 24px 24px;
-        width: 272px;
-        height: 282px;
-        object-fit: cover;
+        padding: 24px;
+
+        img {
+            width: 272px;
+            height: 282px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        @include mxw($sm) {
+            padding: 16px;
+        }
+
     }
 
     &__name {
@@ -86,6 +138,9 @@
 
     &__contacts {
         padding: 16px 24px 24px;
+        @include mxw($sm) {
+            padding: 8px 24px;
+        }
     }
 
     &__contact-method {
@@ -95,6 +150,13 @@
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        @include mxw($sm) {
+            margin-bottom: 8px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -118,6 +180,10 @@
         padding: 8px 12px;
         background-color: #E4E7ED;
         margin: 0 16px 24px;
+
+        @include mxw($sm) {
+            margin: 0 16px 16px;
+        }
     }
 
     &__count-item {
@@ -150,6 +216,10 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+        }
+
+        @include mxw($sm) {
+            zoom: 90%;
         }
     }
 
@@ -187,10 +257,18 @@
         &::-webkit-scrollbar {
             display: none;
         }
+
+        @include mxw($sm) {
+            padding: 16px;
+        }
     }
 
     &__passport-details-inner {
         padding: 24px 24px 0 24px;
+
+        @include mxw($md) {
+            padding: 16px 16px 0 16px;
+        }
     }
 
     &__passport-title {
@@ -209,6 +287,12 @@
         &--inner {
             margin: 14px 0 4px 0;
         }
+        &--visa{
+            text-align: right;
+            span{
+                display: inline-block;
+            }
+        }
     }
 
     &__passport-list {
@@ -216,6 +300,10 @@
         border: 1px solid #E4E7ED;
         background-color: #fff;
         margin-bottom: 24px;
+
+        @include mxw($md) {
+            zoom: 90%;
+        }
     }
 
     &__visa-info {
@@ -231,20 +319,35 @@
     &__fligh {
         border-left: 1px solid #E4E7ED;
         background: #FBFBFC;
-        padding: 24px 24px 24px 24px;
+        padding: 24px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         .passenger__passport-item {
-            padding: 15px 0; 
+            padding: 15px 0;
 
             &:last-child {
-                padding: 14px  0 0;
+                padding: 14px 0 0;
             }
 
             &:first-child {
                 padding: 0 0 14px;
+            }
+        }
+
+        @include mxw($sm) {
+            padding: 16px;
+            .passenger__passport-item {
+                padding: 7px 0;
+    
+                &:last-child {
+                    padding: 7px 0 0;
+                }
+    
+                &:first-child {
+                    padding: 0 0 7px;
+                }
             }
         }
     }
@@ -252,6 +355,10 @@
     &__flight-btn {
         display: flex;
         justify-content: space-between;
+
+        @include mxw($lg) {
+            zoom: 90%;
+        }
     }
 
     &__flight-processing {
@@ -274,6 +381,15 @@
             border: 1px solid #E7E8E9;
             color: #2C2E30;
         }
+
+        @include mxw($md) {
+            width: 180px;
+        }
+
+        @include mxw($sm) {
+            width: 170px;
+            zoom: 90%;
+        }
     }
 
     &__flight-title {
@@ -285,6 +401,14 @@
         border: 1px solid #E4E7ED;
         background-color: #fff;
         margin-bottom: 26px;
+
+        @include mxw($md) {
+            zoom: 90%;
+        }
+
+        @include mxw($sm) {
+            zoom: 80%;
+        }
     }
 
     &__flight-info {
@@ -338,6 +462,10 @@
         &:last-child {
             margin-right: 0;
         }
+
+        @include mxw($sm) {
+            margin-right: 0;
+        }
     }
 
     &__media-btn {
@@ -361,6 +489,10 @@
         &.show {
             display: block;
         }
+
+        @include mxw($sm) {
+            zoom: 80%;
+        }
     }
 
     &__media-title {
@@ -371,6 +503,13 @@
     &__media-tabs {
         padding: 0 12px;
         display: flex;
+
+        @include mxw($lg) {
+            zoom: 80%;
+        }
+        @include mxw($sm) {
+            padding: 0;
+        }
     }
 
     &__link-box {
@@ -417,15 +556,19 @@
     }
 
     &__media-img {
-        width: 724px;
-        height: 505px;
-        object-fit: cover;
-        margin: 0 auto 24px;
+
+            display: block;
+            width: 100%;
+            height: 505px;
+            object-fit: cover;
+            margin: 0 auto 24px;
+ 
+
     }
 
     &__mates-list {
-        overflow-y: scroll;
-        height: calc(100vh - 783px);
+        overflow-y: auto;
+        height: calc(100vh - 795px);
         padding: 16px;
         border: 1px solid #E4E7ED;
         background-color: #fff;
@@ -448,10 +591,30 @@
             border-radius: 30px;
             border: solid 3px transparent;
         }
+
+        @include mxw($lg) {
+   
+            height: calc(100vh - 740px);
+            // height: 250px;   
+        }
+
+        @include mxw($sm) {
+            height: calc(100vh - 500px);
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__mate {
         position: relative;
+        @include mxw($lg) {
+            zoom: 90%;
+        }
+        @include mxw($md) {
+            zoom: 80%;
+        }
+        @include mxw($sm) {
+            zoom: 100%;
+        }
     }
 
     &__mate-img {
@@ -486,18 +649,27 @@
         border-left: 1px solid #E4E7ED;
         background-color: #FBFBFC;
         padding: 16px 24px 24px 24px;
+
+        @include mxw($sm) {
+            padding: 16px;
+        }
     }
 
     &__social-conection {
-        width: 465px;
-        height: 894px;
-        object-fit: cover;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     &__more-inforamation {
         border-left: 1px solid #E4E7ED;
         background: #FBFBFC;
         padding: 24px 24px 24px 24px;
+
+        @include mxw($md) {
+            padding: 16px;
+        }
     }
 
     &__flight-travellers {
@@ -599,6 +771,10 @@
             margin-bottom: 24px;
         }
 
+        @include mxw($lg) {
+            zoom: 80%;
+        }
+
     }
 
     &__operation-item {
@@ -611,11 +787,17 @@
 
     &__operation-text {
         max-width: 230px;
+        padding-right: 15px;
     }
 
     &__operation-info {
         max-width: 418px;
         width: 100%;
+
+        @include mxw($sm) {
+            max-width: 318px;
+            font-size: 14px;
+        }
     }
 
     &__protocol-list,
@@ -623,6 +805,15 @@
         border: 1px solid #E4E7ED;
         background-color: #fff;
         margin-bottom: 16px;
+        @include mxw($lg) {
+            zoom: 80%;
+        }
+    }
+
+
+
+    &__conclusion-list{
+        margin-bottom: 0;
     }
 
     &__protocol-item {
@@ -631,11 +822,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include mxw($md) {
+            padding: 18px;
+        }
     }
 
     &__protocol-files {
         position: relative;
         padding-left: 45px;
+        margin-right: 10px;
 
         &::after {
             content: '';
@@ -648,6 +843,12 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+        }
+        @include mxw($md) {
+            padding-left: 25px;
+            &::after{
+                left: -5px;
+            }
         }
     }
 
@@ -665,6 +866,9 @@
 
     &__protocol-theme {
         width: 280px;
+        @include mxw($sm) {
+            text-align: right;
+        }
     }
 
     &__protocol-description,
@@ -695,6 +899,11 @@
     &__conclusion-box {
         max-width: 397px;
         width: 100%;
+
+        @include mxw($md) {
+            max-width: 200px;
+        }
+
     }
 
     &__conclusion-title {
@@ -741,6 +950,38 @@
         }
     }
 
+    &__travellers-list{
+        @include mxw($lg) {
+            zoom: 80%;
+        }
+    }
 
+    &__ticket-item{
+        @include mxw($lg) {
+            grid-template-columns: 180px 1fr;
+        }
+    }
+
+    &__ticket-right,
+    &__ticket-left{
+        @include mxw($sm) {
+        padding: 16px;
+        }           
+    }
+
+    &__ticket-info{
+        position: relative;
+        z-index: 100;
+        @include mxw($lg) {
+            gap: 8px;
+        }
+
+    }
+
+    &__ticket-box{
+        @include mxw($md) {
+            zoom: 80%;
+        }
+    }
 
 }
