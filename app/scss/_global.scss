@@ -35,18 +35,16 @@ html {
 
     @include mxw($lg) {
         padding: 40px 40px 24px;
-    }
-
-    // @include mxw($md) {
-    //     zoom: 80%;
-    // }
-
-    @include mxw($sm) {
-        padding: 20px 20px 14px 20px;
         overflow-y: auto;
         &::-webkit-scrollbar {
             display: none;
         }
+    }
+
+    @include mxw($sm) {
+        padding: 20px 20px 14px 20px;
+        overflow-y: auto;
+
     }
 }
 
@@ -1322,6 +1320,13 @@ html {
 
     &__center {
         padding: 24px;
+
+        @include mxw($lg) {
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
         @include mxw($md) {
             height:calc(100vh - 65px);
             overflow-y: auto;
@@ -1346,18 +1351,18 @@ html {
         grid-template-columns: repeat(2, 1fr);
         gap: 14px;
         margin-bottom: 0;
-        height: calc(100vh - 755px);
-        // max-height: 295px;
+        // height: calc(100vh - 755px);
+        max-height: 295px;
         overflow-y: auto;
 
-        @include mxw($md) {
-            height: calc(100vh - 500px);
-            // height: 300px;
-        }
+        // @include mxw($md) {
+        //     height: calc(100vh - 500px);
+        //     // height: 300px;
+        // }
 
-        @include mxw($sm) {
-            height: calc(100vh - 520px);
-        }
+        // @include mxw($sm) {
+        //     height: calc(100vh - 520px);
+        // }
     }
     &__list{
         @include mxw($md) {

@@ -2,11 +2,9 @@
     height: 100vh;
 	width: 100%;
 	background: var(--white-100, #FFF);
-
-    @include mxw($sm) {
+    @include mxw($lg) {
         overflow-y: auto;
     }
-
     &__table{
         @include mxw($sm) {
             zoom: 75%;

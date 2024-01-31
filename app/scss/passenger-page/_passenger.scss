@@ -70,6 +70,7 @@
         }
 
         @include mxw($lg) {
+
             &.show {
                 grid-template-columns: 320px 1fr 480px;
             }
@@ -104,6 +105,13 @@
     &__main-info {
         border-right: 1px solid #E4E7ED;
         background: #FBFBFC;
+
+        @include mxw($lg) {
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
 
         @include mxw($md) {
             zoom: 80%;
@@ -333,6 +341,13 @@
 
             &:first-child {
                 padding: 0 0 14px;
+            }
+        }
+
+        @include mxw($lg) {
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                display: none;
             }
         }
 
@@ -568,7 +583,7 @@
 
     &__mates-list {
         overflow-y: auto;
-        height: calc(100vh - 795px);
+        height: 295px;
         padding: 16px;
         border: 1px solid #E4E7ED;
         background-color: #fff;
@@ -592,16 +607,16 @@
             border: solid 3px transparent;
         }
 
-        @include mxw($lg) {
+        // @include mxw($lg) {
    
-            height: calc(100vh - 740px);
-            // height: 250px;   
-        }
+        //     height: calc(100vh - 740px);
+        //     // height: 250px;   
+        // }
 
-        @include mxw($sm) {
-            height: calc(100vh - 500px);
-            grid-template-columns: repeat(2, 1fr);
-        }
+        // @include mxw($sm) {
+        //     height: calc(100vh - 500px);
+        //     grid-template-columns: repeat(2, 1fr);
+        // }
     }
 
     &__mate {
@@ -649,6 +664,13 @@
         border-left: 1px solid #E4E7ED;
         background-color: #FBFBFC;
         padding: 16px 24px 24px 24px;
+
+        @include mxw($lg) {
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
 
         @include mxw($sm) {
             padding: 16px;

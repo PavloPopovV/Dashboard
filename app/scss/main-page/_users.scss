@@ -1,9 +1,10 @@
 .users {
     @include mxw($lg) {
+        overflow-y: auto;
         zoom: 90%;
     }
     @include mxw($md) {
-        overflow-y: auto;
+
         zoom: 80%;
     }
     
