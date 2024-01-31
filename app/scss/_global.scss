@@ -64,6 +64,10 @@ html {
     width: 100%;
     display: grid;
     grid-template-columns: 316px 1fr;
+
+    @include mxw($lg) {
+        height: 100vh;
+    }
 }
 
 .container-table-page {
