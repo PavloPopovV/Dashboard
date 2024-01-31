@@ -607,7 +607,10 @@
             border: solid 3px transparent;
         }
 
-        // @include mxw($lg) {
+        @include mxw($lg) {
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+        }
    
         //     height: calc(100vh - 740px);
         //     // height: 250px;   
