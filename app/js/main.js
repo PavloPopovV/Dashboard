@@ -281,7 +281,6 @@ function rollNumbersOnLoad() {
     }, 2000);
   });
 }
-
 rollNumbersOnLoad();
 
 document.addEventListener("mouseover", rollNumbersOnHover);
