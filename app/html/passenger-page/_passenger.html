@@ -31,7 +31,6 @@
     <div class="passenger__main-info">
       <div class="passenger__photo">
         <img src="images/passenger-photo.png" alt="" />
-
       </div>
       <span class="passenger__name"> Васильев Максим Олександрович </span>
       <ul class="passenger__contacts">
@@ -165,7 +164,8 @@
         </li>
         <li class="passenger__passport-item item">
           <span class="passenger__passport-text text">Подлинность</span>
-          <span class="passenger__passport-text passenger__passport-text--visa text"
+          <span
+            class="passenger__passport-text passenger__passport-text--visa text"
             >Виза с таким номером уже существует
             <span>Виза подделана</span></span
           >
@@ -341,12 +341,15 @@
           >
           <button class="passenger__media-reload" type="button"></button>
         </div>
-
-          <img class="passenger__media-img"
-          src="images/madia-instagram.jpg"
-          alt=""
-        />
- 
+        <div class="passenger__frame">
+          <iframe
+            class="frame"
+            width="100%"
+            height="100%"
+            src="https://www.instagram.com/realdonaldtrump/embed/"
+            frameborder="0"
+          ></iframe>
+        </div>
 
         <span class="passenger__visa-info">Контакты</span>
         <ul class="passenger__mates-list">
@@ -622,11 +625,11 @@
           >
           <button class="passenger__media-reload" type="button"></button>
         </div>
-        <img
-          class="passenger__media-img"
-          src="images/madia-facebook.jpg"
-          alt=""
-        />
+        <div class="passenger__frame">
+          <div class="fb-page" data-href="https://www.facebook.com/zelenskyy.official" data-tabs="timeline,events,messages" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/zelenskyy.official" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/zelenskyy.official">Володимир Зеленський</a></blockquote></div>
+        </div>
+        <!-- <div class = "fb-page" data-href = "https://www.facebook.com/zelenskyy.official" data-tabs = "timeline,events,messages" data-width = "" data-height = " data -small-header = "false" data-adapt-container-width = "false" data-hide-cover = "false" data-show-facepile = "true" ><blockquote cite = "https://www .facebook.com/zelenskyy.official" class = "fb-xfbml-parse-ignore" > <a href = "https://www.facebook.com/zelenskyy.official" > Володимир Зеленський </a></blockquote ></div>  -->
+        <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fzelenskyy.official&tabs=timeline%2Cevents%2Cmessages&width=340&height=500&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
         <span class="passenger__visa-info">Контакты</span>
         <ul class="passenger__mates-list">
           <li class="passenger__mate">
@@ -837,11 +840,14 @@
           >
           <button class="passenger__media-reload" type="button"></button>
         </div>
-        <img
-          class="passenger__media-img"
-          src="images/madia-twitter.jpg"
-          alt=""
-        />
+        <div class="passenger__frame">
+          <a
+            class="twitter-timeline"
+            href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Etfw"
+            >Tweets by realDonaldTrump</a
+          >
+        </div>
+
         <span class="passenger__visa-info">Контакты</span>
         <ul class="passenger__mates-list">
           <li class="passenger__mate">
@@ -1053,11 +1059,13 @@
       <div class="passenger__social-conection">
         <img src="images/passenger-social-conection.jpg" alt="" />
       </div>
-
     </div>
   </div>
 
-  <div  class="passenger__info-box passenger__info-box--operative tab-content" id="#tab_3">
+  <div
+    class="passenger__info-box passenger__info-box--operative tab-content"
+    id="#tab_3"
+  >
     <div class="passenger__main-info">
       <img class="passenger__photo" src="images/passenger-photo.png" alt="" />
       <span class="passenger__name"> Васильев Максим Олександрович </span>
@@ -1455,7 +1463,10 @@
     </div>
   </div>
 
-  <div class="passenger__info-box passenger__info-box--operative tab-content" id="#tab_4">
+  <div
+    class="passenger__info-box passenger__info-box--operative tab-content"
+    id="#tab_4"
+  >
     <div class="passenger__main-info">
       <img class="passenger__photo" src="images/passenger-photo.png" alt="" />
       <span class="passenger__name"> Васильев Максим Олександрович </span>
@@ -1486,7 +1497,7 @@
       </div>
     </div>
 
-    <div class="passenger__passport-details-inner ">
+    <div class="passenger__passport-details-inner">
       <h3 class="passenger__flight-title title title--plane">
         История перелетов
       </h3>
@@ -1538,7 +1549,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Время и дата вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--calendar"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--calendar"
                       >24.12.2023 14:15</span
                     >
                   </li>
@@ -1547,11 +1559,11 @@
                       class="passenger__ticket-description ticket__description"
                       >Аэропорт вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--location"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--location"
                       >Самарканд</span
                     >
                   </li>
-                  
                 </ul>
               </div>
             </article>
@@ -1604,7 +1616,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Время и дата вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--calendar"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--calendar"
                       >24.12.2023 14:15</span
                     >
                   </li>
@@ -1613,7 +1626,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Аэропорт вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--location"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--location"
                       >Самарканд</span
                     >
                   </li>
@@ -1669,7 +1683,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Время и дата вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--calendar"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--calendar"
                       >24.12.2023 14:15</span
                     >
                   </li>
@@ -1678,7 +1693,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Аэропорт вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--location"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--location"
                       >Самарканд</span
                     >
                   </li>
@@ -1734,7 +1750,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Время и дата вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--calendar"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--calendar"
                       >24.12.2023 14:15</span
                     >
                   </li>
@@ -1743,7 +1760,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Аэропорт вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--location"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--location"
                       >Самарканд</span
                     >
                   </li>
@@ -1799,7 +1817,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Время и дата вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--calendar"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--calendar"
                       >24.12.2023 14:15</span
                     >
                   </li>
@@ -1808,7 +1827,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Аэропорт вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--location"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--location"
                       >Самарканд</span
                     >
                   </li>
@@ -1864,7 +1884,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Время и дата вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--calendar"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--calendar"
                       >24.12.2023 14:15</span
                     >
                   </li>
@@ -1873,7 +1894,8 @@
                       class="passenger__ticket-description ticket__description"
                       >Аэропорт вылета</span
                     >
-                    <span class="passenger__ticket-text ticket__text ticket__text--location"
+                    <span
+                      class="passenger__ticket-text ticket__text ticket__text--location"
                       >Самарканд</span
                     >
                   </li>
@@ -1882,7 +1904,6 @@
             </div>
           </a>
         </li>
-
       </ul>
     </div>
 
@@ -1921,15 +1942,23 @@
     </div>
   </div>
 
-
   <div class="popup">
     <div class="popup__card">
       <span class="popup__title"></span>
       <span class="popup__text">Подтвердите действие</span>
       <div class="popup__buttons">
-        <button class="popup__processing processing-btn processing-btn--proc succesProcessing" type="button" >Подтвердить</и>
-        <button class="popup__processing processing-btn processing-btn--remove stopProcessing" type="button" 
-          >Отмена</button>
+        <button
+          class="popup__processing processing-btn processing-btn--proc succesProcessing"
+          type="button"
+        >
+          Подтвердить
+        </button>
+        <button
+          class="popup__processing processing-btn processing-btn--remove stopProcessing"
+          type="button"
+        >
+          Отмена
+        </button>
       </div>
     </div>
   </div>
