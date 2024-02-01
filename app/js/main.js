@@ -31,7 +31,7 @@ const tabsAirplaneDetailsBtn = document.querySelectorAll(
   ".js-airplaneDetailsBtn"
 );
 const tabsAirplaneDetailsItem = document.querySelectorAll(
-  '.js-airplaneDetailsItem'
+  ".js-airplaneDetailsItem"
 );
 
 const tabAirportBtns = document.querySelectorAll(".tab-airport-btn");
@@ -67,7 +67,11 @@ function openTab(target, btns, tabs) {
 //------------------------------- Pagination -------------------------
 
 const allFlights = [];
-const tableBody = document.querySelector(".flights-table tbody");
+const allAirplanes = [];
+const allNotices = [];
+const flightsTable = document.querySelector(".flights-table tbody");
+const airplaneTable = document.querySelector(".airplane__table tbody");
+const noticesTable = document.querySelector(".notices__table tbody");
 const allBtns = document.querySelectorAll(".pagination__btn");
 
 function createFlightsArr() {
@@ -99,13 +103,163 @@ function createFlightsArr() {
 }
 createFlightsArr();
 
-function renderHtml(obj, i) {
-  tableBody.insertAdjacentHTML(
+function createAirplanesArr() {
+  let obj = {
+    name: "BOEING 315",
+    flight: {
+      kod: "312HG - 01",
+      empty: "-",
+    },
+    location: "Аэропорт LVV",
+    "departure-arrival": {
+      time: "12:25",
+      date: "24.12.2023",
+    },
+    "number-of-passengers": {
+      number: "95  пассажиров",
+      empty: "Пустой",
+    },
+    status: {
+      green: {
+        class: "table__type--green",
+        text: "Выполняет рейс",
+      },
+      yellow: {
+        class: "table__type--yellow",
+        text: "Ожидает вылет",
+      },
+      red: {
+        class: "table__type--red",
+        text: "Простой",
+      },
+    },
+    number: "B-315-2",
+    detailsLink: "airplane-details.html",
+  };
+  for (let i = 0; i < 100; i++) {
+    allAirplanes.push(obj);
+  }
+}
+createAirplanesArr();
+
+function createNoticesArr() {
+  let obj = {
+    fullName: "Васильев Максим Олександрович",
+    gender: 'Мужской',
+    notices: "Торговля наркотиками",
+    flight: "312HG - 0",
+    plain: "Airbus А320",
+    place: 'F-16',
+    detailsLink: "airplane-details.html",
+  };
+  for (let i = 0; i < 100; i++) {
+    allNotices.push(obj);
+  }
+}
+createNoticesArr();
+
+function renderHtmlNotices(obj, i) {
+  noticesTable.insertAdjacentHTML(
+    "beforeend",
+    `
+    <tr class="table__row">
+      <td class="table__cell table__cell--name">
+          <span class="table__span gray-span">${obj.fullName}</span>
+      </td>
+      <td class="table__cell table__cell--gender">
+          <span class="table__span gray-span">
+              <span>${obj.gender}</span>
+          </span>
+      </td>
+      <td class="table__cell table__cell--notice">
+          <span class="table__span gray-span">${obj.notices}</span>
+      </td>
+      <td class="table__cell table__cell--flight">
+          <span class="table__span blue-span">${obj.flight + (i+1)}</span>
+      </td>
+      <td class="table__cell table__cell--plain-name">
+          <span class="table__span gray-span">${obj.plain}</span>
+      </td>
+      <td class="table__cell table__cell--place">
+          <span class="table__span gray-span">${obj.place}</span>
+      </td>
+      <td class="table__cell table__cell--details">
+          <a class="table__btn" href="flight-details.html">Детали</a>
+      </td>
+    </tr>
+  `
+  );
+}
+
+let count = 0;
+function renderHtmlAirplanes(obj, i) {
+  count++;
+  count = count === 4 ? 0 : count;
+  airplaneTable.insertAdjacentHTML(
+    "beforeend",
+    `
+    <tr class="table__row">
+      <td class="table__cell table__cell--name">
+          <span class="table__span gray-span">${obj.name} - ${i + 1}</span>
+      </td>
+      <td class="table__cell table__cell--march">
+          <span class="table__span ${count === 3 ? "gray-span" : "blue-span"} ">
+          ${count === 3 ? obj.flight.empty : obj.flight.kod}
+          </span>
+      </td>
+      <td class="table__cell table__cell--location">
+          <span class="table__span gray-span">${obj.location}</span>
+      </td>
+      <td class="table__cell table__cell--date">
+          <span class="table__span gray-span">${
+            obj["departure-arrival"].date
+          }</span>
+          <span class="table__span gray-span">${
+            obj["departure-arrival"].time
+          }</span>
+      </td>
+      <td class="table__cell table__cell--number">
+          <span class="table__span gray-span">${
+            count === 3
+              ? obj["number-of-passengers"].empty
+              : obj["number-of-passengers"].number
+          }</span>
+      </td>
+      <td class="table__cell table__cell--status">
+          <span class="table__type ${
+            count === 3
+              ? obj.status.red.class
+              : count === 1
+              ? obj.status.yellow.class
+              : obj.status.green.class
+          }">${
+      count === 3
+        ? obj.status.red.text
+        : count === 1
+        ? obj.status.yellow.text
+        : obj.status.green.text
+    }</span>
+      </td>
+      <td class="table__cell table__cell--plain">
+          <span class="table__span gray-span">
+            ${obj.number}
+          </span>
+      </td>
+      <td class="table__cell table__cell--details">
+          <a class="table__btn" href="${obj.detailsLink}">Детали</a>
+      </td>
+    </tr>
+  `
+  );
+}
+
+function renderHtmlFlights(obj, i) {
+  flightsTable.insertAdjacentHTML(
     "beforeend",
     `
    <tr class="table__row">
       <td class="table__cell table__cell--id">
-        <span class="table__span gray-span">${obj.id} - ${i}</span>
+        <span class="table__span gray-span">${obj.id} - ${i + 1}</span>
       </td>
       <td class="table__cell table__cell--march">
         <span class="table__span gray-span">
@@ -143,25 +297,33 @@ function renderHtml(obj, i) {
   );
 }
 
-function renderOnLoad() {
+function renderOnLoad(renderFunction, arr) {
   for (let i = 0; i < 16; i++) {
-    renderHtml(allFlights[i], i);
+    renderFunction(arr[i], i);
   }
 }
 
-if (tableBody) {
-  renderOnLoad();
+if (flightsTable) {
+  renderOnLoad(renderHtmlFlights, allFlights);
 }
 
-function showCurrentPageElements(btnValue) {
+if (airplaneTable) {
+  renderOnLoad(renderHtmlAirplanes, allAirplanes);
+}
+
+if (noticesTable) {
+  renderOnLoad(renderHtmlNotices, allNotices);
+}
+
+function showCurrentPageElements(btnValue, renderFunction, arr) {
   let startIndex = (btnValue - 1) * 16;
   let endIndex = btnValue * 16;
   for (let i = startIndex; i < endIndex; i++) {
-    renderHtml(allFlights[i], i);
+    renderFunction(arr[i], i);
   }
 }
 
-function renderOnClickBtns(target) {
+function renderOnClickBtns(target, renderFunction, table, arr) {
   let clickPageValue = !isNaN(parseInt(target.value)) ? target.value : false;
   const activePageValue = document.querySelector(
     ".pagination__btn.active"
@@ -173,30 +335,31 @@ function renderOnClickBtns(target) {
   ) {
     removeClass(allBtns, "active");
     target.classList.add("active");
-    tableBody.innerHTML = "";
-    showCurrentPageElements(clickPageValue);
+    table.innerHTML = "";
+    showCurrentPageElements(clickPageValue, renderFunction, arr);
   }
 }
 
-function renderOnClickArrows(target) {
+function renderOnClickArrows(target, renderFunction, table, arr) {
   const activePageValue = document.querySelector(
     ".pagination__btn.active"
   ).value;
+  if (+activePageValue >= 5) return false;
   switch (target.value) {
-    case "<":
+    case "-":
       if (+activePageValue - 1 !== 0) {
-        tableBody.innerHTML = "";
+        table.innerHTML = "";
         allBtns[+activePageValue - 1].classList.remove("active");
         allBtns[+activePageValue - 2].classList.add("active");
-        showCurrentPageElements(+activePageValue - 1);
+        showCurrentPageElements(+activePageValue - 1, renderFunction, arr);
       }
       break;
-    case ">":
+    case "+":
       if (allBtns[+activePageValue].value < 5) {
+        table.innerHTML = "";
         allBtns[+activePageValue - 1].classList.remove("active");
         allBtns[+activePageValue].classList.add("active");
-        tableBody.innerHTML = "";
-        showCurrentPageElements(+activePageValue + 1);
+        showCurrentPageElements(+activePageValue + 1, renderFunction, arr);
       }
       break;
   }
@@ -217,13 +380,50 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("pagination__btn")) {
     let closestParentId = e.target.closest(".pagination").id;
     if (closestParentId === "flights") {
-      renderOnClickBtns(e.target);
+      renderOnClickBtns(e.target, renderHtmlFlights, flightsTable, allFlights);
+    }
+    if (closestParentId === "airplane") {
+      renderOnClickBtns(
+        e.target,
+        renderHtmlAirplanes,
+        airplaneTable,
+        allAirplanes
+      );
+    }
+    if (closestParentId === "notices") {
+      renderOnClickBtns(
+        e.target,
+        renderHtmlNotices,
+        noticesTable,
+        allNotices
+      );
     }
   }
   if (e.target.classList.contains("pagination__arrows")) {
     let closestParentId = e.target.closest(".pagination").id;
     if (closestParentId === "flights") {
-      renderOnClickArrows(e.target);
+      renderOnClickArrows(
+        e.target,
+        renderHtmlFlights,
+        flightsTable,
+        allFlights
+      );
+    }
+    if (closestParentId === "airplane") {
+      renderOnClickArrows(
+        e.target,
+        renderHtmlAirplanes,
+        airplaneTable,
+        allAirplanes
+      );
+    }
+    if (closestParentId === "notices") {
+      renderOnClickArrows(
+        e.target,
+        renderHtmlNotices,
+        noticesTable,
+        allNotices
+      );
     }
   }
   if (e.target.classList.contains("tab-operation-btn")) {
@@ -284,4 +484,3 @@ function rollNumbersOnLoad() {
 rollNumbersOnLoad();
 
 document.addEventListener("mouseover", rollNumbersOnHover);
-
