@@ -1012,5 +1012,14 @@
         width: 100%;
         height: 505px;
         margin-bottom: 24px;
+
+        &--facebook {
+            display: flex;
+            justify-content: center;
+
+            iframe{
+                width: 500px;
+            }
+        }
     }
 }
