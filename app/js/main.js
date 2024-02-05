@@ -365,6 +365,60 @@ function renderOnClickArrows(target, renderFunction, table, arr) {
   }
 }
 
+
+
+//------------------------------- Animation Rolling Numbers -------------------------
+function rollNumbersOnHover(event) {
+  let hoveredElement = event.target;
+  const el = hoveredElement.closest(".digits")
+    ? hoveredElement.closest(".digits")
+    : false;
+  if (el && !el.classList.contains("hover")) {
+    el.classList.add("hover");
+    setTimeout(() => {
+      el.classList.remove("hover");
+    }, 2000);
+  }
+}
+
+function rollNumbersOnLoad() {
+  const allDigits = document.querySelectorAll(".digits");
+
+  allDigits.forEach((item) => {
+    item.classList.add("hover");
+    setTimeout(() => {
+      item.classList.remove("hover");
+    }, 2000);
+  });
+}
+rollNumbersOnLoad();
+
+document.addEventListener("mouseover", rollNumbersOnHover);
+
+
+//------------------------------- Languages -------------------------
+
+function changeLanguagesOnLoad(e) {
+  const enBtn = document.querySelector('.js-en')
+  const ruBtn = document.querySelector('.js-ru')
+  let pathname = window.location.pathname.replace('/', '')
+
+  let enUrl = pathname.includes('-en') ? pathname : pathname.replace('.html', '-en.html')
+  let ruUrl = pathname.replace('-en.html', '.html')
+
+  enBtn.setAttribute('href', enUrl)
+  ruBtn.setAttribute('href', ruUrl)
+  if(pathname === ruUrl){
+    ruBtn.setAttribute('href', '#')
+    ruBtn.classList.add('active')
+  }else {
+    enBtn.setAttribute('href', '#')
+    enBtn.classList.add('active')
+  }
+}
+changeLanguagesOnLoad()
+
+
 //------------------------------- Listener - CLick  -------------------------
 
 document.addEventListener("click", (e) => {
@@ -456,31 +510,3 @@ document.addEventListener("click", (e) => {
     document.querySelector(".popup").classList.remove("active");
   }
 });
-
-//------------------------------- Animation Rolling Numbers -------------------------
-function rollNumbersOnHover(event) {
-  let hoveredElement = event.target;
-  const el = hoveredElement.closest(".digits")
-    ? hoveredElement.closest(".digits")
-    : false;
-  if (el && !el.classList.contains("hover")) {
-    el.classList.add("hover");
-    setTimeout(() => {
-      el.classList.remove("hover");
-    }, 2000);
-  }
-}
-
-function rollNumbersOnLoad() {
-  const allDigits = document.querySelectorAll(".digits");
-
-  allDigits.forEach((item) => {
-    item.classList.add("hover");
-    setTimeout(() => {
-      item.classList.remove("hover");
-    }, 2000);
-  });
-}
-rollNumbersOnLoad();
-
-document.addEventListener("mouseover", rollNumbersOnHover);
