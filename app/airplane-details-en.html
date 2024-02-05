@@ -27,28 +27,28 @@
             <nav class="sidebar__menu">
                 <ul class="sidebar__list">
                     <li class="sidebar__item">
-                        <a href="index.html" class="sidebar__btn sidebar__btn--main sidebar-active">Главная</a>
+                        <a href="index-en.html" class="sidebar__btn sidebar__btn--main sidebar-active">Main</a>
                     </li>
                     <li class="sidebar__item">
-                        <a href="flights.html" class="sidebar__btn sidebar__btn--flights">Рейсы</a>
+                        <a href="flights-en.html" class="sidebar__btn sidebar__btn--flights">Flights</a>
                     </li>
                     <li class="sidebar__item">
-                        <a href="passengers-table.html" class="sidebar__btn sidebar__btn--passengers">Пассажиры</a>
+                        <a href="passengers-table-en.html" class="sidebar__btn sidebar__btn--passengers">Passengers</a>
                     </li>
                     <li class="sidebar__item">
-                        <a href="airplane.html" class="sidebar__btn sidebar__btn--planes">Самолеты</a>
+                        <a href="airplane-en.html" class="sidebar__btn sidebar__btn--planes">Airplanes</a>
                     </li>
                     <li class="sidebar__item"> 
-                        <a href="notices.html" class="sidebar__btn sidebar__btn--notifications">Уведомления</a>
+                        <a href="notices-en.html" class="sidebar__btn sidebar__btn--notifications">Notifications</a>
                     </li>
                 </ul>
             </nav>
-            <ul class="sidebarlanguages-list">
-                <li class="sidebarlanguages-item">
-                    <a class="sidebarlanguages-btn js-ru active" href="">RU</a>
+            <ul class="sidebar__languages-list">
+                <li class="sidebar__languages-item">
+                    <a class="sidebar__languages-btn js-ru" href="">RU</a>
                 </li>
-                <li class="sidebarlanguages-item">
-                    <a class="sidebarlanguages-btn js-en" href="">EN</a>
+                <li class="sidebar__languages-item">
+                    <a class="sidebar__languages-btn js-en" href="">EN</a>
                 </li>
             </ul>
         </div>
@@ -64,7 +64,7 @@
         <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="">
         <div class="sidebar__account-info">
             <span class="sidebar__account-name">Kianna Press</span>
-            <span class="sidebar__account-position">Сержант</span>
+            <span class="sidebar__account-position">Sarge</span>
         </div>
         <button class="sidebar__account-btn" type="button"></button>
     </div>
@@ -75,16 +75,16 @@
     <div class="airplane-details__container">
         <!-- LEFT ASIDE -->
         <aside class="airplane-details__left left-details">
-            <a class="left-details__back breadcrumbs" href="airplane.html">Вернуться к самолетам</a>
+            <a class="left-details__back breadcrumbs" href="airplane.html">Back to airplanes</a>
             <div class="left-details__box">
                 <img class="left-details__img" src="./images/airplane-details.jpg" alt="plane">
                 <h5 class="left-details__march">BOEING 315</h5>
-                <span class="left-details__id">Номер</span>
+                <span class="left-details__id">Number</span>
                 <span class="left-details__num">B-315-2</span>
-                <span class="left-details__id">Вместительность</span>
-                <span class="left-details__num">95 пассажиров</span>
-                <span class="left-details__id">Максимальная масса</span>
-                <span class="left-details__num">340,2 т</span>
+                <span class="left-details__id">Capacity</span>
+                <span class="left-details__num">95 passengers</span>
+                <span class="left-details__id">Maximum weight</span>
+                <span class="left-details__num">340,2 t</span>
             </div>
         </aside>
         <!-- --- -->
@@ -93,9 +93,9 @@
             <!-- HEADER -->
             <div class="main-details__header">
                 <button class="main-details__header-title active js-airplaneDetailsBtn" data-tab="airplaneDetails_1"
-                    type="button">Информация</button>
+                    type="button">Information</button>
                 <button class="main-details__header-title js-airplaneDetailsBtn" data-tab="airplaneDetails_2"
-                    type="button">История рейсов</button>
+                    type="button">Flight history</button>
             </div>
             <!-- --- -->
 
@@ -103,51 +103,51 @@
                 <!-- MAIN -->
                 <div class="main-details__center">
                     <!-- Детали рейса -->
-                    <h5 class="main-details__title title title--main">Текущий рейс</h5>
+                    <h5 class="main-details__title title title--main">Current flight</h5>
                     <ul class="main-details__list">
                         <li class="main-details__item item">
-                            <span class="main-details__text text">Рейс</span>
+                            <span class="main-details__text text">Flight</span>
                             <span class="main-details__info blue-span">312HG - 01</span>
                         </li>
                         <li class="main-details__item item">
-                            <span class="main-details__text text">Вылет</span>
+                            <span class="main-details__text text">Departure</span>
                             <span class="main-details__info info info--calendar"><span>23.09.2022</span>
                                 <span>12:25</span></span>
                         </li>
                         <li class="main-details__item item">
-                            <span class="main-details__text text">Прибытие</span>
+                            <span class="main-details__text text">Arrival</span>
                             <span class="main-details__info info info--calendar"><span>23.09.2022</span>
                                 <span>12:25</span></span>
                         </li>
                         <li class="main-details__item item">
-                            <span class="main-details__text text">Аэропорт вылета</span>
-                            <span class="main-details__info info info--location">Украина, Lviv Airport</span>
+                            <span class="main-details__text text">Departure airport</span>
+                            <span class="main-details__info info info--location">Ukraine, Lviv Airport</span>
                         </li>
 
                         <li class="main-details__item item">
-                            <span class="main-details__text text">Аэропорт прибытия</span>
-                            <span class="main-details__info info info--location">Румыния, Аэропорт LVV</span>
+                            <span class="main-details__text text">Arrival airport</span>
+                            <span class="main-details__info info info--location">Romania, LVV Airport</span>
                         </li>
 
                         <li class="main-details__item item">
-                            <span class="main-details__text text">Статус</span>
-                            <span class="main-details__info info">Ожидает вылет</span>
+                            <span class="main-details__text text">Status</span>
+                            <span class="main-details__info info">Awaiting departure</span>
                         </li>
                         <li class="main-details__item item">
-                            <span class="main-details__text text">Текущее местоположение</span>
-                            <span class="main-details__info info info--location">Украина, Lviv Airport</span>
+                            <span class="main-details__text text">Current location</span>
+                            <span class="main-details__info info info--location">Ukraine, Lviv Airport</span>
                         </li>
                     </ul>
 
-                    <h6 class="airplane-details__crew">Экипаж</h6>
+                    <h6 class="airplane-details__crew">Crew</h6>
 
                     <ul class="main-details__list">
                         <li class="main-details__item item">
-                            <span class="main-details__text text">Пилот 1</span>
+                            <span class="main-details__text text">Pilot 1</span>
                             <span class="main-details__info info">Васильев Максим Олександрович</span>
                         </li>
                         <li class="main-details__item item">
-                            <span class="main-details__text text">Пилот 2</span>
+                            <span class="main-details__text text">Pilot 2</span>
                             <span class="main-details__info info">Борис Егоров Петрович</span>
                         </li>
                     </ul>
@@ -156,7 +156,7 @@
                 <!-- RIGHT -->
                 <div class="airplane-details__right right-details">
                     <div class="right-details__header">
-                        <h5 class="right-details__title title title--inner">Пассажиры</h5>
+                        <h5 class="right-details__title title title--inner">Passengers</h5>
                         <span class="right-details__count">32</span>
                     </div>
                     <div class="right-details__group search-box">
@@ -233,7 +233,7 @@
                 <!-- MAIN -->
                 <div class="main-details__center">
                     <!-- Детали рейса -->
-                    <h5 class="main-details__title title title--main">История рейсов</h5>
+                    <h5 class="main-details__title title title--main">Flight history</h5>
 
                     <ul class="main-details__ticket-list ticket">
                         <li class="main-details__ticket-box ticket__box">
@@ -242,18 +242,18 @@
                                     <span class="main-details__ticket-name ticket__name">
                                         Bali
                                         <span>312HG - 01</span>
-                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
                                     </span>
                                     <span class="main-details__ticket-id ticket__id">23.12.2023</span>
                                 </div>
                                 <div class="main-details__ticket-right ticket__right">
                                     <span class="main-details__ticket-title ticket__title">
-                                        Информация о рейсе
+                                        Flight information
                                     </span>
                                     <ul class="main-details__ticket-info ticket__info">
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата вылета
+                                                Departure time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
@@ -261,24 +261,24 @@
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Аэропорт вылета
+                                                Departure airport
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--location">
-                                                Самарканд
+                                                Samarkand
                                             </span>
                                         </li>
 
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата прибытия
+                                                Arrival time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
                                             </span>
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
-                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
-                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -290,18 +290,18 @@
                                     <span class="main-details__ticket-name ticket__name">
                                         Bali
                                         <span>312HG - 01</span>
-                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
                                     </span>
                                     <span class="main-details__ticket-id ticket__id">23.12.2023</span>
                                 </div>
                                 <div class="main-details__ticket-right ticket__right">
                                     <span class="main-details__ticket-title ticket__title">
-                                        Информация о рейсе
+                                        Flight information
                                     </span>
                                     <ul class="main-details__ticket-info ticket__info">
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата вылета
+                                                Departure time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
@@ -309,24 +309,24 @@
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Аэропорт вылета
+                                                Departure airport
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--location">
-                                                Самарканд
+                                                Samarkand
                                             </span>
                                         </li>
 
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата прибытия
+                                                Arrival time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
                                             </span>
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
-                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
-                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -338,18 +338,18 @@
                                     <span class="main-details__ticket-name ticket__name">
                                         Bali
                                         <span>312HG - 01</span>
-                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
                                     </span>
                                     <span class="main-details__ticket-id ticket__id">23.12.2023</span>
                                 </div>
                                 <div class="main-details__ticket-right ticket__right">
                                     <span class="main-details__ticket-title ticket__title">
-                                        Информация о рейсе
+                                        Flight information
                                     </span>
                                     <ul class="main-details__ticket-info ticket__info">
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата вылета
+                                                Departure time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
@@ -357,24 +357,24 @@
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Аэропорт вылета
+                                                Departure airport
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--location">
-                                                Самарканд
+                                                Samarkand
                                             </span>
                                         </li>
 
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата прибытия
+                                                Arrival time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
                                             </span>
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
-                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
-                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -386,18 +386,18 @@
                                     <span class="main-details__ticket-name ticket__name">
                                         Bali
                                         <span>312HG - 01</span>
-                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
                                     </span>
                                     <span class="main-details__ticket-id ticket__id">23.12.2023</span>
                                 </div>
                                 <div class="main-details__ticket-right ticket__right">
                                     <span class="main-details__ticket-title ticket__title">
-                                        Информация о рейсе
+                                        Flight information
                                     </span>
                                     <ul class="main-details__ticket-info ticket__info">
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата вылета
+                                                Departure time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
@@ -405,24 +405,24 @@
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Аэропорт вылета
+                                                Departure airport
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--location">
-                                                Самарканд
+                                                Samarkand
                                             </span>
                                         </li>
 
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата прибытия
+                                                Arrival time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
                                             </span>
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
-                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
-                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -434,18 +434,18 @@
                                     <span class="main-details__ticket-name ticket__name">
                                         Bali
                                         <span>312HG - 01</span>
-                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
                                     </span>
                                     <span class="main-details__ticket-id ticket__id">23.12.2023</span>
                                 </div>
                                 <div class="main-details__ticket-right ticket__right">
                                     <span class="main-details__ticket-title ticket__title">
-                                        Информация о рейсе
+                                        Flight information
                                     </span>
                                     <ul class="main-details__ticket-info ticket__info">
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата вылета
+                                                Departure time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
@@ -453,24 +453,24 @@
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Аэропорт вылета
+                                                Departure airport
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--location">
-                                                Самарканд
+                                                Samarkand
                                             </span>
                                         </li>
 
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата прибытия
+                                                Arrival time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
                                             </span>
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
-                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
-                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -482,18 +482,18 @@
                                     <span class="main-details__ticket-name ticket__name">
                                         Bali
                                         <span>312HG - 01</span>
-                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
                                     </span>
                                     <span class="main-details__ticket-id ticket__id">23.12.2023</span>
                                 </div>
                                 <div class="main-details__ticket-right ticket__right">
                                     <span class="main-details__ticket-title ticket__title">
-                                        Информация о рейсе
+                                        Flight information
                                     </span>
                                     <ul class="main-details__ticket-info ticket__info">
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата вылета
+                                                Departure time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
@@ -501,24 +501,24 @@
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Аэропорт вылета
+                                                Departure airport
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--location">
-                                                Самарканд
+                                                Samarkand
                                             </span>
                                         </li>
 
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата прибытия
+                                                Arrival time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
                                             </span>
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
-                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
-                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -530,18 +530,18 @@
                                     <span class="main-details__ticket-name ticket__name">
                                         Bali
                                         <span>312HG - 01</span>
-                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
                                     </span>
                                     <span class="main-details__ticket-id ticket__id">23.12.2023</span>
                                 </div>
                                 <div class="main-details__ticket-right ticket__right">
                                     <span class="main-details__ticket-title ticket__title">
-                                        Информация о рейсе
+                                        Flight information
                                     </span>
                                     <ul class="main-details__ticket-info ticket__info">
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата вылета
+                                                Departure time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
@@ -549,24 +549,24 @@
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Аэропорт вылета
+                                                Departure airport
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--location">
-                                                Самарканд
+                                                Samarkand
                                             </span>
                                         </li>
 
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата прибытия
+                                                Arrival time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
                                             </span>
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
-                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
-                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -578,18 +578,18 @@
                                     <span class="main-details__ticket-name ticket__name">
                                         Bali
                                         <span>312HG - 01</span>
-                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
                                     </span>
                                     <span class="main-details__ticket-id ticket__id">23.12.2023</span>
                                 </div>
                                 <div class="main-details__ticket-right ticket__right">
                                     <span class="main-details__ticket-title ticket__title">
-                                        Информация о рейсе
+                                        Flight information
                                     </span>
                                     <ul class="main-details__ticket-info ticket__info">
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата вылета
+                                                Departure time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
@@ -597,29 +597,174 @@
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Аэропорт вылета
+                                                Departure airport
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--location">
-                                                Самарканд
+                                                Samarkand
                                             </span>
                                         </li>
 
                                         <li class="main-details__ticket-services ticket__servisec">
                                             <span class="main-details__ticket-description ticket__description">
-                                                Время и дата прибытия
+                                                Arrival time and date
                                             </span>
                                             <span class="main-details__ticket-text ticket__text ticket__text--calendar">
                                                 24.12.2023 14:15
                                             </span>
                                         </li>
                                         <li class="main-details__ticket-services ticket__servisec">
-                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
-                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Flight information
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Departure time and date
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Departure airport
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Samarkand
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Arrival time and date
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Flight information
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Departure time and date
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Departure airport
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Samarkand
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Arrival time and date
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Details</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Flight information
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Departure time and date
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Departure airport
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Samarkand
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Arrival time and date
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Arrival airport</span>
+                                            <span class="main-details__ticket-text ticket__text">LVV Airport</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
 
                     </ul>
 
@@ -628,7 +773,7 @@
                 <!-- RIGHT -->
                 <div class="airplane-details__right right-details">
                     <div class="right-details__header">
-                        <h5 class="right-details__title title title--inner">Статистика</h5>
+                        <h5 class="right-details__title title title--inner">Statistics</h5>
                     </div>
                     <div class="right-details__group">
                         <input class="right-details__input " type="text" placeholder="Всего рейсов">

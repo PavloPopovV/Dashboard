@@ -10,6 +10,7 @@
 
     &__logo {
         padding: 16px 0 16px 16px;
+
         img {
             width: 170px;
             height: 32px;
@@ -28,6 +29,10 @@
     }
 
     &__search-box {
+        margin-bottom: 16px;
+    }
+
+    &__menu {
         margin-bottom: 16px;
     }
 
@@ -68,6 +73,38 @@
 
         &--notifications::after {
             background-image: url('../images/sprite.svg#sidebar-notifications-icon');
+        }
+    }
+
+    &__languages-list {
+        padding: 0 12px;
+        display: flex;
+    }
+
+    &__languages-item {
+        margin-right: 16px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__languages-btn {
+        padding: 4px 16px;
+        border-radius: 6px;
+        background-color: rgba(35, 55, 55, 0.05);
+
+        &.active{
+            color: #fff;
+            background-color: #2563eb;
+        }
+
+        &:hover{
+            background-color: #e6e9ef;
+
+            &.active{
+                background-color: #2563eb;
+            }
         }
     }
 
@@ -138,7 +175,8 @@
     &__account-name {
         color: #172B4D;
         font-weight: 600;
-        line-height: 22px; /* 157.143% */
+        line-height: 22px;
+        /* 157.143% */
     }
 
     &__account-position {
@@ -146,7 +184,8 @@
         color: var(--Text-Secondary, #A0A3A6);
         font-weight: 450;
         font-size: 12px;
-        line-height: 18px; /* 150% */
+        line-height: 18px;
+        /* 150% */
     }
 
     &__account-btn {
