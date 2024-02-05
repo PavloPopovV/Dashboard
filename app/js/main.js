@@ -139,7 +139,9 @@ let currentArrFlights = currentLang === "EN" ? allFlightsEn : allFlights
 let currentArrAirplanes = currentLang === "EN" ? allAirplanesEn : allAirplanes
 let currentArrNotices = currentLang === "EN" ? allNoticesEn : allNotices
 
-
+function detailsBtn() {
+  return currentLang === "EN" ? 'Details' : 'Детали'
+}
 
 function renderHtmlNotices(obj, i) {
   noticesTable.insertAdjacentHTML(
@@ -167,7 +169,7 @@ function renderHtmlNotices(obj, i) {
           <span class="table__span gray-span">${obj.place}</span>
       </td>
       <td class="table__cell table__cell--details">
-          <a class="table__btn" href="${obj.detailsLink}">Детали</a>
+          <a class="table__btn" href="${obj.detailsLink}">${detailsBtn()}</a>
       </td>
     </tr>
   `
@@ -228,7 +230,7 @@ function renderHtmlAirplanes(obj, i) {
           </span>
       </td>
       <td class="table__cell table__cell--details">
-          <a class="table__btn" href="${obj.detailsLink}">Детали</a>
+          <a class="table__btn" href="${obj.detailsLink}">${detailsBtn()}</a>
       </td>
     </tr>
   `
@@ -272,7 +274,7 @@ function renderHtmlFlights(obj, i) {
         <span class="table__span gray-span">${obj.number}</span>
       </td>
       <td class="table__cell table__cell--details">
-        <a class="table__btn" href="${obj.detailsLink.trim()}">Детали</a>
+        <a class="table__btn" href="${obj.detailsLink.trim()}">${detailsBtn()}</a>
       </td>
     </tr>
    `
@@ -285,7 +287,7 @@ function renderOnLoad(renderFunction, arr) {
   }
 }
 
-//en
+//EN
 if (currentLang === "EN") {
   function createFlightsArrEn() {
     let obj = {
@@ -371,7 +373,7 @@ if (currentLang === "EN") {
   }
   createNoticesArrEn();
 }
-//RU
+//ru
 if (currentLang === "RU") {
   function createFlightsArr() {
     let obj = {
