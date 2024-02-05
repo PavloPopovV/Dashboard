@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="7afVmuYZ"></script>  
+<div class="home-wrapper">
+    <section class="sidebar">
+    <div class="sidebar__logo">
+        <img src="images/Logo.png" alt="logo">
+    </div>
+    <div class="sidebar__navigation">
+        <div class="sidebar__options">
+            <div class="sidebar__search-box search-box">
+                <input class="sidebar__search search" type="text" placeholder="Поиск"></input>
+            </div>
+            <nav class="sidebar__menu">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="index.html" class="sidebar__btn sidebar__btn--main sidebar-active">Главная</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="flights.html" class="sidebar__btn sidebar__btn--flights">Рейсы</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="passengers-table.html" class="sidebar__btn sidebar__btn--passengers">Пассажиры</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="airplane.html" class="sidebar__btn sidebar__btn--planes">Самолеты</a>
+                    </li>
+                    <li class="sidebar__item"> 
+                        <a href="notices.html" class="sidebar__btn sidebar__btn--notifications">Уведомления</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar__location">
+            <div class="sidebar__location-item">
+                <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
+                <span class="sidebar__country">Узбекистан</span>
+                <button class="sidebar__select-country" type="button"></button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar__account">
+        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="">
+        <div class="sidebar__account-info">
+            <span class="sidebar__account-name">Kianna Press</span>
+            <span class="sidebar__account-position">Сержант</span>
+        </div>
+        <button class="sidebar__account-btn" type="button"></button>
+    </div>
+</section>
+<main class="main">
+    <div class="main-page">
+        <section class="statistics">
+  <div class="statistics__top">
+    <h2 class="statistics__title title title--main">Статистика</h2>
+    <a class="statistics__day" href="#">Today</a>
+  </div>
+  <ul class="statistics__box">
+    <li class="statistics__item">
+      <span class="statistics__text">Количество обработанных рейсов</span>
+      <div class="statistics__numbers">
+        <div id="counter" class="animated">
+          <ul class="digits num-7  luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <span>,</span>
+          <ul class="digits num-2 luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <ul class="digits num-6 luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <ul class="digits num-5 luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+        </div>
+        <div class="statistics__percentage statistics__percentage--success">
+          <span class="statistics__percentage-number">+11.02%</span>
+        </div>
+      </div>
+    </li>
+    <li class="statistics__item">
+      <span class="statistics__text">Количество обработанных пассажиров</span>
+      <div class="statistics__numbers">
+        <div id="counter" class="animated">
+          <ul class="digits num-3  luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <span>,</span>
+          <ul class="digits num-6 luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <ul class="digits num-7 luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <ul class="digits num-1 luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+        </div>
+        <div class="statistics__percentage statistics__percentage--lose">
+          <span class="statistics__percentage-number">-0.03%</span>
+        </div>
+      </div>
+    </li>
+    <li class="statistics__item">
+      <span class="statistics__text">Подозрительных пассажиров</span>
+      <div class="statistics__numbers">
+        <div id="counter" class="animated">
+          <ul class="digits num-1  luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <ul class="digits num-5 luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <ul class="digits num-6 luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+        </div>
+        <div class="statistics__percentage statistics__percentage--success">
+          <span class="statistics__percentage-number">+15.03%</span>
+        </div>
+      </div>
+    </li>
+    <li class="statistics__item">
+      <span class="statistics__text">Рейсов в ожиданни</span>
+      <div class="statistics__numbers">
+        <div id="counter" class="animated">
+          <ul class="digits num-2  luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <ul class="digits num-3  luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+          <ul class="digits num-1  luckie">
+            <li> 0
+            <li> 1
+            <li> 2
+            <li> 3
+            <li> 4
+            <li> 5
+            <li> 6
+            <li> 7
+            <li> 8
+            <li> 9
+          </ul>
+        </div>
+        <div class="statistics__percentage statistics__percentage--success">
+          <span class="statistics__percentage-number">+6.08%</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section> 
+        <section class="flight">
+  <h2 class="flight__main-title title title--main">Информация о рейсах</h2>
+  <div class="flight__box">
+    <div class="flight__img">
+      <img src="images/main-page__map.png" alt="map" />
+    </div>
+    <div class="flight__info">
+      <a href="flight-details.html" class="flight__title">Рейс <span>752GS - 09</span></a>
+      <ul class="flight__list flight-info__list">
+        <li class="flight__item flight-info__item">
+          <span class="flight__route flight-info__route">Маршрут</span>
+          <span class="flight__location flight-info__location">Lviv - Budapest</span>
+        </li>
+        <li class="flight__item flight-info__item">
+          <span class="flight__route flight-info__route">Статус</span>
+          <span class="flight__location flight-info__location">Ожидает вылет</span>
+        </li>
+        <li class="flight__item flight-info__item flight-info__item--loc">
+          <span class="flight__route flight-info__route">Текущее местоположение</span>
+          <span class="flight__location flight-info__location">Украина, Lviv Airport</span>
+        </li>
+      </ul>
+      <p class="flight__suspicions-title">Подозрения</p>
+      <div class="flight__suspicions">
+        <div class="flight__suspicions-user">
+          <img src="images/suspicions-user.png" alt="suspicions-user" />
+          <span class="flight__suspicions-name">Васильев Максим Олександрович</span>
+        </div>
+        <a class="flight__suspicions-details table__btn" href="passenger.html">Детали</a>
+      </div>
+      <p class="flight__suspicions-desrciption">
+        Регулярный контакт с известными фигурами наркоторговли, согласно данным
+        из базы Интерпола.
+      </p>
+    </div>
+  </div>
+</section>
+        <section class="suspicion">
+  <div class="suspicion__top">
+    <h2 class="suspicion__title title title--main">Подозрения</h2>
+    <div class="suspicion__pagination">
+      <button type="button"
+        class="suspicion__btn suspicion__btn--prev"
+      ></button>
+      <div class="suspicion__count-wrapper">
+        <span class="suspicion__count suspicion__count--prev">1</span>
+        /
+        <span class="suspicion__count suspicion__count--next">62</span>
+      </div>
+      <button
+        type="button"
+        class="suspicion__btn suspicion__btn--next"
+      ></button>
+    </div>
+  </div>
+  <div class="suspicion__box">
+    <div class="suspicion__card">
+      <div class="suspicion__notice">
+        <img
+          class="suspicion__photo"
+          src="images/suspicions-photo.png"
+          alt=""
+        />
+        <div class="suspicion__warnning">
+          <span class="suspicion__warnning-text">
+            INTERPOL
+            <span> 1 RED NOTICE </span>
+          </span>
+      </div>
+      </div>
+      <div class="suspicion__data">
+        <div class="suspicion__name-details">
+          <span class="suspicion__name"
+            >Васильев Максим Олександрович</span
+          >
+          <a href="passenger.html" class="suspicion__details table__btn">Детали</a>
+        </div>
+
+        <p class="suspicion__text">
+          Предыдущие подозрения в наркотрафике с 2019 года, но официальных
+          обвинений не было предъявлено.
+        </p>
+        <div class="suspicion__buttons">
+          <button class="suspicion__processing processing-btn processing-btn--proc addProcessing" type="button" >В обработку</и>
+          <button class="suspicion__processing processing-btn processing-btn--remove removeProcessing" type="button"
+            >Снять все подозрения</button>
+        </div>
+      </div>
+    </div>
+    <div class="suspicion__flight">
+        <a href="flight-details.html" class="suspicion__flight-name">
+            Рейс <span>312HG - 01</span>
+        </a>
+      <ul class="suspicion__flight-list flight-info__list">
+        <li class="suspicion__flight-item flight-info__item">
+          <span class="suspicion__flight-route flight-info__route">Маршрут</span>
+          <span class="suspicion__flight-location flight-info__location">Lviv - Budapest</span>
+        </li>
+        <li class="suspicion__flight-item flight-info__item">
+          <span class="suspicion__flight-route flight-info__route">Статус</span>
+          <span class="suspicion__flight-location flight-info__location">Ожидает вылет</span>
+        </li>
+        <li class="suspicion__flight-item flight-info__item flight-info__item--loc">
+          <span class="suspicion__flight-route flight-info__route">Текущее местоположение</span>
+          <span class="suspicion__flight-location flight-info__location">Украина, Lviv Airport</span>
+        </li>
+        <li class="suspicion__flight-item flight-info__item">
+          <span class="suspicion__flight-route flight-info__route">Место в самолете</span>
+          <span class="suspicion__flight-location flight-info__location">Б - 43</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="popup">
+    <div class="popup__card">
+      <span class="popup__title"></span>
+      <span class="popup__text">Подтвердите действие</span>
+      <div class="popup__buttons">
+        <button class="popup__processing processing-btn processing-btn--proc succesProcessing" type="button" >Подтвердить</и>
+        <button class="popup__processing processing-btn processing-btn--remove stopProcessing" type="button" 
+          >Отмена</button>
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+</main>
+<section class="users">
+  <h3 class="users__title">Уведомления</h3>
+  <ul class="users__flights-list">
+    <li class="users__flights-item users__flights-item--arrived">
+      <a class="users__flights-btn" href="flight-details.html"
+        >Прибыл рейс <span>145QP - 15</span></a
+      >
+      <span class="users__flights-time">Только что</span>
+    </li>
+    <li class="users__flights-item users__flights-item--cancellation">
+      <a class="users__flights-btn" href="flight-details.html"
+        >Отмена рейса <span>513SF - 13</span></a
+      >
+      <span class="users__flights-time">59 минут назад</span>
+    </li>
+    <li class="users__flights-item users__flights-item--delay">
+      <a class="users__flights-btn" href="flight-details.html"
+        >Задержка рейса <span>612ЕІ - 21</span></a
+      >
+      <span class="users__flights-time">12 часов назад</span>
+    </li>
+    <li class="users__flights-item users__flights-item--flight">
+      <a class="users__flights-btn" href="flight-details.html"
+        >Вылет рейса <span>752GS - 09</span></a
+      >
+      <span class="users__flights-time">Вчера, 11:59</span>
+    </li>
+  </ul>
+
+  <h3 class="users__title">Активность</h3>
+  <ul class="users__activity-list">
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="passenger.html">Дмитрий Иванов</a>
+      <span class="users__activity-time">Отправлен в обработку</span>
+    </li>
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="passenger.html">Борис Егоров</a>
+      <span class="users__activity-time">Сняты все подозрения</span>
+    </li>
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="passenger.html">Дмитрий Иванов</a>
+      <span class="users__activity-time">Отправлен в обработку</span>
+    </li>
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="passenger.html">Борис Егоров</a>
+      <span class="users__activity-time">Сняты все подозрения</span>
+    </li>
+    <li class="users__activity-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__activity-btn" href="passenger.html">Дмитрий Иванов</a>
+      <span class="users__activity-time">Задержан</span>
+    </li>
+  </ul>
+  <h3 class="users__title">Подозрения</h3>
+  <ul class="users__suspicions-list">
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="passenger.html">Борис Егоров</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="passenger.html">Дмитрий Иванов</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="passenger.html">Юра Васков</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="passenger.html">Дмитрий Иванов</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="passenger.html">Борис Егоров</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="passenger.html">Дмитрий Иванов</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="passenger.html">Юра Васков</a>
+    </li>
+    <li class="users__suspicions-item">
+      <img class="users__photo" src="images/suspicions-user.png" alt="" />
+      <a class="users__suspicions-btn" href="passenger.html">Борис Егоров</a>
+    </li>
+  </ul>
+</section>
+ 
+</div>
+
+
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/main.min.js"></script>
+
+
+
+    </body>
+
+</html>
