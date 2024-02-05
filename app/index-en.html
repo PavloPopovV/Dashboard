@@ -42,6 +42,14 @@
                     </li>
                 </ul>
             </nav>
+            <ul class="sidebar__languages-list">
+                <li class="sidebar__languages-item">
+                    <a class="sidebar__languages-btn js-ru active" href="">RU</a>
+                </li>
+                <li class="sidebar__languages-item">
+                    <a class="sidebar__languages-btn js-en" href="">EN</a>
+                </li>
+            </ul>
         </div>
         <div class="sidebar__location">
             <div class="sidebar__location-item">
@@ -64,12 +72,12 @@
     <div class="main-page">
         <section class="statistics">
   <div class="statistics__top">
-    <h2 class="statistics__title title title--main">Статистика</h2>
+    <h2 class="statistics__title title title--main">Statistics</h2>
     <a class="statistics__day" href="#">Today</a>
   </div>
   <ul class="statistics__box">
     <li class="statistics__item">
-      <span class="statistics__text">Количество обработанных рейсов</span>
+      <span class="statistics__text">Number of flights processed</span>
       <div class="statistics__numbers">
         <div id="counter" class="animated">
           <ul class="digits num-7  luckie">
@@ -128,7 +136,7 @@
       </div>
     </li>
     <li class="statistics__item">
-      <span class="statistics__text">Количество обработанных пассажиров</span>
+      <span class="statistics__text">Number of passengers handled</span>
       <div class="statistics__numbers">
         <div id="counter" class="animated">
           <ul class="digits num-3  luckie">
@@ -187,7 +195,7 @@
       </div>
     </li>
     <li class="statistics__item">
-      <span class="statistics__text">Подозрительных пассажиров</span>
+      <span class="statistics__text">Suspicious passengers</span>
       <div class="statistics__numbers">
         <div id="counter" class="animated">
           <ul class="digits num-1  luckie">
@@ -233,7 +241,7 @@
       </div>
     </li>
     <li class="statistics__item">
-      <span class="statistics__text">Рейсов в ожиданни</span>
+      <span class="statistics__text">There are flights waiting</span>
       <div class="statistics__numbers">
         <div id="counter" class="animated">
           <ul class="digits num-2  luckie">
@@ -281,45 +289,44 @@
   </ul>
 </section> 
         <section class="flight">
-  <h2 class="flight__main-title title title--main">Информация о рейсах</h2>
+  <h2 class="flight__main-title title title--main">Flight information</h2>
   <div class="flight__box">
     <div class="flight__img">
       <img src="images/main-page__map.png" alt="map" />
     </div>
     <div class="flight__info">
-      <a href="flight-details.html" class="flight__title">Рейс <span>752GS - 09</span></a>
+      <a href="flight-details.html" class="flight__title">Flight <span>752GS - 09</span></a>
       <ul class="flight__list flight-info__list">
         <li class="flight__item flight-info__item">
-          <span class="flight__route flight-info__route">Маршрут</span>
+          <span class="flight__route flight-info__route">Itinerary</span>
           <span class="flight__location flight-info__location">Lviv - Budapest</span>
         </li>
         <li class="flight__item flight-info__item">
-          <span class="flight__route flight-info__route">Статус</span>
-          <span class="flight__location flight-info__location">Ожидает вылет</span>
+          <span class="flight__route flight-info__route">Status</span>
+          <span class="flight__location flight-info__location">Awaiting departure</span>
         </li>
         <li class="flight__item flight-info__item flight-info__item--loc">
-          <span class="flight__route flight-info__route">Текущее местоположение</span>
-          <span class="flight__location flight-info__location">Украина, Lviv Airport</span>
+          <span class="flight__route flight-info__route">Current location</span>
+          <span class="flight__location flight-info__location">Ukraine, Lviv Airport</span>
         </li>
       </ul>
-      <p class="flight__suspicions-title">Подозрения</p>
+      <p class="flight__suspicions-title">Suspicions</p>
       <div class="flight__suspicions">
         <div class="flight__suspicions-user">
           <img src="images/suspicions-user.png" alt="suspicions-user" />
-          <span class="flight__suspicions-name">Васильев Максим Олександрович</span>
+          <span class="flight__suspicions-name">Vasiliev Maxim Oleksandrovych</span>
         </div>
-        <a class="flight__suspicions-details table__btn" href="passenger.html">Детали</a>
+        <a class="flight__suspicions-details table__btn" href="passenger.html">Details</a>
       </div>
       <p class="flight__suspicions-desrciption">
-        Регулярный контакт с известными фигурами наркоторговли, согласно данным
-        из базы Интерпола.
+        Regular contact with known drug trafficking figures, according to data from the Interpol database.
       </p>
     </div>
   </div>
 </section>
         <section class="suspicion">
   <div class="suspicion__top">
-    <h2 class="suspicion__title title title--main">Подозрения</h2>
+    <h2 class="suspicion__title title title--main">Suspicions</h2>
     <div class="suspicion__pagination">
       <button type="button"
         class="suspicion__btn suspicion__btn--prev"
@@ -353,41 +360,40 @@
       <div class="suspicion__data">
         <div class="suspicion__name-details">
           <span class="suspicion__name"
-            >Васильев Максим Олександрович</span
+            >Vasiliev Maxim Oleksandrovych</span
           >
-          <a href="passenger.html" class="suspicion__details table__btn">Детали</a>
+          <a href="passenger.html" class="suspicion__details table__btn">Details</a>
         </div>
 
         <p class="suspicion__text">
-          Предыдущие подозрения в наркотрафике с 2019 года, но официальных
-          обвинений не было предъявлено.
+          Previous suspicions of drug trafficking from 2019, but no formal no charges have been filed.
         </p>
         <div class="suspicion__buttons">
-          <button class="suspicion__processing processing-btn processing-btn--proc addProcessing" type="button" >В обработку</и>
+          <button class="suspicion__processing processing-btn processing-btn--proc addProcessing" type="button" >Processing</и>
           <button class="suspicion__processing processing-btn processing-btn--remove removeProcessing" type="button"
-            >Снять все подозрения</button>
+            >To remove all suspicion</button>
         </div>
       </div>
     </div>
     <div class="suspicion__flight">
         <a href="flight-details.html" class="suspicion__flight-name">
-            Рейс <span>312HG - 01</span>
+          Flight <span>312HG - 01</span>
         </a>
       <ul class="suspicion__flight-list flight-info__list">
         <li class="suspicion__flight-item flight-info__item">
-          <span class="suspicion__flight-route flight-info__route">Маршрут</span>
+          <span class="suspicion__flight-route flight-info__route">Itinerary</span>
           <span class="suspicion__flight-location flight-info__location">Lviv - Budapest</span>
         </li>
         <li class="suspicion__flight-item flight-info__item">
-          <span class="suspicion__flight-route flight-info__route">Статус</span>
-          <span class="suspicion__flight-location flight-info__location">Ожидает вылет</span>
+          <span class="suspicion__flight-route flight-info__route">Status</span>
+          <span class="suspicion__flight-location flight-info__location">Awaiting departure</span>
         </li>
         <li class="suspicion__flight-item flight-info__item flight-info__item--loc">
-          <span class="suspicion__flight-route flight-info__route">Текущее местоположение</span>
-          <span class="suspicion__flight-location flight-info__location">Украина, Lviv Airport</span>
+          <span class="suspicion__flight-route flight-info__route">Current location</span>
+          <span class="suspicion__flight-location flight-info__location">Ukraine, Lviv Airport</span>
         </li>
         <li class="suspicion__flight-item flight-info__item">
-          <span class="suspicion__flight-route flight-info__route">Место в самолете</span>
+          <span class="suspicion__flight-route flight-info__route">Airplane seat</span>
           <span class="suspicion__flight-location flight-info__location">Б - 43</span>
         </li>
       </ul>
@@ -396,11 +402,11 @@
   <div class="popup">
     <div class="popup__card">
       <span class="popup__title"></span>
-      <span class="popup__text">Подтвердите действие</span>
+      <span class="popup__text">Confirm action</span>
       <div class="popup__buttons">
-        <button class="popup__processing processing-btn processing-btn--proc succesProcessing" type="button" >Подтвердить</и>
+        <button class="popup__processing processing-btn processing-btn--proc succesProcessing" type="button" >Confirm</и>
         <button class="popup__processing processing-btn processing-btn--remove stopProcessing" type="button" 
-          >Отмена</button>
+          >Canceled</button>
       </div>
     </div>
   </div>
@@ -412,59 +418,59 @@
   <ul class="users__flights-list">
     <li class="users__flights-item users__flights-item--arrived">
       <a class="users__flights-btn" href="flight-details.html"
-        >Прибыл рейс <span>145QP - 15</span></a
+        >Flight has arrived <span>145QP - 15</span></a
       >
       <span class="users__flights-time">Только что</span>
     </li>
     <li class="users__flights-item users__flights-item--cancellation">
       <a class="users__flights-btn" href="flight-details.html"
-        >Отмена рейса <span>513SF - 13</span></a
+        >Flight canceled <span>513SF - 13</span></a
       >
       <span class="users__flights-time">59 минут назад</span>
     </li>
     <li class="users__flights-item users__flights-item--delay">
       <a class="users__flights-btn" href="flight-details.html"
-        >Задержка рейса <span>612ЕІ - 21</span></a
+        >Flight delay <span>612ЕІ - 21</span></a
       >
       <span class="users__flights-time">12 часов назад</span>
     </li>
     <li class="users__flights-item users__flights-item--flight">
       <a class="users__flights-btn" href="flight-details.html"
-        >Вылет рейса <span>752GS - 09</span></a
+        >Flight departure <span>752GS - 09</span></a
       >
-      <span class="users__flights-time">Вчера, 11:59</span>
+      <span class="users__flights-time">Yesterday, 11:59</span>
     </li>
   </ul>
 
-  <h3 class="users__title">Активность</h3>
+  <h3 class="users__title">Activity</h3>
   <ul class="users__activity-list">
     <li class="users__activity-item">
       <img class="users__photo" src="images/suspicions-user.png" alt="" />
       <a class="users__activity-btn" href="passenger.html">Дмитрий Иванов</a>
-      <span class="users__activity-time">Отправлен в обработку</span>
+      <span class="users__activity-time">Sent for processing</span>
     </li>
     <li class="users__activity-item">
       <img class="users__photo" src="images/suspicions-user.png" alt="" />
       <a class="users__activity-btn" href="passenger.html">Борис Егоров</a>
-      <span class="users__activity-time">Сняты все подозрения</span>
+      <span class="users__activity-time">All suspicions are cleared</span>
     </li>
     <li class="users__activity-item">
       <img class="users__photo" src="images/suspicions-user.png" alt="" />
       <a class="users__activity-btn" href="passenger.html">Дмитрий Иванов</a>
-      <span class="users__activity-time">Отправлен в обработку</span>
+      <span class="users__activity-time">Sent for processing</span>
     </li>
     <li class="users__activity-item">
       <img class="users__photo" src="images/suspicions-user.png" alt="" />
       <a class="users__activity-btn" href="passenger.html">Борис Егоров</a>
-      <span class="users__activity-time">Сняты все подозрения</span>
+      <span class="users__activity-time">All suspicions are cleared</span>
     </li>
     <li class="users__activity-item">
       <img class="users__photo" src="images/suspicions-user.png" alt="" />
       <a class="users__activity-btn" href="passenger.html">Дмитрий Иванов</a>
-      <span class="users__activity-time">Задержан</span>
+      <span class="users__activity-time">Arrested</span>
     </li>
   </ul>
-  <h3 class="users__title">Подозрения</h3>
+  <h3 class="users__title">Suspicion</h3>
   <ul class="users__suspicions-list">
     <li class="users__suspicions-item">
       <img class="users__photo" src="images/suspicions-user.png" alt="" />
