@@ -22,7 +22,7 @@
     <div class="sidebar__navigation">
         <div class="sidebar__options">
             <div class="sidebar__search-box search-box">
-                <input class="sidebar__search search" type="text" placeholder="Поиск"></input>
+                <input class="sidebar__search search" type="text" placeholder="Search"></input>
             </div>
             <nav class="sidebar__menu">
                 <ul class="sidebar__list">
@@ -55,13 +55,13 @@
         <div class="sidebar__location">
             <div class="sidebar__location-item">
                 <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
-                <span class="sidebar__country">Узбекистан</span>
+                <span class="sidebar__country">Uzbekistan</span>
                 <button class="sidebar__select-country" type="button"></button>
             </div>
         </div>
     </div>
     <div class="sidebar__account">
-        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="">
+        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="Avatar">
         <div class="sidebar__account-info">
             <span class="sidebar__account-name">Kianna Press</span>
             <span class="sidebar__account-position">Sarge</span>
@@ -74,26 +74,26 @@
         <section class="passengers-table">
     <div class="passengers-table__container container-table-page">
         <div class="passengers-table__absolute">
-            <h5 class="passengers-table__title popular-title">Пассажиры</h5>
+            <h5 class="passengers-table__title popular-title">Passengers</h5>
             <div class="passengers-table__text text-under-popular-title">
-                <p>Пассажиры, которые соответсвутют выбраним категориям</p>
+                <p>Passengers who fit into selected categories</p>
             </div>
-            <a class="passengers-table__bd database-btn" href="bd.html">Поиск по БД</a>
+            <a class="passengers-table__bd database-btn" href="bd.html">DB search</a>
         </div>
         <div class="passengers-table__filter flights-filters__left">
             <div class="flights-filters__search search-box">
-                <input class="search" type="text" name="search" placeholder="Поиск">
+                <input class="search" type="text" name="search" placeholder="Search">
             </div>
             <div class="flights-filters__box">
                 <div class="flights-filters__date">
-                    <button class="flights-filters__btn datapicker-btn" type="button">01 ноября 2020</button>
+                    <button class="flights-filters__btn datapicker-btn" type="button">01 november 2020</button>
 
                     <div class="flights-filters__datepicker datepicker">
                         <div class="datepicker__header">
                             <button class="datepicker__arrows datepicker__arrows--left" type="button"></button>
 
                             <div class="datepicker__center">
-                                <span class="datepicker__month">Ноября</span>
+                                <span class="datepicker__month">November</span>
                                 <span class="datepicker__year">2022</span>
                             </div>
 
@@ -162,14 +162,14 @@
                     </div>
                 </div>
                 <div class="flights-filters__date ">
-                    <button class="flights-filters__btn datapicker-btn" type="button">07 января 2021</button>
+                    <button class="flights-filters__btn datapicker-btn" type="button">07 november 2021</button>
 
                     <div class="flights-filters__datepicker datepicker">
                         <div class="datepicker__header">
                             <button class="datepicker__arrows datepicker__arrows--left" type="button"></button>
 
                             <div class="datepicker__center">
-                                <span class="datepicker__month">Ноября</span>
+                                <span class="datepicker__month">November</span>
                                 <span class="datepicker__year">2022</span>
                             </div>
 
@@ -242,7 +242,7 @@
 
         <ul class="passengers-table__tabs">
             <li class="passengers-table__item">
-                <button class="passengers-table__btn active" data-tab="All" type="button">Все рейсы</button>
+                <button class="passengers-table__btn active" data-tab="All" type="button">All flights</button>
             </li>
             <li class="passengers-table__item">
                 <button class="passengers-table__btn" data-tab="312HG - 01" type="button">312HG - 01</button>
@@ -269,562 +269,528 @@
 
         <div class="passengers-table__box">
             <div class="passengers-table__box-gray show" id="312HG - 01">
-                <h6 class="passengers-table__сaption">Рейс <span>312HG - 01</span></h6>
+                <h6 class="passengers-table__сaption">Flight <span>312HG - 01</span></h6>
                 <table class="passengers-table table" width="100%">
                     <thead>
                         <tr class="passengers-table__header table__header">
-                            <th class="table__head-cell">Фамилия</th>
-                            <th class="table__head-cell">Имя</th>
-                            <th class="table__head-cell">Отчество</th>
-                            <th class="table__head-cell">Пол</th>
-                            <th class="table__head-cell">Дата рождения</th>
-                            <th class="table__head-cell">Подозрения</th>
-                            <th class="table__head-cell">Гражданство</th>
-                            <th class="table__head-cell">Действия</th>
+                            <th class="table__head-cell">Surname</th>
+                            <th class="table__head-cell">Name</th>
+                            <th class="table__head-cell">Patronymic</th>
+                            <th class="table__head-cell">Gender</th>
+                            <th class="table__head-cell">Date of birth</th>
+                            <th class="table__head-cell">Suspicions</th>
+                            <th class="table__head-cell">Nationality</th>
+                            <th class="table__head-cell">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row table__row--red">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--red">Задолженность</span>
+                                <span class="table__type table__type--red">Debt</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row table__row--red">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--red">Задолженность</span>
+                                <span class="table__type table__type--red">Debt</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
@@ -833,402 +799,378 @@
             </div>
 
             <div class="passengers-table__box-gray show" id="312HG - 02">
-                <h6 class="passengers-table__сaption">Рейс <span>312HG - 02</span></h6>
+                <h6 class="passengers-table__сaption">Flight <span>312HG - 02</span></h6>
                 <table class="passengers-table table" width="100%">
                     <thead>
                         <tr class="passengers-table__header table__header">
-                            <th class="table__head-cell">Фамилия</th>
-                            <th class="table__head-cell">Имя</th>
-                            <th class="table__head-cell">Отчество</th>
-                            <th class="table__head-cell">Пол</th>
-                            <th class="table__head-cell">Дата рождения</th>
-                            <th class="table__head-cell">Подозрения</th>
-                            <th class="table__head-cell">Гражданство</th>
-                            <th class="table__head-cell">Действия</th>
+                            <th class="table__head-cell">Surname</th>
+                            <th class="table__head-cell">Name</th>
+                            <th class="table__head-cell">Patronymic</th>
+                            <th class="table__head-cell">Gender</th>
+                            <th class="table__head-cell">Date of birth</th>
+                            <th class="table__head-cell">Suspicions</th>
+                            <th class="table__head-cell">Nationality</th>
+                            <th class="table__head-cell">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row table__row--red">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--red">Задолженность</span>
+                                <span class="table__type table__type--red">Debt</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row table__row--red">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--red">Задолженность</span>
+                                <span class="table__type table__type--red">Debt</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__cell table__cell--lastname">
-                                <span class="table__span gray-span">Текстович</span>
+                                <span class="table__span gray-span">Tekstovich</span>
                             </td>
                             <td class="table__cell table__cell--firstname">
                                 <span class="table__span gray-span">
-                                    Борис
+                                    Boris
                                 </span>
                             </td>
                             <td class="table__cell table__cell--patronymic">
-                                <span class="table__span gray-span">Петрович</span>
+                                <span class="table__span gray-span">Petrovich</span>
                             </td>
                             <td class="table__cell table__cell--sex">
-                                <span class="table__span gray-span">Мужской</span>
+                                <span class="table__span gray-span">Male</span>
                             </td>
                             <td class="table__cell table__cell--birthday">
                                 <span class="table__span gray-span">04/08/1998</span>
                             </td>
                             <td class="table__cell table__cell--suspicions">
-                                <span class="table__type table__type--green">Отсутствуют</span>
+                                <span class="table__type table__type--green">No Suspicions</span>
                             </td>
                             <td class="table__cell table__cell--nationality">
-                                <span class="table__span gray-span">Украина</span>
+                                <span class="table__span gray-span">Ukraine</span>
                             </td>
                             <td class="table__cell table__cell--actions">
-                                <button class="table__icon-btn table__icon-btn--good removeProcessing"
-                                    type="button"></button>
-                                <button class="table__icon-btn table__icon-btn--bed addProcessing"
-                                    type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--good removeProcessing" type="button"></button>
+                                <button class="table__icon-btn table__icon-btn--bed addProcessing" type="button"></button>
                                 <a class="table__icon-btn table__icon-btn--link" href="passenger.html"></a>
                             </td>
                         </tr>
