@@ -398,6 +398,11 @@ document.addEventListener("mouseover", rollNumbersOnHover);
 
 //------------------------------- Languages -------------------------
 
+function changeBtnLang(btn) {
+  btn.setAttribute('href', '#')
+  btn.classList.add('active')
+}
+
 function changeLanguagesOnLoad(e) {
   const enBtn = document.querySelector('.js-en')
   const ruBtn = document.querySelector('.js-ru')
@@ -409,11 +414,9 @@ function changeLanguagesOnLoad(e) {
   enBtn.setAttribute('href', enUrl)
   ruBtn.setAttribute('href', ruUrl)
   if(pathname === ruUrl){
-    ruBtn.setAttribute('href', '#')
-    ruBtn.classList.add('active')
+    changeBtnLang(ruBtn)
   }else {
-    enBtn.setAttribute('href', '#')
-    enBtn.classList.add('active')
+    changeBtnLang(enBtn)
   }
 }
 changeLanguagesOnLoad()
