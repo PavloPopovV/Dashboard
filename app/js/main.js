@@ -484,3 +484,5 @@ function rollNumbersOnLoad() {
 rollNumbersOnLoad();
 
 document.addEventListener("mouseover", rollNumbersOnHover);
+
+
