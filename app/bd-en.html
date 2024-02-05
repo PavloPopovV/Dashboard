@@ -21,7 +21,7 @@
     <div class="sidebar__navigation">
         <div class="sidebar__options">
             <div class="sidebar__search-box search-box">
-                <input class="sidebar__search search" type="text" placeholder="Поиск"></input>
+                <input class="sidebar__search search" type="text" placeholder="Search"></input>
             </div>
             <nav class="sidebar__menu">
                 <ul class="sidebar__list">
@@ -54,13 +54,13 @@
         <div class="sidebar__location">
             <div class="sidebar__location-item">
                 <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
-                <span class="sidebar__country">Узбекистан</span>
+                <span class="sidebar__country">Uzbekistan</span>
                 <button class="sidebar__select-country" type="button"></button>
             </div>
         </div>
     </div>
     <div class="sidebar__account">
-        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="">
+        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="Avatar">
         <div class="sidebar__account-info">
             <span class="sidebar__account-name">Kianna Press</span>
             <span class="sidebar__account-position">Sarge</span>
@@ -72,11 +72,11 @@
     <main class="main">
         <section class="database">
   <div class="database__top">
-    <h3 class="database__title popular-title">Поиск по БД</h3>
+    <h3 class="database__title popular-title">DB search</h3>
     <div class="database__text text-under-popular-title">
-      <p>Найдите пассажира по паспортным данным или информации по перелету.</p>
+      <p>Find a passenger by passport information or flight information.</p>
     </div>
-    <a class="database__btn database-btn" href="bd-result.html">Поиск по БД</a>
+    <a class="database__btn database-btn" href="bd-result.html">DB search</a>
   </div>
   <ul class="database__tab-list">
     <li class="database__tab-item">
@@ -85,7 +85,7 @@
         type="button"
         data-tab="#dataBase_1"
       >
-        Поиск по данным
+      Data search
       </button>
     </li>
     <li class="database__tab-item">
@@ -94,7 +94,7 @@
         type="button"
         data-tab="#dataBase_2"
       >
-        Поиск по критериям
+      Search by criteria
       </button>
     </li>
   </ul>
@@ -102,32 +102,32 @@
 
     <div class="database__form-passport database__form-passport--one">
       <div class="database__form-top">
-        <span class="database__form-title">Паспортные данные</span>
-        <button class="database__form-reset">Сбросить</button>
+        <span class="database__form-title">Passport data</span>
+        <button class="database__form-reset">Reset</button>
       </div>
-      <span class="database__form-subtitle">Персональная информация</span>
+      <span class="database__form-subtitle">Personal information</span>
       <div class="database__form-inputs">
         <label class="database__input-group" for="name">
-            <span class="database__input-name">Имя</span>
+            <span class="database__input-name">Name</span>
           <input class="database__input-text" type="text" id="name" name="name" value="Олег" readonly/>
         </label>
         <label class="database__input-group" for="name">
-            <span class="database__input-name">Фамилия</span>
+            <span class="database__input-name">Surname</span>
             <input class="database__input-text" type="text" id="name" name="name" value="Диба" readonly/>
         </label>
         <label class="database__input-group" for="name">
-            <span class="database__input-name">Отчество</span>
+            <span class="database__input-name">Patronymic</span>
             <input class="database__input-text" type="text" id="name" name="name" placeholder="Владимировна" readonly/>
         </label>
         <label class="database__input-group database__input-group--date" for="name">
-            <span class="database__input-name">Дата рождения</span>
+            <span class="database__input-name">Date of birth</span>
             <button class="database__input-text database__input-text--btn datapicker-btn" type="button">16/03/1999</button>
             <div class="flights-filters__datepicker datepicker database__datapicker">
               <div class="datepicker__header">
                   <button class="datepicker__arrows datepicker__arrows--left" type="button"></button>
 
                   <div class="datepicker__center">
-                      <span class="datepicker__month">Ноября</span>
+                      <span class="datepicker__month">November</span>
                       <span class="datepicker__year">2022</span>
                   </div>
 
@@ -196,42 +196,42 @@
             </div>
         </label>
         <label class="database__input-group database__input-group--gender" for="name">
-            <span class="database__input-name">Пол</span>
+            <span class="database__input-name">Gender</span>
             <input class="database__input-text" type="text" id="name" name="name" value="Мужской" readonly/>
         </label>
         <label class="database__input-group" for="name">
-            <span class="database__input-name">Место рождения</span>
+            <span class="database__input-name">Birthplace</span>
             <input class="database__input-text " type="text" id="name" name="name" value="Укрина, г.Львов" readonly/>
         </label>
       </div>
-      <span class="database__form-subtitle database__form-subtitle--inner">Документы</span>
+      <span class="database__form-subtitle database__form-subtitle--inner">Documents</span>
       <div class="database__form-inputs">
         <label class="database__input-group database__input-group--gender" for="name">
-            <span class="database__input-name">Тип документа</span>
+            <span class="database__input-name">Document type</span>
           <input class="database__input-text" type="text" id="name" name="name" placeholder="Национальный паспорт" readonly/>
         </label>
         <label class="database__input-group" for="name">
-            <span class="database__input-name">Номер документа</span>
+            <span class="database__input-name">Document No.</span>
             <input class="database__input-text" type="text" id="name" name="name" placeholder="AB123456" readonly/>
         </label>
         <label class="database__input-group" for="name">
-            <span class="database__input-name">Идентификационный номер</span>
+            <span class="database__input-name">ID number</span>
             <input class="database__input-text" type="text" id="name" name="name" placeholder="12345678"/>
         </label>
         <label class="database__input-group database__input-group--date" for="name">
-            <span class="database__input-name">Дата выдачи документа</span>
+            <span class="database__input-name">Date of issue of document</span>
             <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
         </label>
         <label class="database__input-group database__input-group--date" for="name">
-            <span class="database__input-name">Срок действия документа</span>
+            <span class="database__input-name">Validity of the document</span>
             <input class="database__input-text " type="text" id="name" name="name" placeholder="DD/MM/YY"  readonly/>
         </label>
         <label class="database__input-group database__input-group--gender" for="name">
-            <span class="database__input-name">Место выдачи документа</span>
+            <span class="database__input-name">Place of issue</span>
             <input class="database__input-text" type="text" id="name" name="name" placeholder="12345678" readonly/>
         </label>
         <label class="database__input-group database__input-group--gender" for="name">
-            <span class="database__input-name">Гражданство</span>
+            <span class="database__input-name">Nationality</span>
             <input class="database__input-text " type="text" id="name" name="name" placeholder="Румыния"  readonly/>
         </label>
       </div>
@@ -240,19 +240,19 @@
     <div class="database__form-right">
         <div class="database__form-passport">
             <div class="database__form-top">
-              <span class="database__form-title">Данные по перелету</span>
+              <span class="database__form-title">Flight data</span>
               <button class="database__form-reset">Сбросить</button>
             </div>
             <div class="database__form-inputs">
                 <label class="database__input-group database__input-group--date" for="name">
-                  <span class="database__input-name">Дата бронирования/покупки билета</span>
+                  <span class="database__input-name">Date of ticket booking/purchase</span>
                   <button class="database__input-text database__input-text--placeholder database__input-text--btn datapicker-btn" type="button">DD/MM/YY</button>
                   <div class="flights-filters__datepicker datepicker database__datapicker">
                     <div class="datepicker__header">
                         <button class="datepicker__arrows datepicker__arrows--left" type="button"></button>
 
                         <div class="datepicker__center">
-                            <span class="datepicker__month">Ноября</span>
+                            <span class="datepicker__month">November</span>
                             <span class="datepicker__year">2022</span>
                         </div>
 
@@ -321,55 +321,55 @@
                   </div>
                 </label>
                 <label class="database__input-group database__input-group--date" for="name">
-                  <span class="database__input-name">Время и дата вылета</span>
+                  <span class="database__input-name">Departure time and date</span>
                   <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY"/>
                 </label>
                 <label class="database__input-group" for="name">
-                  <span class="database__input-name">Аэропорт вылета</span>
+                  <span class="database__input-name">Departure airport</span>
                   <input class="database__input-text" type="text" id="name" name="name" placeholder="Бишкек, Киргизия (FRU)" readonly/>
                 </label>
                 <label class="database__input-group" for="name">
-                  <span class="database__input-name">Аэропорт прибытия</span>
+                  <span class="database__input-name">Arrival airport</span>
                   <input class="database__input-text" type="text" id="name" name="name" placeholder="Бишкек, Киргизия (FRU)">
                 </label>
                 <label class="database__input-group" for="name">
-                  <span class="database__input-name">Место в самолете</span>
+                  <span class="database__input-name">Airplane seat</span>
                   <input class="database__input-text" type="text" id="name" name="name" placeholder="F-16" readonly/>
                 </label>
                 <label class="database__input-group" for="name">
-                  <span class="database__input-name">Данные агента</span>
+                  <span class="database__input-name">Agent's data</span>
                   <input class="database__input-text " type="text" id="name" name="name" placeholder="POLAN DAVID" readonly/>
                 </label>
                 <label class="database__input-group database__input-group--date" for="name">
-                    <span class="database__input-name">Дата приобретения билета</span>
+                    <span class="database__input-name">Ticket purchase date</span>
                     <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
                 </label>
                 <label class="database__input-group database__input-group--date" for="name">
-                    <span class="database__input-name">Дата приобретения билета</span>
+                    <span class="database__input-name">Date of ticket purchase</span>
                     <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
                 </label>
             </div>
         </div>
         <div class="database__form-passport">
             <div class="database__form-top">
-              <span class="database__form-title">Дополнительные данные</span>
-              <button class="database__form-reset">Сбросить</button>
+              <span class="database__form-title">Additional data</span>
+              <button class="database__form-reset">Reset</button>
             </div>
             <div class="database__form-inputs">
               <label class="database__input-group" for="name">
-                  <span class="database__input-name">Номер визы</span>
+                  <span class="database__input-name">Visa number</span>
                 <input class="database__input-text" type="text" id="name" name="name" placeholder="12345678" readonly/>
               </label>
               <label class="database__input-group" for="name">
-                  <span class="database__input-name">Тип визы</span>
+                  <span class="database__input-name">Visa type</span>
                   <input class="database__input-text" type="text" id="name" name="name" placeholder="D" />
               </label>
               <label class="database__input-group database__input-group--date" for="name">
-                  <span class="database__input-name">Дата выдачи</span>
+                  <span class="database__input-name">Date of issue</span>
                   <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
               </label>
               <label class="database__input-group database__input-group--date" for="name">
-                <span class="database__input-name">Срок действия</span>
+                <span class="database__input-name">Expiration date</span>
                 <input class="database__input-text" type="text" id="name" name="name" placeholder="DD/MM/YY" readonly/>
             </label>
     
@@ -382,57 +382,57 @@
   <form class="database__form database-content" action="" id="#dataBase_2">
     <ul class="database__checkbox-list">
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Подозрения</span>
+            <span class="database__checkbox-title">Suspicions</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="drugs">
                     <input class="database__variant" type="checkbox" id="drugs" name="drugs" required>
                     <span class="database__checkbox"></span>
-                    Торговля наркотиками
+                    Drug dealing
                 </label>
                 <label class="database__privacy" for="laundering">
                     <input class="database__variant" type="checkbox" id="laundering" name="laundering" required checked>
                     <span class="database__checkbox"></span>
-                    Отмывание средств
+                    Money laundering
                 </label>
                 <label class="database__privacy" for="human">
                     <input class="database__variant" type="checkbox" id="human" name="human" required>
                     <span class="database__checkbox"></span>
-                    Торговля людьми
+                    Human trafficking
                 </label>
                 <label class="database__privacy" for="terrorism">
                     <input class="database__variant" type="checkbox" id="terrorism" name="terrorism" required checked>
                     <span class="database__checkbox"></span>
-                    Терроризм
+                    Terrorism
                 </label>
             </div>
         </li>
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Попутчики</span>
+            <span class="database__checkbox-title">Travel companions</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="companions-none">
                     <input class="database__variant" type="checkbox" id="companions-none" name="companions-none" required>
                     <span class="database__checkbox"></span>
-                    Нету
+                    No
                 </label>
                 <label class="database__privacy" for="companions-one">
                     <input class="database__variant" type="checkbox" id="companions-one" name="companions-one" required checked>
                     <span class="database__checkbox"></span>
-                    Один
+                    One
                 </label>
                 <label class="database__privacy" for="companions-two">
                     <input class="database__variant" type="checkbox" id="companions-two" name="companions-two" required>
                     <span class="database__checkbox"></span>
-                    Два
+                    Two
                 </label>
                 <label class="database__privacy" for="companions-more">
                     <input class="database__variant" type="checkbox" id="companions-more" name="companions-more" required>
                     <span class="database__checkbox"></span>
-                    3 и более
+                    3 or more
                 </label>
             </div>
         </li>
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Уровень угрозы</span>
+            <span class="database__checkbox-title">Threat level</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="risk-one">
                     <input class="database__variant" type="checkbox" id="risk-one" name="risk-one" required>
@@ -457,57 +457,57 @@
             </div>
         </li>
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Виза</span>
+            <span class="database__checkbox-title">Visa</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="underhanded">
                     <input class="database__variant" type="checkbox" id="underhanded" name="underhanded" required>
                     <span class="database__checkbox"></span>
-                    Подленная
+                    Underhanded
                 </label>
                 <label class="database__privacy" for="fake">
                     <input class="database__variant" type="checkbox" id="fake" name="fake" required>
                     <span class="database__checkbox"></span>
-                    Поддельная
+                    Fake
                 </label>
                 <label class="database__privacy" for="no-info">
                     <input class="database__variant" type="checkbox" id="no-info" name="no-info" required>
                     <span class="database__checkbox"></span>
-                    Нет информации
+                    No information
                 </label>
             </div>
         </li>
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Розыск интерполом</span>
+            <span class="database__checkbox-title">Interpol wanted</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="wanted-yes">
                     <input class="database__variant" type="checkbox" id="wanted-yes" name="wanted-yes" required>
                     <span class="database__checkbox"></span>
-                    Нет
+                    No
                 </label>
                 <label class="database__privacy" for="wanted-no">
                     <input class="database__variant" type="checkbox" id="wanted-no" name="wanted-no" required checked>
                     <span class="database__checkbox"></span>
-                    Да
+                    Yes
                 </label>
             </div>
         </li>
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Документы</span>
+            <span class="database__checkbox-title">Documents</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="confirmed">
                     <input class="database__variant" type="checkbox" id="confirmed" name="confirmed" required>
                     <span class="database__checkbox"></span>
-                    Подтверждены
+                    Confirmed
                 </label>
                 <label class="database__privacy" for="unconfirmed">
                     <input class="database__variant" type="checkbox" id="unconfirmed" name="unconfirmed" required checked>
                     <span class="database__checkbox"></span>
-                    Не подтверждены
+                    Unconfirmed
                 </label>
             </div>
         </li>
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Количество перелетов</span>
+            <span class="database__checkbox-title">Number of flights</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="count-one">
                     <input class="database__variant" type="checkbox" id="count-one" name="count-one" required>
@@ -532,47 +532,47 @@
             </div>
         </li>
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Проверка соц.сетей</span>
+            <span class="database__checkbox-title">Social media check</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="suspicious-posts">
                     <input class="database__variant" type="checkbox" id="suspicious-posts" name="suspicious-posts" required>
                     <span class="database__checkbox"></span>
-                    Подозрительные посты
+                    Suspicious posts
                 </label>
                 <label class="database__privacy" for="enemy-slogans">
                     <input class="database__variant" type="checkbox" id="enemy-slogans" name="enemy-slogans" required>
                     <span class="database__checkbox"></span>
-                    Враждебные слоганы
+                    Hostile slogans
                 </label>
                 <label class="database__privacy" for="suspicious-contacts">
                     <input class="database__variant" type="checkbox" id="suspicious-contacts" name="suspicious-contacts" required>
                     <span class="database__checkbox"></span>
-                    Подозрительные контакты
+                    Suspicious contacts
                 </label>
                 <label class="database__privacy" for="no-social-media-pages">
                     <input class="database__variant" type="checkbox" id="no-social-media-pages" name="no-social-media-pages" required>
                     <span class="database__checkbox"></span>
-                    Нету страниц в соц.сетях
+                    No social media pages
                 </label>
             </div>
         </li>
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Способ приобретения билета</span>
+            <span class="database__checkbox-title">Method of purchasing a ticket</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="internet">
                     <input class="database__variant" type="checkbox" id="internet" name="internet" required>
                     <span class="database__checkbox"></span>
-                    Интернет
+                    Internet
                 </label>
                 <label class="database__privacy" for="airport">
                     <input class="database__variant" type="checkbox" id="airport" name="airport" required>
                     <span class="database__checkbox"></span>
-                    В аэропорту
+                    At the airport
                 </label>
             </div>
         </li>
         <li class="database__checkbox-item">
-            <span class="database__checkbox-title">Кол-во Ранее посещенных стран</span>
+            <span class="database__checkbox-title">No. of Previously Visited Countries</span>
             <div class="database__checkbox-box">
                 <label class="database__privacy" for="visited-one">
                     <input class="database__variant" type="checkbox" id="visited-one" name="visited-one" required>
@@ -597,9 +597,9 @@
             </div>
         </li>
     </ul>
-    <h3 class="database__title popular-title">Ручной поиск</h3>
+    <h3 class="database__title popular-title">Manual search</h3>
     <div class="database__text text-under-popular-title">
-      <p>Введите данные для поиска вручную. В виде “Информация < / = / > Значение”, например “Количество перелетов = 5”</p>
+      <p>Enter the search data manually. In the form "Information < / = / > Value", e.g. "Number of flights = 5"</p>
     </div>
     <ul class="database__manual-search">
         <li class="database__manual-item">
