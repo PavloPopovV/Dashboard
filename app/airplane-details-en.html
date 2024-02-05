@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="7afVmuYZ"></script>
+
+<div class="wrapper">
+    <section class="sidebar">
+    <div class="sidebar__logo">
+        <img src="images/Logo.png" alt="logo">
+    </div>
+    <div class="sidebar__navigation">
+        <div class="sidebar__options">
+            <div class="sidebar__search-box search-box">
+                <input class="sidebar__search search" type="text" placeholder="Поиск"></input>
+            </div>
+            <nav class="sidebar__menu">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="index.html" class="sidebar__btn sidebar__btn--main sidebar-active">Главная</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="flights.html" class="sidebar__btn sidebar__btn--flights">Рейсы</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="passengers-table.html" class="sidebar__btn sidebar__btn--passengers">Пассажиры</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="airplane.html" class="sidebar__btn sidebar__btn--planes">Самолеты</a>
+                    </li>
+                    <li class="sidebar__item"> 
+                        <a href="notices.html" class="sidebar__btn sidebar__btn--notifications">Уведомления</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar__location">
+            <div class="sidebar__location-item">
+                <img class="sidebar__flag" src="../images/sprite.svg#sidebar-flag-icon" alt="sidebar-flag">
+                <span class="sidebar__country">Узбекистан</span>
+                <button class="sidebar__select-country" type="button"></button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar__account">
+        <img class="sidebar__account-img" src="../images/sidebar-account-avatar.png" alt="">
+        <div class="sidebar__account-info">
+            <span class="sidebar__account-name">Kianna Press</span>
+            <span class="sidebar__account-position">Сержант</span>
+        </div>
+        <button class="sidebar__account-btn" type="button"></button>
+    </div>
+</section>
+
+    <main class="main">
+        <section class="airplane-details">
+    <div class="airplane-details__container">
+        <!-- LEFT ASIDE -->
+        <aside class="airplane-details__left left-details">
+            <a class="left-details__back breadcrumbs" href="airplane.html">Вернуться к самолетам</a>
+            <div class="left-details__box">
+                <img class="left-details__img" src="./images/airplane-details.jpg" alt="plane">
+                <h5 class="left-details__march">BOEING 315</h5>
+                <span class="left-details__id">Номер</span>
+                <span class="left-details__num">B-315-2</span>
+                <span class="left-details__id">Вместительность</span>
+                <span class="left-details__num">95 пассажиров</span>
+                <span class="left-details__id">Максимальная масса</span>
+                <span class="left-details__num">340,2 т</span>
+            </div>
+        </aside>
+        <!-- --- -->
+        <!-- CENTRAL RIGHT -->
+        <div class="airplane-details__center main-details">
+            <!-- HEADER -->
+            <div class="main-details__header">
+                <button class="main-details__header-title active js-airplaneDetailsBtn" data-tab="airplaneDetails_1"
+                    type="button">Информация</button>
+                <button class="main-details__header-title js-airplaneDetailsBtn" data-tab="airplaneDetails_2"
+                    type="button">История рейсов</button>
+            </div>
+            <!-- --- -->
+
+            <div class="main-details__box show js-airplaneDetailsItem" id="airplaneDetails_1">
+                <!-- MAIN -->
+                <div class="main-details__center">
+                    <!-- Детали рейса -->
+                    <h5 class="main-details__title title title--main">Текущий рейс</h5>
+                    <ul class="main-details__list">
+                        <li class="main-details__item item">
+                            <span class="main-details__text text">Рейс</span>
+                            <span class="main-details__info blue-span">312HG - 01</span>
+                        </li>
+                        <li class="main-details__item item">
+                            <span class="main-details__text text">Вылет</span>
+                            <span class="main-details__info info info--calendar"><span>23.09.2022</span>
+                                <span>12:25</span></span>
+                        </li>
+                        <li class="main-details__item item">
+                            <span class="main-details__text text">Прибытие</span>
+                            <span class="main-details__info info info--calendar"><span>23.09.2022</span>
+                                <span>12:25</span></span>
+                        </li>
+                        <li class="main-details__item item">
+                            <span class="main-details__text text">Аэропорт вылета</span>
+                            <span class="main-details__info info info--location">Украина, Lviv Airport</span>
+                        </li>
+
+                        <li class="main-details__item item">
+                            <span class="main-details__text text">Аэропорт прибытия</span>
+                            <span class="main-details__info info info--location">Румыния, Аэропорт LVV</span>
+                        </li>
+
+                        <li class="main-details__item item">
+                            <span class="main-details__text text">Статус</span>
+                            <span class="main-details__info info">Ожидает вылет</span>
+                        </li>
+                        <li class="main-details__item item">
+                            <span class="main-details__text text">Текущее местоположение</span>
+                            <span class="main-details__info info info--location">Украина, Lviv Airport</span>
+                        </li>
+                    </ul>
+
+                    <h6 class="airplane-details__crew">Экипаж</h6>
+
+                    <ul class="main-details__list">
+                        <li class="main-details__item item">
+                            <span class="main-details__text text">Пилот 1</span>
+                            <span class="main-details__info info">Васильев Максим Олександрович</span>
+                        </li>
+                        <li class="main-details__item item">
+                            <span class="main-details__text text">Пилот 2</span>
+                            <span class="main-details__info info">Борис Егоров Петрович</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- --- -->
+                <!-- RIGHT -->
+                <div class="airplane-details__right right-details">
+                    <div class="right-details__header">
+                        <h5 class="right-details__title title title--inner">Пассажиры</h5>
+                        <span class="right-details__count">32</span>
+                    </div>
+                    <div class="right-details__group search-box">
+                        <input class="right-details__search search" type="text" placeholder="Поиск">
+                    </div>
+                    <ul class="right-details__list passenger-cards">
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar-glass.png"
+                                alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar-kid.png" alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar-redhead.png"
+                                alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avata-nerd.png" alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar-blonde.png"
+                                alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar.png" alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar.png" alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar-kid.png" alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar-redhead.png"
+                                alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar-redhead.png"
+                                alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+                        <li class="right-details__item passenger-cards__item">
+                            <img class="passenger-cards__img" src="./images/flight-details/avatar-blonde.png"
+                                alt="Avatar">
+                            <span class="passenger-cards__name">Борис Егоров Петрович</span>
+                            <a class="passenger-cards__link " href="passenger.html"></a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- --- -->
+            </div>
+            <div class="main-details__box js-airplaneDetailsItem" id="airplaneDetails_2">
+                <!-- MAIN -->
+                <div class="main-details__center">
+                    <!-- Детали рейса -->
+                    <h5 class="main-details__title title title--main">История рейсов</h5>
+
+                    <ul class="main-details__ticket-list ticket">
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Информация о рейсе
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Аэропорт вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Самарканд
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата прибытия
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
+                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Информация о рейсе
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Аэропорт вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Самарканд
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата прибытия
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
+                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Информация о рейсе
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Аэропорт вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Самарканд
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата прибытия
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
+                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Информация о рейсе
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Аэропорт вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Самарканд
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата прибытия
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
+                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Информация о рейсе
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Аэропорт вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Самарканд
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата прибытия
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
+                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Информация о рейсе
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Аэропорт вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Самарканд
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата прибытия
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
+                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Информация о рейсе
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Аэропорт вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Самарканд
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата прибытия
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
+                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-details__ticket-box ticket__box">
+                            <div class="main-details__ticket-item ticket__item">
+                                <div class="main-details__ticket-left ticket__left">
+                                    <span class="main-details__ticket-name ticket__name">
+                                        Bali
+                                        <span>312HG - 01</span>
+                                        <a class="main-details__ticket-details" href="flight-details.html">Детали</a>
+                                    </span>
+                                    <span class="main-details__ticket-id ticket__id">23.12.2023</span>
+                                </div>
+                                <div class="main-details__ticket-right ticket__right">
+                                    <span class="main-details__ticket-title ticket__title">
+                                        Информация о рейсе
+                                    </span>
+                                    <ul class="main-details__ticket-info ticket__info">
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Аэропорт вылета
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--location">
+                                                Самарканд
+                                            </span>
+                                        </li>
+
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">
+                                                Время и дата прибытия
+                                            </span>
+                                            <span class="main-details__ticket-text ticket__text ticket__text--calendar">
+                                                24.12.2023 14:15
+                                            </span>
+                                        </li>
+                                        <li class="main-details__ticket-services ticket__servisec">
+                                            <span class="main-details__ticket-description ticket__description">Аэропорт прибытия</span>
+                                            <span class="main-details__ticket-text ticket__text">Аэропорт LVV</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- --- -->
+                <!-- RIGHT -->
+                <div class="airplane-details__right right-details">
+                    <div class="right-details__header">
+                        <h5 class="right-details__title title title--inner">Статистика</h5>
+                    </div>
+                    <div class="right-details__group">
+                        <input class="right-details__input " type="text" placeholder="Всего рейсов">
+                        <span class="right-details__number">145</span>
+                    </div>
+                </div>
+                <!-- --- -->
+            </div>
+
+        </div>
+        <!-- --- -->
+
+    </div>
+</section>
+    </main>
+</div>
+
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" integrity="sha512-51WDTV7haD9BBDc8RWH2r5TnuSiRyAqEnbGyuKHYn+qpYCrCckxFeqlr1I5UoOULijyLV2vnHO9LS4MrAzHxwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/main.min.js"></script>
+
+
+
+    </body>
+
+</html>

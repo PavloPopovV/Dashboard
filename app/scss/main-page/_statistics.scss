@@ -79,8 +79,8 @@
         letter-spacing: 0.016px;
         margin-bottom: 16px;
 
-        @include mxw($sm) {
-            font-size: 13px;
+        @include mxw($md) {
+            font-size: 11px;
         }
 
     }
