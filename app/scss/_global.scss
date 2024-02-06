@@ -89,9 +89,12 @@ html {
 }
 
 .breadcrumbs {
+    display: block;
     position: relative;
     text-align: center;
-    padding: 20px 58px 19px 64px;
+    max-width: 319px;
+    width: 100%;
+    padding: 19px 0;
     background-color: var(--Background-Light, #FBFBFC);
     color: var(--Text-Primary, #2C2E30);
     font-size: 16px;
@@ -105,7 +108,8 @@ html {
         position: absolute;
         width: 32px;
         height: 32px;
-        top: 16px;
+        top: 50%;
+        transform: translateY(-50%);
         left: 24px;
         border-radius: 50%;
         border: 1px solid #E5E8EF;
@@ -117,10 +121,10 @@ html {
 
     @include mxw($md) {
         zoom: 80%;
-    }
 
-    &__english {
-        padding: 20px 109px 19px 64px;
+        &::after{
+            zoom: 80%;
+        }
     }
 }
 
@@ -1196,6 +1200,10 @@ html {
     // }
     &__back {
         display: block;
+        // @include mxw($md) {
+        //     width: 305px;
+        // }
+
     }
 
     &__box {

@@ -12,11 +12,12 @@
     }
 
     &__breadcrumbs{
-        padding: 20px 63px 19px 64px;
+        // padding: 20px 63px 19px 64px;
         border-bottom: none;
 
         @include mxw($sm) {
-            padding: 20px 30px 20px 50px;
+            // padding: 20px 30px 20px 50px;
+            width: 273px;
             &::after{
                 left: 10px;
             }
