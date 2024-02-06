@@ -108,14 +108,15 @@ function changeLanguagesOnLoad(e) {
   //   : pathname.replace(".html", "-en.html");
   // let ruUrl = pathname.replace("-en.html", ".html");
   if (pathname.length > 0) {
-    let enUrl = "" ? pathname : pathname.replace(".html", "").split("");
-    enUrl.push("-en");
-    enUrl = enUrl.join("");
-    // let enUrl = pathname.includes("-en")
-    //   ? pathname
-    //   : pathname.replace(".html", "-en.html");
-    // let ruUrl = pathname.replace("-en.html", ".html");
-    let ruUrl = pathname.replace("-en", "");
+    // let enUrl = "" ? pathname : pathname.replace(".html", "").split("");
+    // enUrl.push("-en");
+    // enUrl = enUrl.join("");
+    // let ruUrl = pathname.replace("-en", "");
+    let enUrl = pathname.includes("-en")
+      ? pathname
+      : pathname.replace(".html", "-en.html");
+    let ruUrl = pathname.replace("-en.html", ".html");
+    
 
     enBtn.setAttribute("href", enUrl);
     ruBtn.setAttribute("href", ruUrl);
@@ -124,11 +125,12 @@ function changeLanguagesOnLoad(e) {
     } else {
       changeBtnLang(enBtn);
     }
-  } else {
-    ruBtn.classList.add("active");
-    enBtn.setAttribute("href", "index-en");
-    ruBtn.setAttribute("href", "#");
   }
+  // } else {
+  //   ruBtn.classList.add("active");
+  //   enBtn.setAttribute("href", "index-en");
+  //   ruBtn.setAttribute("href", "#");
+  // }
 }
 
 changeLanguagesOnLoad();
