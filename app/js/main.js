@@ -131,16 +131,17 @@ const flightsTable = document.querySelector(".flights-table tbody");
 const airplaneTable = document.querySelector(".airplane__table tbody");
 const noticesTable = document.querySelector(".notices__table tbody");
 const allBtns = document.querySelectorAll(".pagination__btn");
-const currentLang = document.querySelector(".sidebar__languages-btn.active").textContent.trim();
-
+const currentLang = document
+  .querySelector(".sidebar__languages-btn.active")
+  .textContent.trim();
 
 //currentArr
-let currentArrFlights = currentLang === "EN" ? allFlightsEn : allFlights 
-let currentArrAirplanes = currentLang === "EN" ? allAirplanesEn : allAirplanes
-let currentArrNotices = currentLang === "EN" ? allNoticesEn : allNotices
+let currentArrFlights = currentLang === "EN" ? allFlightsEn : allFlights;
+let currentArrAirplanes = currentLang === "EN" ? allAirplanesEn : allAirplanes;
+let currentArrNotices = currentLang === "EN" ? allNoticesEn : allNotices;
 
 function detailsBtn() {
-  return currentLang === "EN" ? 'Details' : 'Детали'
+  return currentLang === "EN" ? "Details" : "Детали";
 }
 
 function renderHtmlNotices(obj, i) {
@@ -472,7 +473,6 @@ if (noticesTable) {
   renderOnLoad(renderHtmlNotices, currentArrNotices);
 }
 
-
 function showCurrentPageElements(btnValue, renderFunction, arr) {
   let startIndex = (btnValue - 1) * 16;
   let endIndex = btnValue * 16;
@@ -538,7 +538,12 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("pagination__btn")) {
     let closestParentId = e.target.closest(".pagination").id;
     if (closestParentId === "flights") {
-      renderOnClickBtns(e.target, renderHtmlFlights, flightsTable, currentArrFlights);
+      renderOnClickBtns(
+        e.target,
+        renderHtmlFlights,
+        flightsTable,
+        currentArrFlights
+      );
     }
     if (closestParentId === "airplane") {
       renderOnClickBtns(
@@ -549,10 +554,15 @@ document.addEventListener("click", (e) => {
       );
     }
     if (closestParentId === "notices") {
-      renderOnClickBtns(e.target, renderHtmlNotices, noticesTable, currentArrNotices);
+      renderOnClickBtns(
+        e.target,
+        renderHtmlNotices,
+        noticesTable,
+        currentArrNotices
+      );
     }
   }
-  if (e.target.classList.contains("pagination__arrows")) {  
+  if (e.target.classList.contains("pagination__arrows")) {
     let closestParentId = e.target.closest(".pagination").id;
     if (closestParentId === "flights") {
       renderOnClickArrows(
@@ -596,11 +606,21 @@ document.addEventListener("click", (e) => {
   }
   if (e.target.classList.contains("addProcessing")) {
     document.querySelector(".popup").classList.add("active");
-    document.querySelector(".popup__title").innerHTML = "Отправить в обработку";
+    if (document.querySelector(".js-en").classList.contains("active")) {
+      document.querySelector(".popup__title").innerHTML = "Send to processing";
+    } else {
+      document.querySelector(".popup__title").innerHTML =
+        "Отправить в обработку";
+    }
   }
   if (e.target.classList.contains("removeProcessing")) {
     document.querySelector(".popup").classList.add("active");
-    document.querySelector(".popup__title").innerHTML = "Снять все подозрения";
+    if (document.querySelector(".js-en").classList.contains("active")) {
+      document.querySelector(".popup__title").innerHTML = "Remove all suspicion";
+    } else {
+      document.querySelector(".popup__title").innerHTML =
+        "Снять все подозрения";
+    }
   }
   if (e.target.classList.contains("succesProcessing")) {
     document.querySelector(".popup").classList.remove("active");
