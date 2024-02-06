@@ -103,17 +103,31 @@ function changeLanguagesOnLoad(e) {
   const ruBtn = document.querySelector(".js-ru");
   let pathname = window.location.pathname.replace("/", "");
 
-  let enUrl = pathname.includes("-en")
-    ? pathname
-    : pathname.replace(".html", "-en.html");
-  let ruUrl = pathname.replace("-en.html", ".html");
+  // let enUrl = pathname.includes("-en")
+  //   ? pathname
+  //   : pathname.replace(".html", "-en.html");
+  // let ruUrl = pathname.replace("-en.html", ".html");
+  if (pathname.length > 0) {
+    let enUrl = "" ? pathname : pathname.replace(".html", "").split("");
+    enUrl.push("-en");
+    enUrl = enUrl.join("");
+    // let enUrl = pathname.includes("-en")
+    //   ? pathname
+    //   : pathname.replace(".html", "-en.html");
+    // let ruUrl = pathname.replace("-en.html", ".html");
+    let ruUrl = pathname.replace("-en", "");
 
-  enBtn.setAttribute("href", enUrl);
-  ruBtn.setAttribute("href", ruUrl);
-  if (pathname === ruUrl) {
-    changeBtnLang(ruBtn);
+    enBtn.setAttribute("href", enUrl);
+    ruBtn.setAttribute("href", ruUrl);
+    if (pathname === ruUrl) {
+      changeBtnLang(ruBtn);
+    } else {
+      changeBtnLang(enBtn);
+    }
   } else {
-    changeBtnLang(enBtn);
+    ruBtn.classList.add("active");
+    enBtn.setAttribute("href", "index-en");
+    ruBtn.setAttribute("href", "#");
   }
 }
 
