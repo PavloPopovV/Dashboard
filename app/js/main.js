@@ -103,17 +103,31 @@ function changeLanguagesOnLoad(e) {
   const ruBtn = document.querySelector(".js-ru");
   let pathname = window.location.pathname.replace("/", "");
 
-  let enUrl = pathname.includes("-en")
-    ? pathname
-    : pathname.replace(".html", "-en.html");
-  let ruUrl = pathname.replace("-en.html", ".html");
+  // let enUrl = pathname.includes("-en")
+  //   ? pathname
+  //   : pathname.replace(".html", "-en.html");
+  // let ruUrl = pathname.replace("-en.html", ".html");
+  if (pathname.length > 0) {
+    let enUrl = "" ? pathname : pathname.replace(".html", "").split("");
+    enUrl.push("-en");
+    enUrl = enUrl.join("");
+    // let enUrl = pathname.includes("-en")
+    //   ? pathname
+    //   : pathname.replace(".html", "-en.html");
+    // let ruUrl = pathname.replace("-en.html", ".html");
+    let ruUrl = pathname.replace("-en", "");
 
-  enBtn.setAttribute("href", enUrl);
-  ruBtn.setAttribute("href", ruUrl);
-  if (pathname === ruUrl) {
-    changeBtnLang(ruBtn);
+    enBtn.setAttribute("href", enUrl);
+    ruBtn.setAttribute("href", ruUrl);
+    if (pathname === ruUrl) {
+      changeBtnLang(ruBtn);
+    } else {
+      changeBtnLang(enBtn);
+    }
   } else {
-    changeBtnLang(enBtn);
+    ruBtn.classList.add("active");
+    enBtn.setAttribute("href", "index-en");
+    ruBtn.setAttribute("href", "#");
   }
 }
 
@@ -131,16 +145,17 @@ const flightsTable = document.querySelector(".flights-table tbody");
 const airplaneTable = document.querySelector(".airplane__table tbody");
 const noticesTable = document.querySelector(".notices__table tbody");
 const allBtns = document.querySelectorAll(".pagination__btn");
-const currentLang = document.querySelector(".sidebar__languages-btn.active").textContent.trim();
-
+const currentLang = document
+  .querySelector(".sidebar__languages-btn.active")
+  .textContent.trim();
 
 //currentArr
-let currentArrFlights = currentLang === "EN" ? allFlightsEn : allFlights 
-let currentArrAirplanes = currentLang === "EN" ? allAirplanesEn : allAirplanes
-let currentArrNotices = currentLang === "EN" ? allNoticesEn : allNotices
+let currentArrFlights = currentLang === "EN" ? allFlightsEn : allFlights;
+let currentArrAirplanes = currentLang === "EN" ? allAirplanesEn : allAirplanes;
+let currentArrNotices = currentLang === "EN" ? allNoticesEn : allNotices;
 
 function detailsBtn() {
-  return currentLang === "EN" ? 'Details' : 'Детали'
+  return currentLang === "EN" ? "Details" : "Детали";
 }
 
 function renderHtmlNotices(obj, i) {
@@ -472,7 +487,6 @@ if (noticesTable) {
   renderOnLoad(renderHtmlNotices, currentArrNotices);
 }
 
-
 function showCurrentPageElements(btnValue, renderFunction, arr) {
   let startIndex = (btnValue - 1) * 16;
   let endIndex = btnValue * 16;
@@ -538,7 +552,12 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("pagination__btn")) {
     let closestParentId = e.target.closest(".pagination").id;
     if (closestParentId === "flights") {
-      renderOnClickBtns(e.target, renderHtmlFlights, flightsTable, currentArrFlights);
+      renderOnClickBtns(
+        e.target,
+        renderHtmlFlights,
+        flightsTable,
+        currentArrFlights
+      );
     }
     if (closestParentId === "airplane") {
       renderOnClickBtns(
@@ -549,10 +568,15 @@ document.addEventListener("click", (e) => {
       );
     }
     if (closestParentId === "notices") {
-      renderOnClickBtns(e.target, renderHtmlNotices, noticesTable, currentArrNotices);
+      renderOnClickBtns(
+        e.target,
+        renderHtmlNotices,
+        noticesTable,
+        currentArrNotices
+      );
     }
   }
-  if (e.target.classList.contains("pagination__arrows")) {  
+  if (e.target.classList.contains("pagination__arrows")) {
     let closestParentId = e.target.closest(".pagination").id;
     if (closestParentId === "flights") {
       renderOnClickArrows(
