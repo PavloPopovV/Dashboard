@@ -118,6 +118,10 @@ html {
     @include mxw($md) {
         zoom: 80%;
     }
+
+    &__english {
+        padding: 20px 109px 19px 64px;
+    }
 }
 
 .search-box {

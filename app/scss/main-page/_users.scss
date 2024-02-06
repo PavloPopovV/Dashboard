@@ -4,7 +4,6 @@
         zoom: 90%;
     }
     @include mxw($md) {
-
         zoom: 80%;
     }
     
@@ -29,6 +28,10 @@
         padding: 8px 8px 8px 40px;
         margin-bottom: 4px;
 
+        @include mxw($lg) {
+            padding: 8px 8px 8px 30px;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -41,6 +44,10 @@
             background-repeat: no-repeat;
             background-size: 16px 16px;
             background-position: center;
+
+            @include mxw($lg) {
+               left: 0;
+            }
         }
 
         &--arrived::after {
