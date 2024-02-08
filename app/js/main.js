@@ -295,10 +295,10 @@ if (currentLang === "EN") {
   createFlightsArrEn();
   //en
   function createAirplanesArrEn() {
-    let obj = {
+    let obj1 = {
       name: "BOEING 315",
       flight: {
-        kod: "312HG - 01",
+        code: "312HG - 01",
         empty: "-",
       },
       location: "Airport LVV",
@@ -327,8 +327,143 @@ if (currentLang === "EN") {
       number: "B-315-2",
       detailsLink: "airplane-details-en.html",
     };
-    for (let i = 0; i < 100; i++) {
-      allAirplanesEn.push(obj);
+    let obj2 = {
+      name: "AIRBUS A380",
+      flight: {
+        code: "789JK - 02",
+        empty: "-",
+      },
+      location: "Airport CDG",
+      "departure-arrival": {
+        time: "08:30",
+        date: "15.05.2024",
+      },
+      "number-of-passengers": {
+        number: "250 passengers",
+        empty: "Empty",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "He's on a flight",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Awaiting departure",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Delay",
+        },
+      },
+      number: "A-380-1",
+      detailsLink: "airplane-details-en.html",
+    };
+    let obj3 = {
+      name: "BOEING 747",
+      flight: {
+        code: "456LM - 03",
+        empty: "-",
+      },
+      location: "Airport JFK",
+      "departure-arrival": {
+        time: "20:15",
+        date: "03.09.2024",
+      },
+      "number-of-passengers": {
+        number: "200 passengers",
+        empty: "Empty",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "He's on a flight",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Awaiting departure",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Delay",
+        },
+      },
+      number: "B-747-3",
+      detailsLink: "airplane-details-en.html",
+    };
+    let obj4 = {
+      name: "BOEING 787",
+      flight: {
+        code: "135QP - 04",
+        empty: "-",
+      },
+      location: "Airport LAX",
+      "departure-arrival": {
+        time: "16:55",
+        date: "10.08.2024",
+      },
+      "number-of-passengers": {
+        number: "150 passengers",
+        empty: "Empty",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "He's on a flight",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Awaiting departure",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Delay",
+        },
+      },
+      number: "B-787-4",
+      detailsLink: "airplane-details-en.html",
+    };
+    let obj5 = {
+      name: "AIRBUS A320",
+      flight: {
+        code: "678KT - 05",
+        empty: "-",
+      },
+      location: "Airport DXB",
+      "departure-arrival": {
+        time: "10:40",
+        date: "22.11.2024",
+      },
+      "number-of-passengers": {
+        number: "180 passengers",
+        empty: "Empty",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "He's on a flight",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Awaiting departure",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Delay",
+        },
+      },
+      number: "A-320-5",
+      detailsLink: "airplane-details-en.html",
+    };
+                    
+
+
+    for (let i = 0; i < 20; i++) {
+      allAirplanesEn.push(obj1);
+      allAirplanesEn.push(obj2);
+      allAirplanesEn.push(obj3);
+      allAirplanesEn.push(obj4);
+      allAirplanesEn.push(obj5);
     }
   }
   createAirplanesArrEn();
@@ -535,10 +670,10 @@ if (currentLang === "RU") {
   createFlightsArr();
 
   function createAirplanesArr() {
-    let obj = {
+    let obj1 = {
       name: "BOEING 315",
       flight: {
-        kod: "312HG - 01",
+        code: "312HG - 01",
         empty: "-",
       },
       location: "Аэропорт LVV",
@@ -547,7 +682,7 @@ if (currentLang === "RU") {
         date: "24.12.2023",
       },
       "number-of-passengers": {
-        number: "95  пассажиров",
+        number: "95 пассажиры",
         empty: "Пустой",
       },
       status: {
@@ -567,8 +702,141 @@ if (currentLang === "RU") {
       number: "B-315-2",
       detailsLink: "airplane-details.html",
     };
-    for (let i = 0; i < 100; i++) {
-      allAirplanes.push(obj);
+    let obj2 = {
+      name: "AIRBUS A380",
+      flight: {
+        code: "789JK - 02",
+        empty: "-",
+      },
+      location: "Аэропорт CDG",
+      "departure-arrival": {
+        time: "08:30",
+        date: "15.05.2024",
+      },
+      "number-of-passengers": {
+        number: "250 пассажиры",
+        empty: "Пустой",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "Выполняет рейс",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Ожидает вылет",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Простой",
+        },
+      },
+      number: "A-380-1",
+      detailsLink: "airplane-details.html",
+    };
+    let obj3 = {
+      name: "BOEING 747",
+      flight: {
+        code: "456LM - 03",
+        empty: "-",
+      },
+      location: "Аэропорт JFK",
+      "departure-arrival": {
+        time: "20:15",
+        date: "03.09.2024",
+      },
+      "number-of-passengers": {
+        number: "200 пассажиры",
+        empty: "Пустой",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "Выполняет рейс",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Ожидает вылет",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Простой",
+        },
+      },
+      number: "B-747-3",
+      detailsLink: "airplane-details.html",
+    };
+    let obj4 = {
+      name: "BOEING 787",
+      flight: {
+        code: "135QP - 04",
+        empty: "-",
+      },
+      location: "Аэропорт LAX",
+      "departure-arrival": {
+        time: "16:55",
+        date: "10.08.2024",
+      },
+      "number-of-passengers": {
+        number: "150 пассажиры",
+        empty: "Пустой",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "Выполняет рейс",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Ожидает вылет",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Простой",
+        },
+      },
+      number: "B-787-4",
+      detailsLink: "airplane-details.html",
+    };
+    let obj5 = {
+      name: "AIRBUS A320",
+      flight: {
+        code: "678KT - 05",
+        empty: "-",
+      },
+      location: "Аэропорт DXB",
+      "departure-arrival": {
+        time: "10:40",
+        date: "22.11.2024",
+      },
+      "number-of-passengers": {
+        number: "180 пассажиры",
+        empty: "Пустой",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "Выполняет рейс",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Ожидает вылет",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Простой",
+        },
+      },
+      number: "A-320-5",
+      detailsLink: "airplane-details.html",
+    };
+
+    for (let i = 0; i < 20; i++) {
+      allAirplanes.push(obj1);
+      allAirplanes.push(obj2);
+      allAirplanes.push(obj3);
+      allAirplanes.push(obj4);
+      allAirplanes.push(obj5);
     }
   }
   createAirplanesArr();
@@ -675,11 +943,11 @@ function renderHtmlAirplanes(obj, i) {
     `
     <tr class="table__row">
       <td class="table__cell table__cell--name">
-          <span class="table__span gray-span">${obj.name} - ${i + 1}</span>
+          <span class="table__span gray-span">${obj.name}</span>
       </td>
       <td class="table__cell table__cell--march">
           <span class="table__span ${count === 3 ? "gray-span" : "blue-span"} ">
-          ${count === 3 ? obj.flight.empty : obj.flight.kod}
+          ${count === 3 ? obj.flight.empty : obj.flight.code}
           </span>
       </td>
       <td class="table__cell table__cell--location">
