@@ -103,10 +103,6 @@ function changeLanguagesOnLoad(e) {
   const ruBtn = document.querySelector(".js-ru");
   let pathname = window.location.pathname.replace("/", "");
 
-  // let enUrl = pathname.includes("-en")
-  //   ? pathname
-  //   : pathname.replace(".html", "-en.html");
-  // let ruUrl = pathname.replace("-en.html", ".html");
   if (pathname.length > 0) {
     // let enUrl = "" ? pathname : pathname.replace(".html", "").split("");
     // enUrl.push("-en");
@@ -116,7 +112,6 @@ function changeLanguagesOnLoad(e) {
       ? pathname
       : pathname.replace(".html", "-en.html");
     let ruUrl = pathname.replace("-en.html", ".html");
-    
 
     enBtn.setAttribute("href", enUrl);
     ruBtn.setAttribute("href", ruUrl);
@@ -125,12 +120,11 @@ function changeLanguagesOnLoad(e) {
     } else {
       changeBtnLang(enBtn);
     }
+  } else {
+    ruBtn.classList.add("active");
+    enBtn.setAttribute("href", "index-en");
+    ruBtn.setAttribute("href", "#");
   }
-  // } else {
-  //   ruBtn.classList.add("active");
-  //   enBtn.setAttribute("href", "index-en");
-  //   ruBtn.setAttribute("href", "#");
-  // }
 }
 
 changeLanguagesOnLoad();
@@ -155,6 +149,754 @@ const currentLang = document
 let currentArrFlights = currentLang === "EN" ? allFlightsEn : allFlights;
 let currentArrAirplanes = currentLang === "EN" ? allAirplanesEn : allAirplanes;
 let currentArrNotices = currentLang === "EN" ? allNoticesEn : allNotices;
+
+//EN
+if (currentLang === "EN") {
+  function createFlightsArrEn() {
+    let obj1 = {
+      id: 5152,
+      march: {
+        start: "Lviv",
+        end: "Budapest",
+      },
+      fullDate: {
+        date: "24.12.2023",
+        time: "12:25",
+      },
+      airports: {
+        start: "Airport LVA",
+        end: "Airport LAAS",
+      },
+      plain: {
+        name: "BOEING 315",
+        cod: "B-315-2",
+      },
+      type: {
+        class: "table__type--green",
+        text: "Completed",
+      },
+
+      number: 95,
+      detailsLink: "flight-details-en.html",
+    };
+
+    let obj2 = {
+      id: 7382,
+      march: {
+        start: "New York",
+        end: "London",
+      },
+      fullDate: {
+        date: "15.05.2024",
+        time: "08:40",
+      },
+      airports: {
+        start: "JFK Airport",
+        end: "Heathrow Airport",
+      },
+      plain: {
+        name: "AIRBUS A380",
+        cod: "A-380-1",
+      },
+      type: {
+        class: "table__type--yellow",
+        text: "In progress",
+      },
+      number: 143,
+      detailsLink: "flight-details-en.html",
+    };
+
+    let obj3 = {
+      id: 9234,
+      march: {
+        start: "Tokyo",
+        end: "Sydney",
+      },
+      fullDate: {
+        date: "03.09.2024",
+        time: "20:15",
+      },
+      airports: {
+        start: "Narita Airport",
+        end: "Sydney Airport",
+      },
+      plain: {
+        name: "BOEING 747",
+        cod: "B-747-3",
+      },
+      type: {
+        class: "table__type--yellow",
+        text: "In progress",
+      },
+      number: 234,
+      detailsLink: "flight-details-en.html",
+    };
+
+    let obj4 = {
+      id: 6157,
+      march: {
+        start: "Paris",
+        end: "Rome",
+      },
+      fullDate: {
+        date: "10.08.2024",
+        time: "16:55",
+      },
+      airports: {
+        start: "CDG",
+        end: "FCO",
+      },
+      plain: {
+        name: "BOEING 787",
+        cod: "B-787-4",
+      },
+      type: {
+        class: "table__type--red",
+        text: "Delay",
+      },
+      number: 87,
+      detailsLink: "flight-details-en.html",
+    };
+
+    let obj5 = {
+      id: 9876,
+      march: {
+        start: "Kyiv",
+        end: "Beijing",
+      },
+      fullDate: {
+        date: "29.11.2023",
+        time: "21:10",
+      },
+      airports: {
+        start: "Sheremetyevo Airport",
+        end: "Beijing Capital Airport",
+      },
+      plain: {
+        name: "AIRBUS A320",
+        cod: "A-320-2",
+      },
+      type: {
+        class: "table__type--green",
+        text: "Completed",
+      },
+      number: 54,
+      detailsLink: "flight-details-en.html",
+    };
+
+    for (let i = 0; i < 60; i++) {
+      allFlightsEn.push(obj1);
+      allFlightsEn.push(obj2);
+      allFlightsEn.push(obj3);
+      allFlightsEn.push(obj4);
+      allFlightsEn.push(obj5);
+    }
+  }
+  createFlightsArrEn();
+  //en
+  function createAirplanesArrEn() {
+    let obj1 = {
+      name: "BOEING 315",
+      flight: {
+        code: "312HG - 01",
+        empty: "-",
+      },
+      location: "Airport LVV",
+      "departure-arrival": {
+        time: "12:25",
+        date: "24.12.2023",
+      },
+      "number-of-passengers": {
+        number: "95 passengers",
+        empty: "Empty",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "He's on a flight",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Awaiting departure",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Delay",
+        },
+      },
+      number: "B-315-2",
+      detailsLink: "airplane-details-en.html",
+    };
+    let obj2 = {
+      name: "AIRBUS A380",
+      flight: {
+        code: "789JK - 02",
+        empty: "-",
+      },
+      location: "Airport CDG",
+      "departure-arrival": {
+        time: "08:30",
+        date: "15.05.2024",
+      },
+      "number-of-passengers": {
+        number: "250 passengers",
+        empty: "Empty",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "He's on a flight",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Awaiting departure",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Delay",
+        },
+      },
+      number: "A-380-1",
+      detailsLink: "airplane-details-en.html",
+    };
+    let obj3 = {
+      name: "BOEING 747",
+      flight: {
+        code: "456LM - 03",
+        empty: "-",
+      },
+      location: "Airport JFK",
+      "departure-arrival": {
+        time: "20:15",
+        date: "03.09.2024",
+      },
+      "number-of-passengers": {
+        number: "200 passengers",
+        empty: "Empty",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "He's on a flight",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Awaiting departure",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Delay",
+        },
+      },
+      number: "B-747-3",
+      detailsLink: "airplane-details-en.html",
+    };
+    let obj4 = {
+      name: "BOEING 787",
+      flight: {
+        code: "135QP - 04",
+        empty: "-",
+      },
+      location: "Airport LAX",
+      "departure-arrival": {
+        time: "16:55",
+        date: "10.08.2024",
+      },
+      "number-of-passengers": {
+        number: "150 passengers",
+        empty: "Empty",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "He's on a flight",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Awaiting departure",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Delay",
+        },
+      },
+      number: "B-787-4",
+      detailsLink: "airplane-details-en.html",
+    };
+    let obj5 = {
+      name: "AIRBUS A320",
+      flight: {
+        code: "678KT - 05",
+        empty: "-",
+      },
+      location: "Airport DXB",
+      "departure-arrival": {
+        time: "10:40",
+        date: "22.11.2024",
+      },
+      "number-of-passengers": {
+        number: "180 passengers",
+        empty: "Empty",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "He's on a flight",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Awaiting departure",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Delay",
+        },
+      },
+      number: "A-320-5",
+      detailsLink: "airplane-details-en.html",
+    };
+                    
+
+
+    for (let i = 0; i < 20; i++) {
+      allAirplanesEn.push(obj1);
+      allAirplanesEn.push(obj2);
+      allAirplanesEn.push(obj3);
+      allAirplanesEn.push(obj4);
+      allAirplanesEn.push(obj5);
+    }
+  }
+  createAirplanesArrEn();
+  //en
+  function createNoticesArrEn() {
+    let obj1 = {
+      fullName: "Maxim Oleksandrovych Vasiliev",
+      gender: "Male",
+      notices: "Drug trafficking",
+      flight: "312HG - 01",
+      plain: "Airbus А320",
+      place: "F-16",
+      detailsLink: "flight-details-en.html",
+    };
+    let obj2 = {
+      fullName: "Anna Ivanovna Kovalenko",
+      gender: "Female",
+      notices: "Smoking in non-smoking area",
+      flight: "789JK - 02",
+      plain: "Boeing 737",
+      place: "A-23",
+      detailsLink: "flight-details-en.html",
+    };
+    let obj3 = {
+      fullName: "John Smith",
+      gender: "Male",
+      notices: "Loud behavior",
+      flight: "456LM - 03",
+      plain: "Airbus A380",
+      place: "B-12",
+      detailsLink: "flight-details-en.html",
+    };
+    let obj4 = {
+      fullName: "Elena Petrova",
+      gender: "Female",
+      notices: "Carrying restricted items",
+      flight: "135QP - 04",
+      plain: "Boeing 747",
+      place: "C-07",
+      detailsLink: "flight-details-en.html",
+    };
+    let obj5 = {
+      fullName: "Mohammad Ahmed",
+      gender: "Male",
+      notices: "Disruptive behavior",
+      flight: "678KT - 05",
+      plain: "Airbus A330",
+      place: "D-14",
+      detailsLink: "flight-details-en.html",
+    };
+
+    for (let i = 0; i < 20; i++) {
+      allNoticesEn.push(obj1);
+      allNoticesEn.push(obj2);
+      allNoticesEn.push(obj3);
+      allNoticesEn.push(obj4);
+      allNoticesEn.push(obj5);
+    }
+  }
+  createNoticesArrEn();
+}
+//ru
+if (currentLang === "RU") {
+  function createFlightsArr() {
+    let obj1 = {
+      id: 5152,
+      march: {
+        start: "Lviv",
+        end: "Budapest",
+      },
+      fullDate: {
+        date: "24.12.2023",
+        time: "12:25",
+      },
+      airports: {
+        start: "Airport LVA",
+        end: "Airport LAAS",
+      },
+      plain: {
+        name: "BOEING 315",
+        cod: "B-315-2",
+      },
+      type: {
+        class: "table__type--green",
+        text: "Завершен",
+      },
+
+      number: 95,
+      detailsLink: "flight-details-en.html",
+    };
+
+    let obj2 = {
+      id: 7382,
+      march: {
+        start: "New York",
+        end: "London",
+      },
+      fullDate: {
+        date: "15.05.2024",
+        time: "08:40",
+      },
+      airports: {
+        start: "JFK Airport",
+        end: "Heathrow Airport",
+      },
+      plain: {
+        name: "AIRBUS A380",
+        cod: "A-380-1",
+      },
+      type: {
+        class: "table__type--yellow",
+        text: "В процессе",
+      },
+      number: 143,
+      detailsLink: "flight-details-en.html",
+    };
+
+    let obj3 = {
+      id: 9234,
+      march: {
+        start: "Tokyo",
+        end: "Sydney",
+      },
+      fullDate: {
+        date: "03.09.2024",
+        time: "20:15",
+      },
+      airports: {
+        start: "Narita Airport",
+        end: "Sydney Airport",
+      },
+      plain: {
+        name: "BOEING 747",
+        cod: "B-747-3",
+      },
+      type: {
+        class: "table__type--yellow",
+        text: "В процессе",
+      },
+      number: 234,
+      detailsLink: "flight-details-en.html",
+    };
+
+    let obj4 = {
+      id: 6157,
+      march: {
+        start: "Paris",
+        end: "Rome",
+      },
+      fullDate: {
+        date: "10.08.2024",
+        time: "16:55",
+      },
+      airports: {
+        start: "CDG",
+        end: "FCO",
+      },
+      plain: {
+        name: "BOEING 787",
+        cod: "B-787-4",
+      },
+      type: {
+        class: "table__type--red",
+        text: "Простой",
+      },
+      number: 87,
+      detailsLink: "flight-details-en.html",
+    };
+
+    let obj5 = {
+      id: 9876,
+      march: {
+        start: "Kyiv",
+        end: "Beijing",
+      },
+      fullDate: {
+        date: "29.11.2023",
+        time: "21:10",
+      },
+      airports: {
+        start: "Sheremetyevo Airport",
+        end: "Beijing Capital Airport",
+      },
+      plain: {
+        name: "AIRBUS A320",
+        cod: "A-320-2",
+      },
+      type: {
+        class: "table__type--green",
+        text: "Завершен",
+      },
+      number: 54,
+      detailsLink: "flight-details-en.html",
+    };
+
+    for (let i = 0; i < 60; i++) {
+      allFlights.push(obj1);
+      allFlights.push(obj2);
+      allFlights.push(obj3);
+      allFlights.push(obj4);
+      allFlights.push(obj5);
+    }
+  }
+  createFlightsArr();
+
+  function createAirplanesArr() {
+    let obj1 = {
+      name: "BOEING 315",
+      flight: {
+        code: "312HG - 01",
+        empty: "-",
+      },
+      location: "Аэропорт LVV",
+      "departure-arrival": {
+        time: "12:25",
+        date: "24.12.2023",
+      },
+      "number-of-passengers": {
+        number: "95 пассажиры",
+        empty: "Пустой",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "Выполняет рейс",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Ожидает вылет",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Простой",
+        },
+      },
+      number: "B-315-2",
+      detailsLink: "airplane-details.html",
+    };
+    let obj2 = {
+      name: "AIRBUS A380",
+      flight: {
+        code: "789JK - 02",
+        empty: "-",
+      },
+      location: "Аэропорт CDG",
+      "departure-arrival": {
+        time: "08:30",
+        date: "15.05.2024",
+      },
+      "number-of-passengers": {
+        number: "250 пассажиры",
+        empty: "Пустой",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "Выполняет рейс",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Ожидает вылет",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Простой",
+        },
+      },
+      number: "A-380-1",
+      detailsLink: "airplane-details.html",
+    };
+    let obj3 = {
+      name: "BOEING 747",
+      flight: {
+        code: "456LM - 03",
+        empty: "-",
+      },
+      location: "Аэропорт JFK",
+      "departure-arrival": {
+        time: "20:15",
+        date: "03.09.2024",
+      },
+      "number-of-passengers": {
+        number: "200 пассажиры",
+        empty: "Пустой",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "Выполняет рейс",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Ожидает вылет",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Простой",
+        },
+      },
+      number: "B-747-3",
+      detailsLink: "airplane-details.html",
+    };
+    let obj4 = {
+      name: "BOEING 787",
+      flight: {
+        code: "135QP - 04",
+        empty: "-",
+      },
+      location: "Аэропорт LAX",
+      "departure-arrival": {
+        time: "16:55",
+        date: "10.08.2024",
+      },
+      "number-of-passengers": {
+        number: "150 пассажиры",
+        empty: "Пустой",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "Выполняет рейс",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Ожидает вылет",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Простой",
+        },
+      },
+      number: "B-787-4",
+      detailsLink: "airplane-details.html",
+    };
+    let obj5 = {
+      name: "AIRBUS A320",
+      flight: {
+        code: "678KT - 05",
+        empty: "-",
+      },
+      location: "Аэропорт DXB",
+      "departure-arrival": {
+        time: "10:40",
+        date: "22.11.2024",
+      },
+      "number-of-passengers": {
+        number: "180 пассажиры",
+        empty: "Пустой",
+      },
+      status: {
+        green: {
+          class: "table__type--green",
+          text: "Выполняет рейс",
+        },
+        yellow: {
+          class: "table__type--yellow",
+          text: "Ожидает вылет",
+        },
+        red: {
+          class: "table__type--red",
+          text: "Простой",
+        },
+      },
+      number: "A-320-5",
+      detailsLink: "airplane-details.html",
+    };
+
+    for (let i = 0; i < 20; i++) {
+      allAirplanes.push(obj1);
+      allAirplanes.push(obj2);
+      allAirplanes.push(obj3);
+      allAirplanes.push(obj4);
+      allAirplanes.push(obj5);
+    }
+  }
+  createAirplanesArr();
+
+  function createNoticesArr() {
+    let obj1 = {
+      fullName: "Максим Александрович Васильев",
+      gender: "Мужчина",
+      notices: "Торговля наркотиками",
+      flight: "312HG - 01",
+      plain: "Airbus А320",
+      place: "F-16",
+      detailsLink: "flight-details.html",
+    };
+    let obj2 = {
+      fullName: "Анна Ивановна Коваленко",
+      gender: "Женщина",
+      notices: "Курение в зоне для некурящих",
+      flight: "789JK - 02",
+      plain: "Boeing 737",
+      place: "A-23",
+      detailsLink: "flight-details.html",
+    };
+    let obj3 = {
+      fullName: "Джон Смит",
+      gender: "Мужчина",
+      notices: "Громкое поведение",
+      flight: "456LM - 03",
+      plain: "Airbus A380",
+      place: "B-12",
+      detailsLink: "flight-details.html",
+    };
+    let obj4 = {
+      fullName: "Елена Петровна",
+      gender: "Женщина",
+      notices: "Торговля наркотиками",
+      flight: "135QP - 04",
+      plain: "Boeing 747",
+      place: "C-07",
+      detailsLink: "flight-details.html",
+    };
+    let obj5 = {
+      fullName: "Мохаммед Ахмед",
+      gender: "Мужчина",
+      notices: "Разрушительное поведение",
+      flight: "678KT - 05",
+      plain: "Airbus A330",
+      place: "D-14",
+      detailsLink: "flight-details.html",
+    };
+    for (let i = 0; i < 20; i++) {
+      allNotices.push(obj1);
+      allNotices.push(obj2);
+      allNotices.push(obj3);
+      allNotices.push(obj4);
+      allNotices.push(obj5);
+    }
+  }
+  createNoticesArr();
+}
 
 function detailsBtn() {
   return currentLang === "EN" ? "Details" : "Детали";
@@ -201,11 +943,11 @@ function renderHtmlAirplanes(obj, i) {
     `
     <tr class="table__row">
       <td class="table__cell table__cell--name">
-          <span class="table__span gray-span">${obj.name} - ${i + 1}</span>
+          <span class="table__span gray-span">${obj.name}</span>
       </td>
       <td class="table__cell table__cell--march">
           <span class="table__span ${count === 3 ? "gray-span" : "blue-span"} ">
-          ${count === 3 ? obj.flight.empty : obj.flight.kod}
+          ${count === 3 ? obj.flight.empty : obj.flight.code}
           </span>
       </td>
       <td class="table__cell table__cell--location">
@@ -260,7 +1002,7 @@ function renderHtmlFlights(obj, i) {
     `
    <tr class="table__row">
       <td class="table__cell table__cell--id">
-        <span class="table__span gray-span">${obj.id} - ${i + 1}</span>
+        <span class="table__span gray-span">${obj.id}</span>
       </td>
       <td class="table__cell table__cell--march">
         <span class="table__span gray-span">
@@ -285,7 +1027,7 @@ function renderHtmlFlights(obj, i) {
         </span>
       </td>
       <td class="table__cell table__cell--type">
-        <span class="table__type table__type--green" >${obj.type}</span>
+        <span class="table__type ${obj.type.class}" >${obj.type.text}</span>
       </td>
       <td class="table__cell table__cell--number">
         <span class="table__span gray-span">${obj.number}</span>
@@ -302,179 +1044,6 @@ function renderOnLoad(renderFunction, arr) {
   for (let i = 0; i < 16; i++) {
     renderFunction(arr[i], i);
   }
-}
-
-//EN
-if (currentLang === "EN") {
-  function createFlightsArrEn() {
-    let obj = {
-      id: 5152,
-      march: {
-        start: "Lviv",
-        end: "Budapest",
-      },
-      fullDate: {
-        date: "24.12.2023",
-        time: "12:25",
-      },
-      airports: {
-        start: "Airport LVA",
-        end: "Airport LAAS",
-      },
-      plain: {
-        name: "BOEING 315",
-        cod: "B-315-2",
-      },
-      type: "Completed",
-      number: 95,
-      detailsLink: "flight-details-en.html",
-    };
-    for (let i = 0; i < 100; i++) {
-      allFlightsEn.push(obj);
-    }
-  }
-  createFlightsArrEn();
-  //en
-  function createAirplanesArrEn() {
-    let obj = {
-      name: "BOEING 315",
-      flight: {
-        kod: "312HG - 01",
-        empty: "-",
-      },
-      location: "Airport LVV",
-      "departure-arrival": {
-        time: "12:25",
-        date: "24.12.2023",
-      },
-      "number-of-passengers": {
-        number: "95 passengers",
-        empty: "Empty",
-      },
-      status: {
-        green: {
-          class: "table__type--green",
-          text: "He's on a flight",
-        },
-        yellow: {
-          class: "table__type--yellow",
-          text: "Awaiting departure",
-        },
-        red: {
-          class: "table__type--red",
-          text: "Delay",
-        },
-      },
-      number: "B-315-2",
-      detailsLink: "airplane-details-en.html",
-    };
-    for (let i = 0; i < 100; i++) {
-      allAirplanesEn.push(obj);
-    }
-  }
-  createAirplanesArrEn();
-  //en
-  function createNoticesArrEn() {
-    let obj = {
-      fullName: "Maxim Oleksandrovych Vasiliev",
-      gender: "Male",
-      notices: "Drug trafficking",
-      flight: "312HG - 0",
-      plain: "Airbus А320",
-      place: "F-16",
-      detailsLink: "flight-details-en.html",
-    };
-    for (let i = 0; i < 100; i++) {
-      allNoticesEn.push(obj);
-    }
-  }
-  createNoticesArrEn();
-}
-//ru
-if (currentLang === "RU") {
-  function createFlightsArr() {
-    let obj = {
-      id: 5152,
-      march: {
-        start: "Lviv",
-        end: "Budapest",
-      },
-      fullDate: {
-        date: "24.12.2023",
-        time: "12:25",
-      },
-      airports: {
-        start: "Аэропорт LVA",
-        end: "Аэропорт LAAS",
-      },
-      plain: {
-        name: "BOEING 315",
-        cod: "B-315-2",
-      },
-      type: "Завершен",
-      number: 95,
-      detailsLink: "flight-details.html",
-    };
-    for (let i = 0; i < 100; i++) {
-      allFlights.push(obj);
-    }
-  }
-  createFlightsArr();
-
-  function createAirplanesArr() {
-    let obj = {
-      name: "BOEING 315",
-      flight: {
-        kod: "312HG - 01",
-        empty: "-",
-      },
-      location: "Аэропорт LVV",
-      "departure-arrival": {
-        time: "12:25",
-        date: "24.12.2023",
-      },
-      "number-of-passengers": {
-        number: "95  пассажиров",
-        empty: "Пустой",
-      },
-      status: {
-        green: {
-          class: "table__type--green",
-          text: "Выполняет рейс",
-        },
-        yellow: {
-          class: "table__type--yellow",
-          text: "Ожидает вылет",
-        },
-        red: {
-          class: "table__type--red",
-          text: "Простой",
-        },
-      },
-      number: "B-315-2",
-      detailsLink: "airplane-details.html",
-    };
-    for (let i = 0; i < 100; i++) {
-      allAirplanes.push(obj);
-    }
-  }
-  createAirplanesArr();
-
-  function createNoticesArrEn() {
-    let obj = {
-      fullName: "Максим Александрович Васильев",
-      gender: "Мужчина",
-      notices: "Незаконный оборот наркотиков",
-      flight: "312HG - 0",
-      plain: "Airbus А320",
-      place: "F-16",
-      detailsLink: "airplane-details.html",
-    };
-    for (let i = 0; i < 100; i++) {
-      allNotices.push(obj);
-    }
-  }
-  createNoticesArrEn();
 }
 
 if (flightsTable) {
@@ -632,7 +1201,8 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("removeProcessing")) {
     document.querySelector(".popup").classList.add("active");
     if (document.querySelector(".js-en").classList.contains("active")) {
-      document.querySelector(".popup__title").innerHTML = "Remove all suspicion";
+      document.querySelector(".popup__title").innerHTML =
+        "Remove all suspicion";
     } else {
       document.querySelector(".popup__title").innerHTML =
         "Снять все подозрения";

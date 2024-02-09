@@ -1055,6 +1055,10 @@ html {
         letter-spacing: -0.464px;
         margin-right: 24px;
 
+        @include mxw($md) {
+            margin-right: 0;
+        }
+
         span {
             display: block;
             color: #A0A3A6;
