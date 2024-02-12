@@ -122,7 +122,7 @@ html {
     @include mxw($md) {
         zoom: 80%;
 
-        &::after{
+        &::after {
             zoom: 80%;
         }
     }
@@ -376,6 +376,7 @@ html {
         background-color: #fff;
         box-shadow: 0px 5px 4px -4px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
         width: 180px;
+
         &::placeholder {
             color: #979A9D;
         }
@@ -1411,8 +1412,11 @@ html {
     }
 
     &__img {
-        object-fit: contain;
+        object-fit: cover;
         margin-right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
     }
 
     &__name {
