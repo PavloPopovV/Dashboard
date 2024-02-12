@@ -104,10 +104,14 @@ function changeLanguagesOnLoad(e) {
   let pathname = window.location.pathname.replace("/", "");
 
   if (pathname.length > 0) {
+
+    // netlify-urls
     // let enUrl = "" ? pathname : pathname.replace(".html", "").split("");
     // enUrl.push("-en");
     // enUrl = enUrl.join("");
     // let ruUrl = pathname.replace("-en", "");
+
+    // local urls
     let enUrl = pathname.includes("-en")
       ? pathname
       : pathname.replace(".html", "-en.html");
@@ -456,8 +460,6 @@ if (currentLang === "EN") {
       detailsLink: "airplane-details-en.html",
     };
                     
-
-
     for (let i = 0; i < 20; i++) {
       allAirplanesEn.push(obj1);
       allAirplanesEn.push(obj2);
@@ -552,7 +554,7 @@ if (currentLang === "RU") {
       },
 
       number: 95,
-      detailsLink: "flight-details-en.html",
+      detailsLink: "flight-details.html",
     };
 
     let obj2 = {
@@ -578,7 +580,7 @@ if (currentLang === "RU") {
         text: "В процессе",
       },
       number: 143,
-      detailsLink: "flight-details-en.html",
+      detailsLink: "flight-details.html",
     };
 
     let obj3 = {
@@ -604,7 +606,7 @@ if (currentLang === "RU") {
         text: "В процессе",
       },
       number: 234,
-      detailsLink: "flight-details-en.html",
+      detailsLink: "flight-details.html",
     };
 
     let obj4 = {
@@ -630,7 +632,7 @@ if (currentLang === "RU") {
         text: "Простой",
       },
       number: 87,
-      detailsLink: "flight-details-en.html",
+      detailsLink: "flight-details.html",
     };
 
     let obj5 = {
@@ -656,10 +658,10 @@ if (currentLang === "RU") {
         text: "Завершен",
       },
       number: 54,
-      detailsLink: "flight-details-en.html",
+      detailsLink: "flight-details.html",
     };
 
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 20; i++) {
       allFlights.push(obj1);
       allFlights.push(obj2);
       allFlights.push(obj3);
